@@ -1,0 +1,78 @@
+import React, { useState } from 'react';
+import { slide as Menu } from 'react-burger-menu';
+import { Link, useLocation } from 'react-router-dom';
+import '../Components/ComponentCSS/Nav.scss';
+import Burger from '../Asset/Nav/burger.svg';
+import Logo from '../Asset/Logo/Jodi_Logo.svg'
+
+
+export default function Nav (){
+    const [isOpen, setIsOpen] = useState(false)
+    const [navbar, setNavbar] = useState(false)
+    // const [location, setLocation] = useState(useLocation())
+
+    let location = useLocation()
+
+    const handleStateChange = (state) => {
+        setIsOpen(state.isOpen)
+    }
+
+    const closeMenu = () => {
+        setIsOpen(false)
+    }
+
+    const checkNavBarScroll = () => {
+        if(window.innerWidth < 768){
+            if(window.scrollY >= 1){
+                setNavbar(true)
+            } else {
+                setNavbar(false)
+            }
+        } else {
+            setNavbar(false)
+        }
+    }
+
+    window.addEventListener('scroll', checkNavBarScroll);
+
+    return (
+        <nav className={navbar ? 'nav active' : 'nav' } >
+        <div className='nav__mobile'>
+            <Menu width={'256px'} isOpen={isOpen} onStateChange={(state) => handleStateChange(state)}>
+                <Link to={'/'} className='menu-logo'><img onClick={() => closeMenu()} src={Logo} className="logo" alt="article cover"></img></Link>
+                <Link to={'/'}><p onClick={() => closeMenu()} className={`nav__list  ${location.pathname === '/' ? 'nav__list-selected' : 'nav__list-unselected'}`}>Home</p></Link>
+                <Link to={'/About'}><p onClick={() => closeMenu()} className={`nav__list  ${location.pathname === '/About' ? 'nav__list-selected' : 'nav__list-unselected'}`}>About Me</p></Link>
+                <Link to={'/Portfolio'}><p onClick={() => closeMenu()} className={`nav__list  ${location.pathname === '/Portfolio' ? 'nav__list-selected' : 'nav__list-unselected'}`}>Portfolio</p></Link>
+                {/* <Link to={'/Blog'}><p onClick={() => closeMenu()} className='nav__list'>Blog</p></Link> */}
+                {/* <div className='nav__resume' onClick={()=>{window.open(Resume)}}>Resume<img src={DownloadBlack} alt='download resume' className='nav__img'/></div> */}
+                <div className='nav__resume'>Resume</div>
+                <Link to={'/Contact'}><p onClick={() => closeMenu()} className={`nav__list  ${location.pathname === '/Contact' ? 'nav__list-selected' : 'nav__list-unselected'}`}>Contact</p></Link>
+            </Menu>
+            {
+            navbar ?  
+            <div className="nav__logo">
+                <img className='burger' alt='burger menu' src={Burger}/>
+                <Link to={'/'}><img src={Logo} alt="app logo"></img></Link>
+            </div>
+            :
+            <div className="nav__logo">
+                <img className='burger' alt='burger menu' src={Burger}/>
+                <Link to={'/'}><img src={Logo} alt="app logo"></img></Link>
+            </div>
+            }
+        </div>
+        <div className='nav__tablet'>                            
+            <div>
+                <Link to={'/'} ><img  src={Logo} className='nav__tablet__logo' alt="article cover"></img></Link>
+            </div>
+            <div className='nav__tablet__listContainer'>
+                <Link to={'/'}><p className={`nav__tablet__list ${location.pathname === '/' ? 'nav__tablet__list-selected' : 'nav__tablet__list-unselected'}`}>Home</p></Link>
+                <Link to={'/About'}><p  className={`nav__tablet__list ${location.pathname === '/About' ? 'nav__tablet__list-selected' : 'nav__tablet__list-unselected'}`}>About Me</p></Link>
+                <Link to={'/Portfolio'}><p  className={`nav__tablet__list ${location.pathname === '/Portfolio' ? 'nav__tablet__list-selected' : 'nav__tablet__list-unselected'}`}>Portfolio</p></Link>
+                <div className='nav__tablet__list'>Resume</div>
+                <Link to={'/Contact'}><p  className={`nav__tablet__list ${location.pathname === '/Contact' ? 'nav__tablet__list-selected' : 'nav__tablet__list-unselected'}`}>Contact</p></Link>    
+            </div>
+        </div>
+    </nav>
+    )
+}

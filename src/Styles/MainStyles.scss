@@ -1,28 +1,26 @@
 //Global colors
-$paragraph-text-color: #323232;
-$labels: #afafaf;
-$text-field-border: #e1e1e1;
-$text-field-background: #fafafa;
-$nav-background-fill: #323232;
-$primary-text-link: #0095ff;
-$primary-hover: #0065ad;
+$paragraph-text-color: #38373A;
+$paragraph-text-color-dark: #FFFFFF;
+$paragraph-text-color-card: #3B6075;
+$paragraph-text-color-title: #3B6075;
+$nav-text-color: #6B6C71;
+$button-background-color: #93BEAE;
 
-//Text Size Mobile
-$header-mobile: 24px;
-$button-text: 16px;
-$title-text: 16px;
-$sub-header-mobile: 14px;
-$paragraph-text-size-mobile: 13px;
 
-//Text Size Tablet
-$header-tablet: 36px;
-$sub-header-tablet: 24px;
-$paragraph-text-size-tablet: 14px;
+//Text Size 
+$header-text: 24px;
+$title-text: 18px;
+$burger-text: 18px;
+$subtitle-text: 16px;
+$paragraph-text: 14px;
+$button-text: 14px;
 
 //font
 $font-light: "OpenSans-light";
 $font-normal: "OpenSans";
 $font-bold: "OpenSans-Bold";
+$titlefont-normal: "PlayfairDisplay";
+$titlefont-bold: "PlayfairDisplay-Bold";
 
 //screen size - moblie first logic
 
@@ -45,7 +43,7 @@ $font-bold: "OpenSans-Bold";
   }
 
 @mixin tablet-desktop {
-    @media (min-width: 1000px) {
+    @media (min-width: 1024px) {
         @content;
     }
 } 

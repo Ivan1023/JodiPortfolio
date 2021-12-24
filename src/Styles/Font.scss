@@ -1,15 +1,25 @@
 @font-face {
     font-family: "OpenSans";
-    src: url(../Assets/Font/OpenSans/OpenSans-Regular.ttf)
-    
-  }
-
-@font-face {
-  font-family: "OpenSans-Bold";
-  src: url(../Assets/Font/OpenSans/OpenSans-Bold.ttf);
+    src: url(../Asset/Font/OpenSans/OpenSans-Regular.ttf);
 }
 
 @font-face {
-  font-family: "OpenSans-light";
-  src: url(../Assets/Font/OpenSans/OpenSans-Light.ttf);
+    font-family: "OpenSans-Bold";
+    src: url(../Asset/Font/OpenSans/OpenSans-Bold.ttf);
 }
+
+@font-face {
+    font-family: "OpenSans-light";
+    src: url(../Asset/Font/OpenSans/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url(../Asset/Font/PlayFairDisplay/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: "PlayfairDisplay-Bold";
+    src: url(../Asset/Font/PlayFairDisplay/PlayfairDisplay-Bold.ttf);
+}
+
