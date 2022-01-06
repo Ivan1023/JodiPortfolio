@@ -13,9 +13,9 @@ import BuyAgain from '../Asset/Projects/Buy_Again.png';
 import OnlineToolRental from '../Asset/Projects/Online_Tool_Rental.png';
 import LocalPro from '../Asset/Projects/Local_Pro_App-Cirect_Jobs.png';
 
-import LinkedIn from '../Asset/Footer/linkedin.svg';
-
-
+import MobileTopBackground from '../Asset/Home/greyTopMobile.svg'
+import TabletTopBackground from '../Asset/Home/greyTopTablet.svg'
+import TabletBottomBackground from '../Asset/Home/greyBottomTablet.svg'
 
 export default function Main (){
 
@@ -32,6 +32,7 @@ export default function Main (){
                 <button className='main__hero__button'>View My Portfolio</button>
             </section>
             <section className='main__competencies'>
+                <img src={TabletTopBackground}/>
                 <div className='main__competencies__top'>
                     <h1 className='main__competencies__top__title'>Competencies</h1>
                 </div>
@@ -67,7 +68,7 @@ export default function Main (){
                         <p className='main__competencies__middle__skills__text'>Creates UI mocks and layout with look, feel and interactivity in mind to ensure the user is able to go through the experience as intended.</p>
                     </article>
                 </div>
-                <div className='main__competencies__bottom'/>
+                <img src={TabletBottomBackground}/>
             </section>
             <section className='main__works'>
                 <h1 className='main__works__title'>My Top Works</h1>
@@ -85,10 +86,6 @@ export default function Main (){
                         <p className='main__works__card__description'>The Home Depot: Local Pro App - Direct Jobs</p>
                     </article>
                 </div>
-            </section>
-            <section className='main__footer'>
-                <img src={LinkedIn} className='main__footer__img'/>
-                <p>{` © ${year} Jodi Lam`}</p>
             </section>
         </main>
     )

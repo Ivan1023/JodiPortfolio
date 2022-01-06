@@ -1,0 +1,66 @@
+@import '../../Styles/Font.scss';
+@import '../../Styles/MainStyles.scss';
+
+.about {
+    padding: 20px;
+
+    &__imgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // width: 100px;
+
+        &__img{
+            width: 338px;
+            height: 451px;
+
+            @include desktop-view {
+                width: 445px;
+                height: 594px;
+            }
+        }
+    }
+
+    &__textContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-normal;
+        font-size: $paragraph-text;
+        line-height: $line-height;
+        text-align: center;
+
+        &__text {
+            margin: 10px 0;
+            @include tablet-desktop {
+                margin: 0 0 25px 0;
+            }
+        }
+
+        @include tablet-desktop {
+            padding: 0 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            text-align: start;
+        }
+    }
+
+    @include tablet-view {
+        padding: 20px 100px;
+    }
+
+    @include tablet-desktop {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 100px 225px 100px;
+    }
+
+    @include desktop-view {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 100px 100px 100px;
+    }
+}
