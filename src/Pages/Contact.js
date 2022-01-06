@@ -43,7 +43,7 @@ export default function Contact(){
     const [emailErrorState, setEmailErrorState] = useState(false);
     const [messageErrorState, setMessageErrorState] = useState(false);
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [serverError, setServerError] = useState(true)
+    const [serverError, setServerError] = useState(false)
     
     const sendEmail = (e) => {
         e.preventDefault();
