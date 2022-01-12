@@ -13,9 +13,10 @@ import BuyAgain from '../Asset/Projects/Buy_Again.png';
 import OnlineToolRental from '../Asset/Projects/Online_Tool_Rental.png';
 import LocalPro from '../Asset/Projects/Local_Pro_App-Cirect_Jobs.png';
 
-import MobileTopBackground from '../Asset/Home/greyTopMobile.svg'
-import TabletTopBackground from '../Asset/Home/greyTopTablet.svg'
-import TabletBottomBackground from '../Asset/Home/greyBottomTablet.svg'
+import GreyWaveMobile from '../Asset/Home/greyWaveMobile.svg'
+import GreyWaveTablet from '../Asset/Home/greyWaveTablet.svg'
+import GreyWaveDesktop from '../Asset/Home/greyWaveDesktop.svg'
+
 
 export default function Main (){
 
@@ -32,8 +33,9 @@ export default function Main (){
                 <button className='main__hero__button'>View My Portfolio</button>
             </section>
             <section className='main__competencies'>
-                <img src={TabletTopBackground}/>
+                <img className='main__competencies__svgTop' src={GreyWaveTablet}/>
                 <div className='main__competencies__top'>
+                    <div className='main__competencies__top__filler'>.</div>
                     <h1 className='main__competencies__top__title'>Competencies</h1>
                 </div>
                 <div className='main__competencies__middle'>
@@ -67,8 +69,9 @@ export default function Main (){
                         <p className='main__competencies__middle__skills__title'>Agile Project Facilitator</p>
                         <p className='main__competencies__middle__skills__text'>Creates UI mocks and layout with look, feel and interactivity in mind to ensure the user is able to go through the experience as intended.</p>
                     </article>
+                    <div className='main__competencies__middle__filler'>.</div>
                 </div>
-                <img src={TabletBottomBackground}/>
+                <img className='main__competencies__svgBottom' src={GreyWaveTablet}/>
             </section>
             <section className='main__works'>
                 <h1 className='main__works__title'>My Top Works</h1>
