@@ -1,0 +1,554 @@
+@import '../../Styles/Font.scss';
+@import '../../Styles/MainStyles.scss';
+
+@mixin sub-title-style {
+    font-family: $font-bold;
+    font-size: $title-text;
+    color: $paragraph-text-color-title;
+    margin: 30px 0 0 0;
+}
+
+@mixin paragraph-text-style {
+    font-family: $font-normal;
+    font-size: $paragraph-text;
+    line-height: $line-height;
+}
+
+@mixin paragraph-text-bold-style {
+    font-family: $font-bold;
+    font-size: $paragraph-text;
+    line-height: $line-height;
+}
+
+.mindful {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 18px;
+
+    &__title {
+        color: $paragraph-text-color-title;
+        font-family: $titlefont-bold;
+        font-size: $header-text;
+    }
+
+    &__description {
+        @include paragraph-text-style(); 
+        line-height: $line-height;
+        text-align: center;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__list {
+        text-align: center;
+        padding: 20px 0 24px 0;
+
+        &__item {
+            @include paragraph-text-style()    
+        }
+    }
+
+    &__design-process {
+        text-align: center;
+        border-top: 1px solid $border-color;
+        width: 100%;
+        padding: 10px 0;
+        position: relative;
+        height: 800px;
+        z-index: 1;
+
+        &__title {
+            @include sub-title-style()
+        }
+
+        &__img {
+            position: absolute;
+            top: 85px;
+            right: 0;
+            left: 50px;
+            margin: auto;
+        }
+    }
+
+    &__problem-space {
+        text-align: center;
+        border-top: 1px solid $border-color;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 25px 0;
+        
+        }
+
+        &__question {
+            @include paragraph-text-bold-style();
+            margin-bottom: 30px ;
+        }
+    }
+
+    &__project-overview {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid $border-color;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__list {
+
+            &__text-bold {
+                @include paragraph-text-bold-style();
+                margin: 5px 0 0 0;
+            }
+
+            &__text {
+                @include paragraph-text-style();
+                margin: 5px 0 25px 0; 
+            }
+
+            &__text-init {
+                @include paragraph-text-style();
+                margin: 5px 0 0 0; 
+            }
+
+        }
+    }
+
+    &__project-goal {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid $border-color;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 25px 0; 
+        }
+
+    }
+
+    &__research-insight {
+        text-align: center;
+        border-top: 1px solid $border-color;
+
+        &__insight-container {
+            display: flex;
+            flex-direction: column;
+
+            @include tablet-view {
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0;
+            }
+
+            @include desktop-view{
+                margin: 0 200px;
+            }
+        }
+
+        &__finding-container {
+            display: flex;
+            flex-direction: column;
+
+            @include tablet-view {
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin: 0 ;
+            }
+
+            @include desktop-view{
+                margin: 0 200px;
+            }
+        }
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 25px 0; 
+        }
+
+        &__box {
+
+            &__img {
+                margin-top: 20px
+            }
+
+            &__title {
+                @include paragraph-text-bold-style();
+                margin: 15px 0 0 0;
+            }
+    
+            &__text {
+                @include paragraph-text-style();
+                margin: 5px 0 25px 0; 
+            }
+
+            @include tablet-view {
+                width: 215px;
+            }
+
+            @include tablet-desktop{
+                width: 325px;
+            }
+        }
+    }
+
+    &__persona {
+        text-align: center;
+        border-top: 1px solid $border-color;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 25px 0; 
+        }
+
+        &__img {
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+
+    &__user-story {
+        text-align: center;
+        border-top: 1px solid $border-color;
+        margin: 30px 0 0 0 ;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__title-bold {
+            @include paragraph-text-bold-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 30px 0 25px 0; 
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+    }
+
+    &__mock-up {
+        text-align: center;
+        border-top: 1px solid $border-color;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 30px 0 25px 0; 
+        }
+
+        &__img {
+            width: 100%;
+        }
+    }
+
+    &__user-testing {
+        text-align: center;
+        border-top: 1px solid $border-color;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 25px 0; 
+        }
+    }
+
+    &__iterations {
+        text-align: center;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0; 
+            line-height: normal;
+        }
+
+        &__text-bold {
+            @include paragraph-text-bold-style();
+            margin: 30px 0 0 0;
+
+        }
+
+        &__img {
+
+            @include tablet-view {
+                width: 280px;
+            }
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+
+            &__sub {
+                display: flex;
+                flex-direction: column;
+                
+
+                @include tablet-view {
+                    align-items: flex-start;
+                    text-align: start;
+                    width: 45%;
+                    margin-left: 30px;            
+                }
+            }
+
+            @include tablet-view {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;            
+            }
+        }
+
+    }
+
+    &__challenges {
+        text-align: center;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 20px 0; 
+        }
+
+        &__text-bold {
+            @include paragraph-text-bold-style();
+            margin: 15px 0 0 0;
+        }
+
+        &__img {
+            width: 240px;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @include tablet-view {
+                    width: 48%;
+                    height: 250px;
+                    padding: 0 5px;
+                }
+
+                @include desktop-view {
+                    width: 24%;
+                    height: 250px;
+                    padding: 0 5px;
+                }
+            }
+
+            @include tablet-view {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        }
+
+        
+    }
+
+    &__visual-identity { 
+        text-align: center;
+        border-top: 1px solid $border-color;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+        }
+
+        &__text-bold {
+            @include paragraph-text-bold-style();
+        }
+
+        &__img {
+            padding: 0 5px 24px 5px;
+        }
+
+    }
+
+    &__colour-palette {
+        text-align: center;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+        }
+    }
+
+    &__wordmark {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+        }
+
+        &__img {
+            padding-bottom: 24px;
+            width: 100%
+        }
+    }
+
+    &__typography {
+        text-align: center;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 0 0 30px 0;
+        }
+
+        &__text-bold {
+            @include paragraph-text-bold-style();
+            margin: 10px 0 0 0;
+        }
+    }
+
+    &__high-fidelity {
+        text-align: center;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 0 0 30px 0;
+        }
+
+        &__text-bold {
+            @include paragraph-text-bold-style();
+            margin: 10px 0 0 0;
+        }
+
+        &__img {
+            width: 280px;
+            max-width: 350px;
+            min-width: 280px;
+            margin: 20px 0;
+        }
+
+        &__main-img {
+            width: 100%
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+
+            &__sub {
+                display: flex;
+                flex-direction: column;
+                
+
+                @include tablet-view {
+                    align-items: flex-start;
+                    text-align: start;
+                    width: 45%;
+                    margin-left: 30px;            
+                }
+            }
+
+            @include tablet-view {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;            
+            }
+        }
+    }
+
+    &__conclusion {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border-top: 1px solid $border-color;
+
+        &__title {
+            @include sub-title-style();
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            // margin: 0 0 30px 0;
+            color: $paragraph-text-color;
+        }
+
+        &__click {
+            cursor: pointer;
+        }
+    }
+
+    @include tablet-view {
+        margin: 20px 80px;
+    }
+
+    @include tablet-desktop {
+        margin: 20px 115px;
+    }
+
+    @include desktop-view {
+        margin: 20px 115px;
+    }
+}
+

@@ -1,0 +1,69 @@
+@import '../../Styles/Font.scss';
+@import '../../Styles/MainStyles.scss';
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__works {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;        
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+
+            @include tablet-view {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+        }
+
+        &__title {
+            font-family: $titlefont-bold;
+            font-size: $header-text;
+            color: $paragraph-text-color-title;
+        }
+
+        &__text {
+            font-family: $font-normal;
+            font-size: $paragraph-text;
+            color: $paragraph-text-color;
+            line-height: $line-height ;
+            text-align: center;
+            padding: 0 18px;
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 12px 18px; 
+            height: 232px;
+            background: #FFFFFF;
+            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+
+            &__img {
+                border-radius: 10px;
+            }
+
+            &__description {
+                color: $paragraph-text-color-title;
+                font-size: $paragraph-text;
+            }
+        }
+
+        @include tablet-view {
+            display: flex;
+            flex-direction: column;
+            
+        }
+    }
+}
