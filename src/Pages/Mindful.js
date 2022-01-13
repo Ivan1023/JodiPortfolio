@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // import { Link } from "react-router-dom";
 import '../Pages/PageCSS/Mindful.scss';
 
@@ -47,6 +47,11 @@ import MindfulAnimation3 from '../Asset/Mindful/GIFS/Mindful Animation 3.gif';
 import MindfulAnimation4 from '../Asset/Mindful/GIFS/Mindful Animation 4.gif';
 
 export default function Mindful (){    
+
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+
 
     return (
         <main className='mindful'>
