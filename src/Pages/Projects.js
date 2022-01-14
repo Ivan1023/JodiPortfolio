@@ -19,10 +19,12 @@ export default function Projects (){
                         <img src={OnlineToolRental} className='main__works__card__img'/>
                         <p className='main__works__card__description'>The Home Depot: Online Tool Rental</p>
                     </article>
-                    <article className='main__works__card'>
-                        <img src={BuyAgain} className='main__works__card__img'/>
-                        <p className='main__works__card__description'>The Home Depot: Buy Again</p>
-                    </article>
+                    <Link to={'/BuyAgain'}>
+                        <article className='main__works__card'>
+                            <img src={BuyAgain} className='main__works__card__img'/>
+                            <p className='main__works__card__description'>The Home Depot: Buy Again</p>
+                        </article>
+                    </Link>
                     <article className='main__works__card'>
                         <img src={LocalPro} className='main__works__card__img'/>
                         <p className='main__works__card__description'>The Home Depot: Local Pro App - Direct Jobs</p>

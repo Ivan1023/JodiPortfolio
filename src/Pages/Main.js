@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import '../Pages/PageCSS/Main.scss';
 
 import JourneyMapping from '../Asset/Home/Journey_Mapping.svg';
@@ -18,6 +18,7 @@ import GreyWaveTablet from '../Asset/Home/greyWaveTablet.svg'
 import GreyWaveDesktop from '../Asset/Home/greyWaveDesktop.svg'
 
 
+
 export default function Main (){
 
     const [year, setYear] = useState(new Date().getFullYear())
@@ -30,7 +31,7 @@ export default function Main (){
                     <p className='main__hero__title-container__text'>Hello, I’m Jodi.</p>
                     <p className='main__hero__title-container__text'>I’m a UX Designer and strategist.</p>
                 </div>
-                <button className='main__hero__button'>View My Portfolio</button>
+                <Link to={'/Portfolio'}><button className='main__hero__button'>View My Portfolio</button></Link>
             </section>
             <section className='main__competencies'>
                 <img className='main__competencies__svgTop' src={GreyWaveTablet}/>
@@ -80,10 +81,12 @@ export default function Main (){
                         <img src={OnlineToolRental} className='main__works__card__img'/>
                         <p className='main__works__card__description'>The Home Depot: Online Tool Rental</p>
                     </article>
-                    <article className='main__works__card'>
-                        <img src={BuyAgain} className='main__works__card__img'/>
-                        <p className='main__works__card__description'>The Home Depot: Buy Again</p>
-                    </article>
+                    <Link to={'/BuyAgain'}>
+                        <article className='main__works__card'>
+                            <img src={BuyAgain} className='main__works__card__img'/>
+                            <p className='main__works__card__description'>The Home Depot: Buy Again</p>
+                        </article>
+                    </Link>
                     <article className='main__works__card'>
                         <img src={LocalPro} className='main__works__card__img'/>
                         <p className='main__works__card__description'>The Home Depot: Local Pro App - Direct Jobs</p>

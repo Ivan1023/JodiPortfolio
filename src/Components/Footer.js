@@ -8,10 +8,13 @@ export default function Footer (){
 
     const [year, setYear] = useState(new Date().getFullYear())
     
+    const handleClick = () => {
+        window.open("https://www.linkedin.com/in/jodi-lam/");
+    };
 
     return (
         <main className='footer'>
-            <img src={LinkedIn} className='footer__img'/>
+            <img src={LinkedIn} onClick={()=>handleClick()} className='footer__img'/>
             <p>{` © ${year} Jodi Lam`}</p>
         </main>
     )
