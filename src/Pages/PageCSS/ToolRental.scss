@@ -1,0 +1,310 @@
+@import '../../Styles/Font.scss';
+@import '../../Styles/MainStyles.scss';
+
+@mixin sub-title-style {
+    font-family: $font-bold;
+    font-size: $title-text;
+    color: $paragraph-text-color-title;
+    margin: 30px 0 0 0;
+}
+
+@mixin paragraph-text-style {
+    font-family: $font-normal;
+    font-size: $paragraph-text;
+    line-height: $line-height;
+}
+
+@mixin paragraph-text-bold-style {
+    font-family: $font-bold;
+    font-size: $paragraph-text;
+    line-height: $line-height;
+}
+
+.tool-rental {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 18px;
+
+    &__title {
+        color: $paragraph-text-color-title;
+        font-family: $titlefont-bold;
+        font-size: $header-text;
+    }
+
+    &__description {
+        @include paragraph-text-style(); 
+        line-height: $line-height;
+        text-align: center;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__list {
+        text-align: center;
+        padding: 20px 0 24px 0;
+
+        &__item {
+            @include paragraph-text-style()    
+        }
+    }
+
+    &__design-process {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid $border-color;
+        margin-bottom: 30px;
+
+        &__title {
+            @include sub-title-style();
+            margin: 30px 0;
+        }
+    }
+
+    &__questions {
+        text-align: center;
+        border-top: 1px solid $border-color;
+        margin: 0 0 39px 0;
+
+        &__title {
+            @include sub-title-style();
+            margin: 50px 0 0 0;
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 0 0; 
+        }
+    }
+
+    &__research {
+        text-align: center;
+        border-top: 1px solid $border-color;
+
+        &__title {
+            @include sub-title-style();
+            margin: 30px 0 0 0;
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            // margin: 5px 0 25px 0; 
+            margin: 0;
+        }
+
+        &__img {
+            width: 100%;
+            padding: 24px 0;
+
+            @include desktop-view {
+                max-width: 1220px;
+            }
+        }
+    }
+
+    &__analysis {
+        text-align: center;
+        border-top: 1px solid $border-color;
+        margin-top: 30px;
+
+        &__title {
+            @include sub-title-style();
+            margin: 30px 0 0 0;
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            // margin: 5px 0 25px 0; 
+            margin: 0;
+        }
+
+        &__text-bold {
+            @include paragraph-text-bold-style();
+            margin: 0;
+        }
+
+        &__img {
+            width: 100%;
+            padding: 24px 0;
+
+            @include desktop-view {
+                max-width: 1220px;
+            }
+        }
+    }
+
+    &__aoda {
+        text-align: center;
+        border-top: 1px solid $border-color;
+        margin-top: 30px;
+
+        &__title {
+            @include sub-title-style();
+            margin: 30px 0 0 0;
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 25px 0; 
+            // margin: 0;
+        }
+
+        &__img {
+            width: 100%;
+            padding: 24px 0;
+
+            @include desktop-view {
+                max-width: 1220px;
+            }
+        }
+    }
+
+    &__lo-fi {
+        text-align: center;
+        border-top: 1px solid $border-color;
+        margin-top: 30px;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop-view {
+                display: flex;
+                flex-direction: row;
+            }
+
+        }
+
+        &__title {
+            @include sub-title-style();
+            margin: 30px 0 0 0;
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 25px 0; 
+        }
+
+        &__img {
+            width: 100%;
+            padding: 24px 0;
+
+            @include desktop-view {
+                max-width: 1220px;
+            }
+        }
+    }
+
+    &__final {
+        text-align: center;
+        border-top: 1px solid $border-color;
+        margin-top: 30px;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+
+            @include tablet-desktop {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            @include desktop-view {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+        }
+
+        &__title {
+            @include sub-title-style();
+            margin: 30px 0 0 0;
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 25px 0; 
+        }
+
+        &__img {
+            width: 100%;
+            padding: 24px 5px;
+
+            @include tablet-desktop {
+                max-width: 450px;
+            }
+
+            // @include desktop-view {
+            //     max-width: 1220px;
+            // }
+        }
+
+        &__gif {
+            width: 100%;
+            padding: 24px 0;
+
+            @include desktop-view {
+                max-width: 1220px;
+            }
+        }
+    }
+
+    &__result {
+        text-align: center;
+        border-top: 1px solid $border-color;
+        margin-top: 30px;
+
+        &__title {
+            @include sub-title-style();
+            margin: 30px 0 0 0;
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 25px 0; 
+        }
+
+        &__img {
+            width: 100%;
+            padding: 24px 0;
+
+            @include desktop-view {
+                max-width: 1220px;
+            }
+        }
+    }
+
+    &__next-step {
+        text-align: center;
+        border-top: 1px solid $border-color;
+        margin-top: 30px;
+
+        &__title {
+            @include sub-title-style();
+            margin: 30px 0 0 0;
+        }
+
+        &__text {
+            @include paragraph-text-style();
+            margin: 5px 0 25px 0; 
+        }
+    }
+
+    @include tablet-view {
+        margin: 20px 80px;
+    }
+
+    @include tablet-desktop {
+        margin: 20px 115px;
+    }
+
+    @include desktop-view {
+        margin: 20px 115px;
+    }
+}

@@ -6,6 +6,8 @@ import Contact from './Pages/Contact'
 import Portfolio from './Pages/Projects';
 import Mindful from './Pages/Mindful';
 import BuyAgain from './Pages/BuyAgain';
+import ToolRental from './Pages/ToolRental';
+
 
 import Nav from './Components/Nav';
 import Footer from './Components/Footer';
@@ -23,6 +25,7 @@ export default function App(){
           <Route path="/Portfolio" element={<Portfolio/>}/>
           <Route path="/Mindful" element={<Mindful/>}/>
           <Route path="/BuyAgain" element={<BuyAgain/>}/>
+          <Route path="/ToolRental" element={<ToolRental/>}/>
         </Routes>
         <Footer/>
       </div>

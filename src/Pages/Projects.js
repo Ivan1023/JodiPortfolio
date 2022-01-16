@@ -15,10 +15,12 @@ export default function Projects (){
                 <h1 className='main__works__title'>Portfolio</h1>
                 <p className='main__works__text'>I have worked as the UX Designer and UX Strategist for several projects. I have experience in handling UX projects in both web and mobile app platforms.</p>
                 <div className='main__works__container'>
-                    <article className='main__works__card'>
-                        <img src={OnlineToolRental} className='main__works__card__img'/>
-                        <p className='main__works__card__description'>The Home Depot: Online Tool Rental</p>
-                    </article>
+                    <Link to={'/ToolRental'}>
+                        <article className='main__works__card'>
+                            <img src={OnlineToolRental} className='main__works__card__img'/>
+                            <p className='main__works__card__description'>The Home Depot: Online Tool Rental</p>
+                        </article>
+                    </Link>
                     <Link to={'/BuyAgain'}>
                         <article className='main__works__card'>
                             <img src={BuyAgain} className='main__works__card__img'/>

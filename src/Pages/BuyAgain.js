@@ -70,7 +70,7 @@ export default function BuyAgain (){
                 <h1 className='buyAgain__questions__title'>Where</h1>
                 <p className='buyAgain__questions__text'>On the Home Depot Canada website.</p>
                 <h1 className='buyAgain__questions__title'>How</h1>
-                <p className='buyAgain__questions__text'>On the Home Depot Canada website.</p>
+                <p className='buyAgain__questions__text'>Surface previously purchased items and allow the ability to buy these items again quickly.</p>
                 <h1 className='buyAgain__questions__title'>Goals</h1>
                 <p className='buyAgain__questions__text'>The goal is to drive sales velocity from signed in contractors by making it easy for them to find and buy frequently purchased items. We want to help these busy contractors save time by also allowing them to sort and filter through the list in ways are useful to them.</p>
                 <h1 className='buyAgain__questions__title'>Scope Constraints</h1>
