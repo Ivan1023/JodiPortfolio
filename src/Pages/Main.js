@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Pages/PageCSS/Main.scss';
 
@@ -12,17 +12,12 @@ import Agile from '../Asset/Home/Agile_Project_Facilitator.svg';
 import BuyAgain from '../Asset/Projects/Buy_Again.png';
 import OnlineToolRental from '../Asset/Projects/Online_Tool_Rental.png';
 import LocalPro from '../Asset/Projects/Local_Pro_App-Cirect_Jobs.png';
-
-import GreyWaveMobile from '../Asset/Home/greyWaveMobile.svg'
 import GreyWaveTablet from '../Asset/Home/greyWaveTablet.svg'
-import GreyWaveDesktop from '../Asset/Home/greyWaveDesktop.svg'
+
 
 
 
 export default function Main (){
-
-    const [year, setYear] = useState(new Date().getFullYear())
-    
 
     return (
         <main className='main'>
@@ -34,7 +29,7 @@ export default function Main (){
                 <Link to={'/Portfolio'}><button className='main__hero__button'>View My Portfolio</button></Link>
             </section>
             <section className='main__competencies'>
-                <img className='main__competencies__svgTop' src={GreyWaveTablet}/>
+                <img className='main__competencies__svgTop' src={GreyWaveTablet} alt='grey wave desing'/>
                 <div className='main__competencies__top'>
                     <div className='main__competencies__top__filler'>.</div>
                     <h1 className='main__competencies__top__title'>Competencies</h1>
@@ -66,13 +61,13 @@ export default function Main (){
                         <p className='main__competencies__middle__skills__text'>Creates UI mocks and layout with look, feel and interactivity in mind to ensure the user is able to go through the experience as intended.</p>
                     </article>
                     <article className='main__competencies__middle__skills'>
-                        <img src={Agile} className='main__competencies__middle__skills__img'/>
+                        <img src={Agile} className='main__competencies__middle__skills__img' />
                         <p className='main__competencies__middle__skills__title'>Agile Project Facilitator</p>
                         <p className='main__competencies__middle__skills__text'>Creates UI mocks and layout with look, feel and interactivity in mind to ensure the user is able to go through the experience as intended.</p>
                     </article>
                     <div className='main__competencies__middle__filler'>.</div>
                 </div>
-                <img className='main__competencies__svgBottom' src={GreyWaveTablet}/>
+                <img className='main__competencies__svgBottom' src={GreyWaveTablet} alt='grey wave desing'/>
             </section>
             <section className='main__works'>
                 <h1 className='main__works__title'>My Top Works</h1>
@@ -89,10 +84,12 @@ export default function Main (){
                             <p className='main__works__card__description'>The Home Depot: Buy Again</p>
                         </article>
                     </Link>
-                    <article className='main__works__card'>
-                        <img src={LocalPro} className='main__works__card__img'/>
-                        <p className='main__works__card__description'>The Home Depot: Local Pro App - Direct Jobs</p>
-                    </article>
+                    <Link to={'/LocalPro'}>
+                        <article className='main__works__card'>
+                            <img src={LocalPro} className='main__works__card__img'/>
+                            <p className='main__works__card__description'>The Home Depot: Local Pro App - Direct Jobs</p>
+                        </article>
+                    </Link>
                 </div>
             </section>
         </main>

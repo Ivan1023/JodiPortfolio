@@ -27,10 +27,12 @@ export default function Projects (){
                             <p className='main__works__card__description'>The Home Depot: Buy Again</p>
                         </article>
                     </Link>
-                    <article className='main__works__card'>
-                        <img src={LocalPro} className='main__works__card__img'/>
-                        <p className='main__works__card__description'>The Home Depot: Local Pro App - Direct Jobs</p>
-                    </article>
+                    <Link to={'/LocalPro'}>
+                        <article className='main__works__card'>
+                            <img src={LocalPro} className='main__works__card__img'/>
+                            <p className='main__works__card__description'>The Home Depot: Local Pro App - Direct Jobs</p>
+                        </article>
+                    </Link>
                     <Link to={'/Mindful'}>
                         <article className='main__works__card'>
                             <img src={Mindful} className='main__works__card__img'/>
