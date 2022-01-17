@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import '../Pages/PageCSS/ToolRental.scss';
 
 //images
@@ -52,9 +52,9 @@ import FinalUI6 from '../Asset/ToolRental/GIFS/Vehicle Rental mid GIF.gif';
 
 export default function ToolRental() {
 
-    // useEffect(()=>{
-    //     window.scrollTo(0, 0);
-    // },[])
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
 
     return (
         <main className='tool-rental'>

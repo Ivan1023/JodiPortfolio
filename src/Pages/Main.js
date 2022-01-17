@@ -77,10 +77,12 @@ export default function Main (){
             <section className='main__works'>
                 <h1 className='main__works__title'>My Top Works</h1>
                 <div className='main__works__container'>
-                    <article className='main__works__card'>
-                        <img src={OnlineToolRental} className='main__works__card__img'/>
-                        <p className='main__works__card__description'>The Home Depot: Online Tool Rental</p>
-                    </article>
+                    <Link to={'/ToolRental'}>
+                        <article className='main__works__card'>
+                            <img src={OnlineToolRental} className='main__works__card__img'/>
+                            <p className='main__works__card__description'>The Home Depot: Online Tool Rental</p>
+                        </article>
+                    </Link>
                     <Link to={'/BuyAgain'}>
                         <article className='main__works__card'>
                             <img src={BuyAgain} className='main__works__card__img'/>
