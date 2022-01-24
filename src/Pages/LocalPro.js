@@ -9,6 +9,8 @@ import DesignSprint2 from '../Asset/LocalPro/LPT2 sprint 2 1.svg'
 import DesignSprint3 from '../Asset/LocalPro/LPT2 sprint 3 1.svg'
 import DesignSprint4 from '../Asset/LocalPro/LPT2 sprint 4 1.svg'
 import DesignSprint5 from '../Asset/LocalPro/LPT2 sprint 5 1.svg'
+import DesignSprint1AND2 from '../Asset/LocalPro/Group 61.svg'
+import DesignSprint4AND5 from '../Asset/LocalPro/Group 62.svg'
 import Jiffy1 from '../Asset/LocalPro/Comp Jiffy 1 1.svg'
 import Jiffy2 from '../Asset/LocalPro/Comp Jiffy 2 1.svg'
 import Jiffy3 from '../Asset/LocalPro/Comp Jiffy 3 1.svg'
@@ -50,7 +52,8 @@ import Final2 from '../Asset/LocalPro/GIFS/LPT2 Final2.gif'
 
 export default function LocalPro() {
 
-    const [state, setState] = useState(localStorage.getItem('LocalPro'))
+    // const [state, setState] = useState(localStorage.getItem('LocalPro'))
+    const [state, setState] = useState(true)
     const [passwordCheck, setPasswordCheck] = useState('') 
     const [error, setError] = useState(false)
 
@@ -64,9 +67,9 @@ export default function LocalPro() {
         }
     }
 
-    useEffect(()=>{
-        window.scrollTo(0, 0);
-    },[])
+    // useEffect(()=>{
+    //     window.scrollTo(0, 0);
+    // },[])
         
 
     return(
@@ -85,14 +88,14 @@ export default function LocalPro() {
                         <p className='local-pro__intro__text'>This page will showcase the case study of phase 2 “Invitation” of the Local Pro Transact.</p>
                         <img src={MainImage} alt='final product image' className='local-pro__intro__img'/>
                         <div className='local-pro__intro__list'>
-                            <p className='local-pro__intro__text'>Role: UX Strategist</p>
-                            <p className='local-pro__intro__text'>Timeline: 4 weeks</p>
-                            <p className='local-pro__intro__text'>Tools: Sketch, miro, InVision, Abstract</p>
-                            <p className='local-pro__intro__text'>Platform: e-commerce website (desktop + mobile)</p>
+                            <p className='local-pro__intro__list__text'>Role: UX Strategist</p>
+                            <p className='local-pro__intro__list__text'>Timeline: 4 weeks</p>
+                            <p className='local-pro__intro__list__text'>Tools: Sketch, miro, InVision, Abstract</p>
+                            <p className='local-pro__intro__list__text'>Platform: e-commerce website (desktop + mobile)</p>
                         </div>
                     </section>
                     <section className='local-pro__design-process'>
-                        <h1 className='local-pro__design-process__title'></h1>
+                        <h1 className='local-pro__design-process__title'>Overview of Design Process</h1>
                         <img src={DesignProcess} alt='design process image' className='local-pro__design-process__img'/>
                     </section>
                     <section className='local-pro__questions'>
@@ -115,11 +118,17 @@ export default function LocalPro() {
                         <h1 className='local-pro__sprint__title'>Design Sprint</h1>
                         <p className='local-pro__sprint__text'>A design sprint was held with the stakeholders shortly after the product kickoff. During the sprint, we went through problem &amp; opportunity, overall ask, what is and is not in scope, competitor analysis, how might we questions, participant sketches, voting round and ongoing discussions.</p>
                         <p className='local-pro__sprint__text'>I facilitated this design sprint on a miro board, and divided the sessions in 2 days with the stakeholders until the sketches and voting round.</p>
-                        <img src={DesignSprint1} alt='design sprint image 1' className='local-pro__sprint__img'/>
-                        <img src={DesignSprint2} alt='design sprint image 2' className='local-pro__sprint__img'/>
+                        <img src={DesignSprint1} alt='design sprint image 1' className='local-pro__sprint__img-mobile1'/>
+                        <img src={DesignSprint2} alt='design sprint image 2' className='local-pro__sprint__img-mobile1'/>
+                        <div className='local-pro__sprint__imgContainer-group1'>
+                            <img src={DesignSprint1AND2} className='local-pro__sprint__imgContainer-group1__img'/>
+                        </div>
                         <img src={DesignSprint3} alt='design sprint image 3' className='local-pro__sprint__img'/>
-                        <img src={DesignSprint4} alt='design sprint image 4' className='local-pro__sprint__img'/>
-                        <img src={DesignSprint5} alt='design sprint image 5' className='local-pro__sprint__img'/>
+                        <img src={DesignSprint4} alt='design sprint image 4' className='local-pro__sprint__img-mobile2'/>
+                        <img src={DesignSprint5} alt='design sprint image 5' className='local-pro__sprint__img-mobile2'/>
+                        <div className='local-pro__sprint__imgContainer-group2'>
+                            <img src={DesignSprint4AND5} className='local-pro__sprint__imgContainer-group2__img'/>
+                        </div>
                         <h1 className='local-pro__sprint__title'>Competitive Analysis</h1>
                         <p className='local-pro__sprint__text'>With the limitations of not having an actual business number or business insurance number, I tried to research on the invitation/enrollment stage of competitor apps as best I could. I reviewed both the customer facing and contractor facing experience to get the most thorough details, up until a business number or payment was required.</p>
                         <img src={Jiffy1} alt='Jiffy image 1' className='local-pro__sprint__img'/>
@@ -139,12 +148,14 @@ export default function LocalPro() {
                     <section className='local-pro__sketches'>
                         <h1 className='local-pro__sketches__title'>Day 2 of Sprint: Sketches</h1>
                         <p className='local-pro__sketches__text'>After walking through the project asks, opportunities, competitive analysis and How Might We questions, we gave the sketches out as homework. Those who participate will post their sketches of this invitation experience on the miro board, and on Day 2 the rest of the team will perfom a silent gallery exercise before each participant will walkthrough their sketches. </p>
-                        <p className='local-pro__sketches__text'>The sketches should consist the experience to:</p>
-                        <p className='local-pro__sketches__text'>1. Introduce the benefits of Local Pro Transact</p>
-                        <p className='local-pro__sketches__text'>2. Capture Banking Information</p>
-                        <p className='local-pro__sketches__text'>3. Capture the Local Pro’s Services</p>
-                        <p className='local-pro__sketches__text'>4. Capture a profile picture</p>
-                        <p className='local-pro__sketches__text'>5. Capture a survey that asks for what the user’s honest opinion of their occupation’s market rate (which also has a capped range)</p>
+                        <div className='local-pro__sketches__container'>
+                            <p className='local-pro__sketches__text'>The sketches should consist the experience to:</p>
+                            <p className='local-pro__sketches__text'>1. Introduce the benefits of Local Pro Transact</p>
+                            <p className='local-pro__sketches__text'>2. Capture Banking Information</p>
+                            <p className='local-pro__sketches__text'>3. Capture the Local Pro’s Services</p>
+                            <p className='local-pro__sketches__text'>4. Capture a profile picture</p>
+                            <p className='local-pro__sketches__text'>5. Capture a survey that asks for what the user’s honest opinion of their occupation’s market rate (which also has a capped range)</p>
+                        </div>
                         <img src={DesignSprint6} alt='design sprint image 6' className='local-pro__sketches__img'/>
                         <img src={DesignSprint7} alt='design sprint image 7' className='local-pro__sketches__img'/>
                         <img src={DesignSprint8} alt='design sprint image 8' className='local-pro__sketches__img'/>
@@ -205,8 +216,10 @@ export default function LocalPro() {
                         <h1 className='local-pro__final__title'>Final Hand Off</h1>
                         <p className='local-pro__final__text'>Taking all the insights from the moderated usability tests, the UX team went back to tweak the designs before handing off to the developers.</p>
                         <p className='local-pro__final__text'> A visual of what the final designs that was handed off to the developers:</p>
-                        <img src={Final1} alt='final product image 1' className='local-pro__final__img'/>
-                        <img src={Final2} alt='final product image 2' className='local-pro__final__img'/>
+                        <div className='local-pro__final__container'>
+                            <img src={Final1} alt='final product image 1' className='local-pro__final__img'/>
+                            <img src={Final2} alt='final product image 2' className='local-pro__final__img'/>
+                        </div>
                     </section>
                     <section className='local-pro__reflection'>
                         <h1 className='local-pro__reflection__title'>Reflections and Next Steps</h1>

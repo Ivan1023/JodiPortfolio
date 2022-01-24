@@ -108,6 +108,17 @@
         &__img {
             width: 100%;
         }
+        
+        &__list {
+            margin: 50px 0;
+            
+            &__text {
+                @include paragraph-text-style();
+                margin: 5px 0; 
+            } 
+        }
+
+        
     }
 
     &__design-process {
@@ -161,12 +172,65 @@
                 max-width: 1220px;
             }
         }
+
+        &__img-mobile1 {
+            width: 100%;
+            padding: 24px 0;
+
+            @include tablet-view {
+                display: none;
+            }
+        }
+
+        &__img-mobile2 {
+            width: 100%;
+            padding: 24px 0;
+
+            @include tablet-desktop {
+                display: none;
+            }
+        }
+
+        &__imgContainer-group1 {
+            display: none;
+            
+            @include tablet-view {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 10px 0;
+                 
+                &__img{
+                    width: 100%;
+                    max-width: 1220px;
+                }
+            }
+        }
+
+        &__imgContainer-group2 {
+            display: none;
+
+            @include tablet-desktop {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__img{
+                    width: 100%;
+                    max-width: 1220px;
+                }
+            }
+        }
     }
 
     &__sketches {
         text-align: center;
         border-top: 1px solid $border-color;
         margin: 0 0 40px 0;
+
+        &__container {
+            margin: 30px 0
+        }
 
         &__title {
             @include sub-title-style();
@@ -175,7 +239,8 @@
 
         &__text {
             @include paragraph-text-style();
-            margin: 25px 0 0 0; 
+            // margin: 25px 0 0 0; 
+            margin: 0;
         }
 
         &__img {
@@ -248,6 +313,12 @@
         text-align: center;
         border-top: 1px solid $border-color;
         margin: 0 0 40px 0;
+        
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         &__title {
             @include sub-title-style();

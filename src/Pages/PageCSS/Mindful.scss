@@ -238,6 +238,7 @@
 
         &__title-bold {
             @include paragraph-text-bold-style();
+            margin: 20px 0 0 0;
         }
 
         &__text {
@@ -396,6 +397,18 @@
         text-align: center;
         border-top: 1px solid $border-color;
 
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include tablet-desktop {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
         &__title {
             @include sub-title-style();
         }
@@ -408,8 +421,18 @@
             @include paragraph-text-bold-style();
         }
 
+        &__img-group {
+            padding: 0 5px 24px 5px;
+            width: 100%;
+
+            @include tablet-desktop {
+                width: 50%;
+            }
+        }
+
         &__img {
             padding: 0 5px 24px 5px;
+            width: 100%;
         }
 
     }
@@ -423,6 +446,10 @@
 
         &__text {
             @include paragraph-text-style();
+        }
+
+        &__img {
+            width: 100%
         }
     }
 

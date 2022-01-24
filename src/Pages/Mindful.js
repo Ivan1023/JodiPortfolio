@@ -25,10 +25,10 @@ import Challenge1  from '../Asset/Mindful/a1.png';
 import Challenge2  from '../Asset/Mindful/a2.png';
 import Challenge3  from '../Asset/Mindful/a3.png';
 import Challenge4  from '../Asset/Mindful/a4.png';
-import Visual1  from '../Asset/Mindful/visual 1 1.png';
-import Visual2  from '../Asset/Mindful/visual 2 1.png';
-import WordBubble  from '../Asset/Mindful/words 1.png';
-import ColorPalette  from '../Asset/Mindful/colour 1.png';
+import Visual1  from '../Asset/Mindful/visual 1 2.svg';
+import Visual2  from '../Asset/Mindful/visual 2 2.svg';
+import WordBubble  from '../Asset/Mindful/words 2.svg';
+import ColorPalette  from '../Asset/Mindful/colour 2.svg';
 // import WordMark  from '../Asset/Mindful/wordmark 1.png';
 // import ChosenLogo  from '../Asset/Mindful/chosen 1.png';
 // import AppLogo  from '../Asset/Mindful/app 1.png';
@@ -48,9 +48,9 @@ import MindfulAnimation4 from '../Asset/Mindful/GIFS/Mindful Animation 4.gif';
 
 export default function Mindful (){    
 
-    useEffect(()=>{
-        window.scrollTo(0, 0);
-    },[])
+    // useEffect(()=>{
+    //     window.scrollTo(0, 0);
+    // },[])
 
 
     return (
@@ -181,6 +181,7 @@ export default function Mindful (){
                 <h1 className='mindful__user-story__title'>User Story Selection</h1>
                 <p className='mindful__user-story__title-bold'>As a young adult user, I want to link my personalized health care suggestions to benefits that I’m eligible to claim for, so that it is more convenient and enticing for me to use my benefits.</p>
                 <p className='mindful__user-story__text'>As the key realization after user interviews, users just want to know what they need instead of being educated about the entirety of their benefits. By sending out suggestions that the user can and should claim, I will also be subtlety teaching them of the benefits that they can use, therefore eliminating this step of the user having to find out what they can do for a shorter and easier process.</p>
+                <h1 className='mindful__user-story__title'>Task Flows</h1>
                 <img src={PrimaryTask} alt='task flow image' className='mindful__user-story__img'/>
                 <p className='mindful__user-story__title-bold'>Primary: Checking Seasonal Dental Suggestions </p>
                 <p className='mindful__user-story__text'>WHY: because by flushing out the task flow of a user receiving a suggested service and checking the coverage will help paint the narrative of how this solution will work and the simplicity of this function can entice and increase benefits usage.</p>
@@ -309,9 +310,9 @@ export default function Mindful (){
             <section className='mindful__visual-identity'> 
                 <h1 className='mindful__visual-identity__title'>Visual Identity</h1>
                 <p className='mindful__visual-identity__text'>A list was created to help create a visual identity for this app experiene, which I used to brainstorm words that will convey the brand’s meaning.</p>
-                <div>
-                    <img src={Visual1} alt='visual 1' className='mindful__visual-identity__img'/>
-                    <img src={Visual2} alt='visual 2' className='mindful__visual-identity__img'/>
+                <div className='mindful__visual-identity__container'>
+                    <img src={Visual1} alt='visual 1' className='mindful__visual-identity__img-group'/>
+                    <img src={Visual2} alt='visual 2' className='mindful__visual-identity__img-group'/>
                 </div>
                 <img src={WordBubble} alt='word bubble image' className='mindful__visual-identity__img'/>
                 <p className='mindful__visual-identity__text-bold'>Chosen App Name: Mindful</p>
@@ -322,7 +323,7 @@ export default function Mindful (){
                 <h1 className='mindful__colour-palette__title'>Colour Palette</h1>
                 <p className='mindful__colour-palette__text'>I begin from collecting images that convey the feeling I want my app to convey. From the images collected in the mood board, I then extracted and injected the various colours into the mid-fidelity home screen for a better visualization before deciding on the colour palette for Mindful.</p>
                 <p className='mindful__colour-palette__text'>The colours were chosen with also accessibility guidelines (AODA and WCAG) in mind.</p>
-                <img src={ColorPalette} alt='color palette image' />
+                <img src={ColorPalette} alt='color palette image' className='mindful__colour-palette__img'/>
             </section>
             <section className='mindful__wordmark'>
                 <h1 className='mindful__wordmark__title'>Wordmark and Logo</h1>

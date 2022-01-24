@@ -39,8 +39,8 @@ import LoFiReview4 from '../Asset/ToolRental/Wireframe 3 1.svg';
 import LoFiReview5 from '../Asset/ToolRental/Wireframe 4 1.svg';
 import LoFiReview6 from '../Asset/ToolRental/Wireframe 5 1.svg';
 import LoFiReview7 from '../Asset/ToolRental/Wireframe 6 1.svg';
-import FinalUI1 from '../Asset/ToolRental/Final 1 1.svg';
-import FinalUI2 from '../Asset/ToolRental/Final 2 1.svg';
+import FinalUI1 from '../Asset/ToolRental/Final 1 3.svg';
+import FinalUI2 from '../Asset/ToolRental/Final 2 3.svg';
 import FinalUI3 from '../Asset/ToolRental/Final 3 1.svg';
 import FinalUI4 from '../Asset/ToolRental/Final 4 1.svg';
 import FinalUI5 from '../Asset/ToolRental/Final 5 2.svg';
@@ -130,8 +130,10 @@ export default function ToolRental() {
                 <h1 className='tool-rental__aoda__title'>AODA Review</h1>
                 <p className='tool-rental__aoda__text'>Before diving into making low fidelity wireframes for the .ca Tool Rental experience, I reviewed the current experience to see if there are areas to improve in, especially in the accessibility area.</p>
                 <p className='tool-rental__aoda__text'>The first page to look at was the Tool Rental landing page. Using programs and screen readers, I determined the existing tab order and alt text. Generally there are no tab order issues on the Tool Rental landing page, however the alt text on certain images can be improved.</p>
-                <img src={RentalTabOrder1} alt=' rental order image 1' className='tool-rental__aoda__img'/>
-                <img src={RentalTabOrder2} alt=' rental order image 2' className='tool-rental__aoda__img'/>
+                <div className='tool-rental__aoda__imgContainer'>
+                    <img src={RentalTabOrder1} alt=' rental order image 1' className='tool-rental__aoda__img'/>
+                    <img src={RentalTabOrder2} alt=' rental order image 2' className='tool-rental__aoda__img'/>
+                </div>
                 <p className='tool-rental__aoda__text'>Secondly, I looked into the existing product page for tools that are available to rent. The tab order was not natural, some images are missing proper alt text, and also images are missing alt text altogether. </p>
                 <p className='tool-rental__aoda__text'>After reviewing the AODA issues, I presented these to the stakeholder along with suggestions on how to fix these issues.</p>
                 <img src={RentalTabOrder3} alt=' rental order image 3' className='tool-rental__aoda__img'/>
@@ -141,7 +143,7 @@ export default function ToolRental() {
                 <img src={RentalTabOrder7} alt=' rental order image 7' className='tool-rental__aoda__img'/>
                 <p className='tool-rental__aoda__text'>On the last issue where the price chart gives off the illusion that it can be selected to review an online reserve experience, I went into the data heat and click maps to back up the assumption as well. As seen in the image above, we have a click map that shows multiple users trying to click on the price chart’s most popular choices (4 hours and 1 day duration) as if they expect to open up something.</p>
                 <p className='tool-rental__aoda__text'>To tackle this misunderstanding, we have proposed to change the UI of the price chart so that it does not look clickable. Instead of having the duration closed within a card, we are separating them horizontally with a line in between.</p>
-                <img src={RentalTabOrder8} alt=' rental order image 8' className='tool-rental__aoda__img'/>
+                <img src={RentalTabOrder8} alt=' rental order image 8' className='tool-rental__aoda__img-rental-price'/>
             </section>
             <section className='tool-rental__lo-fi'>
                 <h1 className='tool-rental__lo-fi__title'>Lo-Fi UI Review</h1>
@@ -164,7 +166,7 @@ export default function ToolRental() {
                 <h1 className='tool-rental__final__title'>Final UI Review</h1>
                 <p className='tool-rental__final__text'>Before the final UI Review to hand off, there was an increase in scope to add “Pick up hour” into the form. We have included this in the first step where users pick the date.</p>
                 <p className='tool-rental__final__text'>These are the final design in mobile format, and also a short visual of the interaction shown on the desktop platform.</p>
-                <div className='tool-rental__container'>
+                <div className='tool-rental__final__container'>
                     <img src={FinalUI1} alt='final ui image 1' className='tool-rental__final__img'/>
                     <img src={FinalUI2} alt='final ui image 2' className='tool-rental__final__img'/>
                     <img src={FinalUI3} alt='final ui image 3' className='tool-rental__final__img'/>

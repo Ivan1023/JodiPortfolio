@@ -36,32 +36,48 @@ export default function Main (){
                 </div>
                 <div className='main__competencies__middle'>
                     <article className='main__competencies__middle__skills'>
-                        <img src={JourneyMapping} className='main__competencies__middle__skills__img'/>
+                        <div className='main__competencies__middle__skills__imgContainer'>
+                            <img src={JourneyMapping} className='main__competencies__middle__skills__img'/>
+                        </div>
+                        
                         <p className='main__competencies__middle__skills__title'>Journey Mapping</p>
                         <p className='main__competencies__middle__skills__text'>Visualizes the target user’s journey in order to understand how they think, feel and speak in order to empathize with the users and extrapolate their pain points and needs.</p>
                     </article>
                     <article className='main__competencies__middle__skills'>
-                        <img src={UserTesting} className='main__competencies__middle__skills__img'/>
+                        <div className='main__competencies__middle__skills__imgContainer'>
+                            <img src={UserTesting} className='main__competencies__middle__skills__img'/>    
+                        </div>
+                        
                         <p className='main__competencies__middle__skills__title'>Usability Testing</p>
                         <p className='main__competencies__middle__skills__text'>Creates moderated and unmoderated usability test scripts; Gathers and analyzes insights through infinity mapping to influence and validate design decisions.</p>
                     </article>
                     <article className='main__competencies__middle__skills'>
-                        <img src={AODA} className='main__competencies__middle__skills__AODA'/>
+                        <div className='main__competencies__middle__skills__imgContainer'>
+                            <img src={AODA} className='main__competencies__middle__skills__AODA'/>    
+                        </div>
+                        
                         <p className='main__competencies__middle__skills__title'>AODA Compliant</p>
                         <p className='main__competencies__middle__skills__text'>Understands AODA and WCAG 2.0 guidelines to analyze and fix existing experiences while also designing new and future projects to be compliant.</p>
                     </article>
                     <article className='main__competencies__middle__skills'>
-                        <img src={Prototype} className='main__competencies__middle__skills__img'/>
+                        <div className='main__competencies__middle__skills__imgContainer'>
+                            <img src={Prototype} className='main__competencies__middle__skills__img'/>  
+                        </div>
                         <p className='main__competencies__middle__skills__title'>Prototyping</p>
                         <p className='main__competencies__middle__skills__text'>Understands AODA and WCAG 2.0 guidelines to analyze and fix existing experiences while also designing new and future projects to be compliant.</p>
                     </article>
                     <article className='main__competencies__middle__skills'>
-                        <img src={UIDesign} className='main__competencies__middle__skills__img'/>
+                        <div className='main__competencies__middle__skills__imgContainer'>
+                            <img src={UIDesign} className='main__competencies__middle__skills__img'/>
+                        </div>
+                        
                         <p className='main__competencies__middle__skills__title'>UI Design</p>
                         <p className='main__competencies__middle__skills__text'>Creates UI mocks and layout with look, feel and interactivity in mind to ensure the user is able to go through the experience as intended.</p>
                     </article>
                     <article className='main__competencies__middle__skills'>
-                        <img src={Agile} className='main__competencies__middle__skills__img' />
+                        <div className='main__competencies__middle__skills__imgContainer'>
+                            <img src={Agile} className='main__competencies__middle__skills__img' />    
+                        </div>
                         <p className='main__competencies__middle__skills__title'>Agile Project Facilitator</p>
                         <p className='main__competencies__middle__skills__text'>Creates UI mocks and layout with look, feel and interactivity in mind to ensure the user is able to go through the experience as intended.</p>
                     </article>
