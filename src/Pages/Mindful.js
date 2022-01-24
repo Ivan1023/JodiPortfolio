@@ -11,7 +11,8 @@ import ReseachGoal from '../Asset/Mindful/Goal 1.svg';
 import IntervieweeCriteria  from '../Asset/Mindful/Find 1.svg';
 import Hassle  from '../Asset/Mindful/hassle 1 1.svg';
 import Laziness  from '../Asset/Mindful/lazy 1.svg';
-import Confusion  from '../Asset/Mindful/confuse 1.svg';
+// import Confusion  from '../Asset/Mindful/confuse 1.svg';
+import Confusion  from '../Asset/Mindful/confuse.png';
 import LackOfInitiative  from '../Asset/Mindful/lack 1.svg';
 import NotIntuitive  from '../Asset/Mindful/not intuitive 1.svg';
 import LackKnowledge  from '../Asset/Mindful/lack knowledge 1.svg';
@@ -144,7 +145,7 @@ export default function Mindful (){
                         <p className='mindful__research-insight__box__text'>Users under-utilize their workplace benefits due to laziness and lack of time.</p>
                     </article>
                     <article className='mindful__research-insight__box'>
-                        <img src={Confusion} alt='Confusion image' className='mindful__research-insight__box__img'/>
+                        <img src={Confusion} alt='Confusion image' className='mindful__research-insight__box__img-confusion'/>
                         <p className='mindful__research-insight__box__title'>Confusion</p>
                         <p className='mindful__research-insight__box__text'>Claiming process for extensive coverage is often confusing on existing platform.</p>
                     </article>

@@ -188,6 +188,11 @@
                 margin-top: 20px
             }
 
+            &__img-confusion {
+                width: 100px;
+                margin-top: 15px;
+            }
+
             &__title {
                 @include paragraph-text-bold-style();
                 margin: 15px 0 0 0;
