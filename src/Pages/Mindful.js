@@ -49,9 +49,9 @@ import MindfulAnimation4 from '../Asset/Mindful/GIFS/Mindful Animation 4.gif';
 
 export default function Mindful (){    
 
-    // useEffect(()=>{
-    //     window.scrollTo(0, 0);
-    // },[])
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
 
 
     return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../Pages/PageCSS/Main.scss';
 
@@ -18,6 +18,10 @@ import GreyWaveTablet from '../Asset/Home/greyWaveTablet.svg'
 
 
 export default function Main (){
+
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
 
     return (
         <main className='main'>
