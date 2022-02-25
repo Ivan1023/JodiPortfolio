@@ -4,14 +4,12 @@ import { Link, useLocation } from 'react-router-dom';
 import '../Components/ComponentCSS/Nav.scss';
 import Burger from '../Asset/Nav/burger.svg';
 import Logo from '../Asset/Logo/Jodi_Logo.svg'
-// import Resume from '../Asset/Resume/Resume_Jodi.pdf';
 import Resume from '../Asset/Resume/Jodi Lam UX Resume.pdf';
 
 
 export default function Nav (){
     const [isOpen, setIsOpen] = useState(false)
     const [navbar, setNavbar] = useState(false)
-    // const [location, setLocation] = useState(useLocation())
 
     let location = useLocation()
 
