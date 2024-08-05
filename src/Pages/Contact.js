@@ -8,12 +8,12 @@ import emailjs from '@emailjs/browser';
 
 const customStyles = {
     overlay:{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: "rgba(30, 30, 30, 0.72)"
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: "rgba(30, 30, 30, 0.72)"
     },
     content : {
       top                   : '50%',
@@ -134,11 +134,10 @@ export default function Contact(){
                 <input type="submit" value="Send" className='form__button' />
             </form>
             <Modal
-            isOpen={modalIsOpen}
-            // onAfterOpen={afterOpenModal}
-            onRequestClose={closeModal}
-            style={customStyles}
-            contentLabel="Example Modal"
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Example Modal"
             >
                 <img className='btn' src={BlackExit} onClick={closeModal}/>
                 <img alt='Success icon' className='check' src={GreenCheck}/>

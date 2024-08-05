@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
-// import { Link } from "react-router-dom";
 import '../Pages/PageCSS/Mindful.scss';
 
 //images
-// import Final5 from '../Asset/Mindful/Final 5 1.png';
 import Final5 from '../Asset/Mindful/Final 5 1.svg';
 import DesignProcess from '../Asset/Mindful/DesignProcess.png';
 import Hypothesis from '../Asset/Mindful/hypothesis 1.svg';
@@ -11,7 +9,6 @@ import ReseachGoal from '../Asset/Mindful/Goal 1.svg';
 import IntervieweeCriteria  from '../Asset/Mindful/Find 1.svg';
 import Hassle  from '../Asset/Mindful/hassle 1 1.svg';
 import Laziness  from '../Asset/Mindful/lazy 1.svg';
-// import Confusion  from '../Asset/Mindful/confuse 1.svg';
 import Confusion  from '../Asset/Mindful/confuse.png';
 import LackOfInitiative  from '../Asset/Mindful/lack 1.svg';
 import NotIntuitive  from '../Asset/Mindful/not intuitive 1.svg';
@@ -30,9 +27,6 @@ import Visual1  from '../Asset/Mindful/visual 1 2.svg';
 import Visual2  from '../Asset/Mindful/visual 2 2.svg';
 import WordBubble  from '../Asset/Mindful/words 2.svg';
 import ColorPalette  from '../Asset/Mindful/colour 2.svg';
-// import WordMark  from '../Asset/Mindful/wordmark 1.png';
-// import ChosenLogo  from '../Asset/Mindful/chosen 1.png';
-// import AppLogo  from '../Asset/Mindful/app 1.png';
 import WordMark  from '../Asset/Mindful/logo 1.svg';
 import ChosenLogo  from '../Asset/Mindful/chosen 2.svg';
 import AppLogo  from '../Asset/Mindful/app 2.svg';
@@ -52,7 +46,6 @@ export default function Mindful (){
     useEffect(()=>{
         window.scrollTo(0, 0);
     },[])
-
 
     return (
         <main className='mindful'>

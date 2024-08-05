@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import '../Components/ComponentCSS/Nav.scss';
 import Burger from '../Asset/Nav/burger.svg';
 import Logo from '../Asset/Logo/Jodi_Logo.svg'
-import Resume from '../Asset/Resume/Jodi Lam UX Resume.pdf';
+import Resume from '../Asset/Resume/Jodi Lam Resume - 2024.pdf';
 
 
 export default function Nav (){
@@ -44,7 +44,7 @@ export default function Nav (){
                 <Link to={'/About'}><p onClick={() => closeMenu()} className={`nav__list  ${location.pathname === '/About' ? 'nav__list-selected' : 'nav__list-unselected'}`}>About Me</p></Link>
                 <Link to={'/Portfolio'}><p onClick={() => closeMenu()} className={`nav__list  ${location.pathname === '/Portfolio' ? 'nav__list-selected' : 'nav__list-unselected'}`}>Portfolio</p></Link>
                 <div className='nav__resume' onClick={()=>{window.open(Resume)}}>Resume</div>
-                <Link to={'/Contact'}><p onClick={() => closeMenu()} className={`nav__list  ${location.pathname === '/Contact' ? 'nav__list-selected' : 'nav__list-unselected'}`}>Contact</p></Link>
+                {/* <Link to={'/Contact'}><p onClick={() => closeMenu()} className={`nav__list  ${location.pathname === '/Contact' ? 'nav__list-selected' : 'nav__list-unselected'}`}>Contact</p></Link> */}
             </Menu>
             {
             navbar ?  
@@ -68,7 +68,7 @@ export default function Nav (){
                 <Link to={'/About'}><p  className={`nav__tablet__list ${location.pathname === '/About' ? 'nav__tablet__list-selected' : 'nav__tablet__list-unselected'}`}>About Me</p></Link>
                 <Link to={'/Portfolio'}><p  className={`nav__tablet__list ${location.pathname === '/Portfolio' ? 'nav__tablet__list-selected' : 'nav__tablet__list-unselected'}`}>Portfolio</p></Link>
                 <div className='nav__tablet__list' onClick={()=>{window.open(Resume)}}>Resume</div>
-                <Link to={'/Contact'}><p  className={`nav__tablet__list ${location.pathname === '/Contact' ? 'nav__tablet__list-selected' : 'nav__tablet__list-unselected'}`}>Contact</p></Link>    
+                {/* <Link to={'/Contact'}><p  className={`nav__tablet__list ${location.pathname === '/Contact' ? 'nav__tablet__list-selected' : 'nav__tablet__list-unselected'}`}>Contact</p></Link>     */}
             </div>
         </div>
     </nav>

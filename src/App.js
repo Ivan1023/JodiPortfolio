@@ -10,6 +10,7 @@ import ToolRental from './Pages/ToolRental';
 import LocalPro from './Pages/LocalPro';
 import Nav from './Components/Nav';
 import Footer from './Components/Footer';
+import ConfigServer from './Pages/ConfigServer';
 import './App.scss';
 
 export default function App(){
@@ -31,6 +32,7 @@ export default function App(){
           <Route path="/BuyAgain" element={<BuyAgain/>}/>
           <Route path="/ToolRental" element={<ToolRental/>}/>
           <Route path="/LocalPro" element={<LocalPro/>}/>
+          <Route path="/ConfigServer" element={<ConfigServer/>}/>
         </Routes>
         <Footer/>
       </div>

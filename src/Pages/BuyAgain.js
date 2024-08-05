@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
-// import { Link } from "react-router-dom";
 import '../Pages/PageCSS/BuyAgain.scss';
 
 //image file
 import MainImage from '../Asset/BuyAgain/Main Image 3.svg';
-// import MainImage from '../Asset/BuyAgain/19.svg';
 import DesignProcess from '../Asset/BuyAgain/Design_Process.svg';
 import ResearchStage1 from '../Asset/BuyAgain/image 1.svg';
 import ResearchStage2 from '../Asset/BuyAgain/image 2.svg';

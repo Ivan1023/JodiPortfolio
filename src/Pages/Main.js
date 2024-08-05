@@ -13,9 +13,8 @@ import BuyAgain from '../Asset/Projects/Buy_Again.png';
 import OnlineToolRental from '../Asset/Projects/Online_Tool_Rental.png';
 import LocalPro from '../Asset/Projects/Local_Pro_App-Cirect_Jobs.png';
 import GreyWaveTablet from '../Asset/Home/greyWaveTablet.svg'
-
-
-
+import ConfigServer from '../Asset/ConfigServer/Samsung_Config_Server_Project_Icon_Photo.png';
+import ProjectTitleCard from '../Components/ProjectTitleCard';
 
 export default function Main (){
 
@@ -68,7 +67,7 @@ export default function Main (){
                             <img src={Prototype} className='main__competencies__middle__skills__img'/>  
                         </div>
                         <p className='main__competencies__middle__skills__title'>Prototyping</p>
-                        <p className='main__competencies__middle__skills__text'>Understands AODA and WCAG 2.0 guidelines to analyze and fix existing experiences while also designing new and future projects to be compliant.</p>
+                        <p className='main__competencies__middle__skills__text'>Creates interactive prototypes with low, mid and high fidelity wireframes using InVision, Sketch and Figma during different stages of the design process.</p>
                     </article>
                     <article className='main__competencies__middle__skills'>
                         <div className='main__competencies__middle__skills__imgContainer'>
@@ -83,32 +82,21 @@ export default function Main (){
                             <img src={Agile} className='main__competencies__middle__skills__img' />    
                         </div>
                         <p className='main__competencies__middle__skills__title'>Agile Project Facilitator</p>
-                        <p className='main__competencies__middle__skills__text'>Creates UI mocks and layout with look, feel and interactivity in mind to ensure the user is able to go through the experience as intended.</p>
+                        <p className='main__competencies__middle__skills__text'>Facilitates a UX project from beginning to end while conversing and working together with cross functional departments in an agile environment.</p>
                     </article>
                     <div className='main__competencies__middle__filler'>.</div>
                 </div>
                 <img className='main__competencies__svgBottom' src={GreyWaveTablet} alt='grey wave desing'/>
             </section>
             <section className='main__works'>
-                <h1 className='main__works__title'>My Top Works</h1>
+                <h1 className='main__works__title'>My Top 3 Works</h1>
+                <p className='main__competencies__middle__skills__text'>To see all of my published case studies and works, please head over to <Link to={'/Portfolio'} style={{color: '#009CDF'}}>Portfolio</Link></p>
                 <div className='main__works__container'>
-                    <Link to={'/ToolRental'}>
-                        <article className='main__works__card'>
-                            <img src={OnlineToolRental} className='main__works__card__img'/>
-                            <p className='main__works__card__description'>The Home Depot: Online Tool Rental</p>
-                        </article>
-                    </Link>
-                    <Link to={'/BuyAgain'}>
-                        <article className='main__works__card'>
-                            <img src={BuyAgain} className='main__works__card__img'/>
-                            <p className='main__works__card__description'>The Home Depot: Buy Again</p>
-                        </article>
+                    <Link to={'/ConfigServer'}>
+                        <ProjectTitleCard titleImg={LocalPro} description={'The Home Depot: Local Pro App - Direct Jobs'} />
                     </Link>
                     <Link to={'/LocalPro'}>
-                        <article className='main__works__card'>
-                            <img src={LocalPro} className='main__works__card__img'/>
-                            <p className='main__works__card__description'>The Home Depot: Local Pro App - Direct Jobs</p>
-                        </article>
+                        <ProjectTitleCard titleImg={ConfigServer} description={'Samsung Ads: Config Server'} />
                     </Link>
                 </div>
             </section>

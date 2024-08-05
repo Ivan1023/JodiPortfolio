@@ -1,229 +1,226 @@
-@import '../../Styles/Font.scss';
-@import '../../Styles/MainStyles.scss';
+@import "../../Styles/Font.scss";
+@import "../../Styles/MainStyles.scss";
 
 .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url("../../Asset/Home/blueSpotTablet.svg");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 350px;
+    max-height: 400px;
 
-    &__hero {
-        display: flex;   
-        flex-direction: column; 
-        align-items: center;
-        justify-content: center;
-        background-image: url('../../Asset/Home/blueSpotTablet.svg');
-        background-position: center;
-        background-size:auto ;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: 350px;
-        max-height: 400px;
+    &__title-container {
+      color: $paragraph-text-color-dark;
+      font-family: $titlefont-bold;
+      font-size: $header-text;
+      text-align: center;
+      width: 250px;
 
-        &__title-container {
-            color:$paragraph-text-color-dark;
-            font-family: $titlefont-bold;
-            font-size: $header-text;
-            text-align: center;
-            width: 250px;
-
-            &__text {
-                margin: 0;
-            }
-        }
-
-        &__button {
-            background-color: $button-background-color ;
-            color: $paragraph-text-color;
-            font-size: $button-text;
-            font-family: $font-bold;
-            outline: none;
-            border: none;
-            border-radius: 50px;
-            width: 175px;
-            height: 48px;
-            margin-top: 18px;
-            cursor: pointer;
-        }
+      &__text {
+        margin: 0;
+      }
     }
 
-    &__competencies {
-        display: flex;
-        flex-direction: column;
+    &__button {
+      background-color: $button-background-color;
+      color: $paragraph-text-color;
+      font-size: $button-text;
+      font-family: $font-bold;
+      outline: none;
+      border: none;
+      border-radius: 50px;
+      width: 175px;
+      height: 48px;
+      margin-top: 18px;
+      cursor: pointer;
+    }
+  }
+
+  &__competencies {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 100px 0 0 0;
+
+    &__top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $paragraph-text-color;
+      position: relative;
+
+      &__filler {
+        position: absolute;
+        background-color: $paragraph-text-color;
         width: 100%;
-        margin: 100px 0 0 0;
+        font-size: 5px;
+        top: -1px;
+      }
 
-        
-
-        &__top {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: $paragraph-text-color;
-          position: relative;
-
-          &__filler{
-            position: absolute;
-            background-color:$paragraph-text-color; 
-            width: 100%;
-            font-size: 5px;
-            top: -1px;
-          }
-
-          &__title {
-              color: $paragraph-text-color-dark;
-              font-family: $titlefont-bold;
-              font-size: $header-text;
-          }
-
-        }
-
-        &__middle {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: $paragraph-text-color;
-            padding: 25px 0;
-            position: relative;
-
-            &__filler{
-                position: absolute;
-                background-color:$paragraph-text-color; 
-                width: 100%;
-                font-size: 1px;
-                bottom: -1px;
-              }
-
-            &__skills {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-evenly;
-                padding: 15px 18px 30px 18px;
-                font-family: $font-normal;
-                color: $paragraph-text-color-dark;
-                height: 100%;
-
-                &__img {
-                    // width: 135px;
-                    height: 140px;
-                }
-
-                &__imgContainer {
-                    height: 135px;
-                }
-
-                &__AODA {
-                    // width: 65px;
-                    height: 140px;
-                }
-
-                &__title {
-                    font-size: $subtitle-text;
-                    margin: 15px 0;
-                }
-
-                &__text {
-                    font-size: $paragraph-text;
-                    text-align: center;
-                    margin: 0;
-                }
-
-                @include tablet-view {
-                    // width: 225px;
-                    width: 400px;
-                }
-
-            }
-
-            @include tablet-view {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                padding: 0 104px;
-            }
-
-            @include tablet-desktop {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                padding: 0 104px;
-            }
-
-            @include desktop-view {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                padding: 0 104px;
-            }
-        }
-
-        &__svgBottom {
-            transform: rotate(180deg);
-        }
-
-        // &__bottom {
-        //     // background-image: url('../../Asset/Home/greyWaveMobile.svg');
-        //     // background-image: url('../../Asset/Home/greyWaveMobile.png');
-        //     background-size: cover;
-        //     background-repeat: no-repeat;
-        //     width: 100%;
-        //     height: 150px;
-        //     transform: rotate(180deg);
-        // }
+      &__title {
+        color: $paragraph-text-color-dark;
+        font-family: $titlefont-bold;
+        font-size: $header-text;
+      }
     }
 
-    &__works {
+    &__middle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $paragraph-text-color;
+      padding: 25px 0;
+      position: relative;
+
+      &__filler {
+        position: absolute;
+        background-color: $paragraph-text-color;
+        width: 100%;
+        font-size: 1px;
+        bottom: -1px;
+      }
+
+      &__skills {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        justify-content: space-evenly;
+        padding: 15px 18px 30px 18px;
+        font-family: $font-normal;
+        color: $paragraph-text-color-dark;
+        height: 100%;
 
-        &__container {
-            display: flex;
-            flex-direction: column;
+        &__img {
+          // width: 135px;
+          height: 140px;
+        }
 
-            @include tablet-view {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-            }
+        &__imgContainer {
+          height: 135px;
+        }
+
+        &__AODA {
+          // width: 65px;
+          height: 140px;
         }
 
         &__title {
-            font-family: $titlefont-bold;
-            font-size: $header-text;
-            color: $paragraph-text-color-title;
+          font-size: $subtitle-text;
+          margin: 15px 0;
         }
 
-        &__card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 12px 18px; 
-            height: 232px;
-            background: #FFFFFF;
-            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-
-            &__img {
-                border-radius: 10px;
-            }
-
-            &__description {
-                color: $paragraph-text-color-title;
-                font-size: $paragraph-text;
-            }
+        &__text {
+          font-size: $paragraph-text;
+          text-align: center;
+          margin: 0;
         }
 
         @include tablet-view {
-            display: flex;
-            flex-direction: column;
-            
+          // width: 225px;
+          width: 400px;
         }
+      }
+
+      @include tablet-view {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0 104px;
+      }
+
+      @include tablet-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0 104px;
+      }
+
+      @include desktop-view {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 0 104px;
+      }
     }
+
+    &__svgBottom {
+      transform: rotate(180deg);
+    }
+
+    // &__bottom {
+    //     // background-image: url('../../Asset/Home/greyWaveMobile.svg');
+    //     // background-image: url('../../Asset/Home/greyWaveMobile.png');
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    //     width: 100%;
+    //     height: 150px;
+    //     transform: rotate(180deg);
+    // }
+  }
+
+  &__works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+
+      @include tablet-view {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+    }
+
+    &__title {
+      font-family: $titlefont-bold;
+      font-size: $header-text;
+      color: $paragraph-text-color-title;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 12px 18px;
+      height: 232px;
+      background: #ffffff;
+      box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+
+      &__img {
+        border-radius: 10px;
+        width: 340px;
+        height: 176px;
+      }
+
+      &__description {
+        color: $paragraph-text-color-title;
+        font-size: $paragraph-text;
+      }
+    }
+
+    @include tablet-view {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
