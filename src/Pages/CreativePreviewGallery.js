@@ -57,7 +57,7 @@ export default function CreativePreviewGallery() {
                 <p className='creative-preview-gallery__item'>Tools: Figma, Figjam</p>
                 <p className='creative-preview-gallery__item'>Platform: B2B SaaS on website</p>
             </div>
-            <section className='creative-preview-gallery__section'>
+            <section style={{ width: '100%' }} className='creative-preview-gallery__section'>
                 <h1 className='creative-preview-gallery__design-process__title'>Overview of Design Process</h1>
                 <img className='creative-preview-gallery__design-process__img' src={DesignProcess} alt='Design Process Image'/>
             </section>

@@ -97,7 +97,7 @@ export default function Main (){
                         <ProjectTitleCard titleImg={ConfigServer} description={'Samsung Ads: Config Server'} />
                     </Link>
                     <Link to={'/CreativePreviewGallery'}>
-                        <ProjectTitleCard titleImg={CreativePreviewGallery} description={'Samsung Ads: Creative Gallery Preview'} />
+                        <ProjectTitleCard titleImg={CreativePreviewGallery} description={'Samsung Ads: Creative Preview Gallery'} />
                     </Link>
                     <Link to={'/LocalPro'}>
                         <ProjectTitleCard titleImg={LocalPro} description={'The Home Depot: Local Pro App - Direct Jobs'} />

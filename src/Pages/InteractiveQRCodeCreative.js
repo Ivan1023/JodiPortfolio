@@ -44,7 +44,7 @@ export default function InteractiveQRCodeCreative() {
                 <p className='interactive-qr-code-creative__item'>Tools: Figma, Figjam</p>
                 <p className='interactive-qr-code-creative__item'>Platform: B2B SaaS on website</p>
             </div>
-            <section className='interactive-qr-code-creative__section'>
+            <section style={{ width: '100%' }} className='interactive-qr-code-creative__section'>
                 <h1 className='interactive-qr-code-creative__design-process__title'>Overview of Design Process</h1>
                 <img className='interactive-qr-code-creative__design-process__img' src={DesignProcess} alt='Design Process Image'/>
             </section>
@@ -80,6 +80,7 @@ export default function InteractiveQRCodeCreative() {
                 <p className='interactive-qr-code-creative__questions__text'>Competitive benchmarking was done across other ad platforms to see how their creative forms were filled. 4 competitors were highlighted to showcase their ability to show preview as the user completes the form. The preview are always on the right, showing real time edits as the user fills out the form. This gives the users assurance of how the creative will eventually look in production.</p>
                 <img src={CompetitiveBrenchmarking1} alt='CompetitiveBrenchmarking1' className='interactive-qr-code-creative__research__img'/>
                 <img src={CompetitiveBrenchmarking2} alt='CompetitiveBrenchmarking2' className='interactive-qr-code-creative__research__img'/>
+                <img src={CompetitiveBrenchmarking3} alt='CompetitiveBrenchmarking3' className='interactive-qr-code-creative__research__img'/>
                 <h1 className='interactive-qr-code-creative__questions__title'>How current creative forms look</h1>
                 <p className='interactive-qr-code-creative__questions__text'>Below are some examples of how Samsung Ads DSP creative forms currently look. They do not have any preview elements, and is only a long form with input fields.</p>
                 <div className='interactive-qr-code-creative__paired-image'>
@@ -149,51 +150,15 @@ export default function InteractiveQRCodeCreative() {
                 <p className='interactive-qr-code-creative__final__text-bold'>Creative Details Page and Preview</p>
                 <p className='interactive-qr-code-creative__questions__text'>• Once all the mandatory fields are filled in, the user can submit the form</p>
                 <p className='interactive-qr-code-creative__questions__text'>• The user will be navigated to the Creative Details Page, where it will display a summary of the creative user just submitted</p>
-                <p className='interactive-qr-code-creative__questions__text'>• There is the option to view the preview again, but this time it will open up a drawer to show a larger scale of the preview for user to clearly see it</p>
+                <p className='interactive-qr-code-creative__questions__text margin-bottom'>• There is the option to view the preview again, but this time it will open up a drawer to show a larger scale of the preview for user to clearly see it</p>
                 <p className='interactive-qr-code-creative__final__text-bold'>Advocating for QR Code Label to be Mandatory</p>
                 <p className='interactive-qr-code-creative__questions__text'>• Originally the QR Code Label was not mandatory as per the Product Manager, but through understand the functionality of the creative, I believe the QR Code label should be made mandatory in order to aid end users to interact with the ad properly</p>
-                <p className='interactive-qr-code-creative__questions__text'>• The Product manager was able to understand my point of view and rationalization, therefore the QR Code Label input field was made mandatory</p>
+                <p className='interactive-qr-code-creative__questions__text margin-bottom'>• The Product manager was able to understand my point of view and rationalization, therefore the QR Code Label input field was made mandatory</p>
                 <p className='interactive-qr-code-creative__final__text-bold'>Advocating for Preview</p>
                 <p className='interactive-qr-code-creative__questions__text'>• Originally the creative form was not able to have a preview, however after understanding the functionality of this new creative, I believe a preview was very essentail for the Ad Op as they are filling in the form</p>
                 <p className='interactive-qr-code-creative__questions__text'>• I have backed my reasoning with the competitive benchmarking, and the Product Manager was able to work with the engineers to elongate the timeline enough to make this feature feasible</p>
                 <p className='interactive-qr-code-creative__questions__text'>• Since the preview function is incorporated in this creative form, all other creative forms can benefit from this as necessary, giving Ad Ops a more comprehensive view of the creative they are filling. This can be turned into an external link for Ad Ops to send over to their clients to review as well.</p>
             </section>
-            {/* <section className='interactive-qr-code-creative__final'>
-                <h1 className='interactive-qr-code-creative__final__title'>Final Hand Off</h1>
-                <p className='interactive-qr-code-creative__final__text'>Below is part of all the final hand off of the mocks (prototypes were also provided to the engineers to show interactions). Due to the amount of mocks involved, only one example of each category mock is shown.</p>
-                <p className='interactive-qr-code-creative__final__text'>Due to the amount of mocks involved, only one example of each category mock is shown.</p>
-                <p className='interactive-qr-code-creative__final__text-bold'>CTV/OLV</p>
-                <div className='interactive-qr-code-creative__paired-image'>
-                    <img src={FinalHandOff1A} alt='FinalHandOff1A' className='interactive-qr-code-creative__paired-image__img'/>
-                    <img src={FinalHandOff1B} alt='FinalHandOff1B' className='interactive-qr-code-creative__paired-image__img'/>
-                </div>
-                <p className='interactive-qr-code-creative__final__text-bold'>Samsung TV Native</p>
-                <div className='interactive-qr-code-creative__paired-image'>
-                    <img src={FinalHandOff2A} alt='FinalHandOff2A' className='interactive-qr-code-creative__paired-image__img'/>
-                    <img src={FinalHandOff2B} alt='FinalHandOff2B' className='interactive-qr-code-creative__paired-image__img'/>
-                </div>
-                <p className='interactive-qr-code-creative__final__text-bold'>Samsung Mobile Native</p>
-                <div className='interactive-qr-code-creative__paired-image'>
-                    <img src={FinalHandOff3A} alt='FinalHandOff3A' className='interactive-qr-code-creative__paired-image__img'/>
-                    <img src={FinalHandOff3B} alt='FinalHandOff3B' className='interactive-qr-code-creative__paired-image__img'/>
-                </div>
-                <p className='interactive-qr-code-creative__final__text-bold'>Displays</p>
-                <div className='interactive-qr-code-creative__paired-image'>
-                    <img src={FinalHandOff4A} alt='FinalHandOff4A' className='interactive-qr-code-creative__paired-image__img'/>
-                    <img src={FinalHandOff4B} alt='FinalHandOff4B' className='interactive-qr-code-creative__paired-image__img'/>
-                </div>
-                <h1 className='interactive-qr-code-creative__lo-fi__title'>Important Finalization</h1>
-                <p className='interactive-qr-code-creative__questions__text'>• Each line of copy had been reviewed and approved by the SME to ensure validity</p>
-                <p className='interactive-qr-code-creative__questions__text'>• For convenience of the user, only one source of truth for information is presented at the external link of “DSP Help Center”, which is maintained by the marketing team (Which will also make updating it easier as it is on one place)</p>
-            </section> */}
-            {/* <section className='interactive-qr-code-creative__result'>
-                <h1 className='interactive-qr-code-creative__result__title'>Results after launch</h1>
-                <div style={{padding: '20px 0'}}>
-                    <p className='interactive-qr-code-creative__final__text-bold'>Key benefits</p>
-                    <p className='interactive-qr-code-creative__questions__text'>• Provides self serve users a convenient UI to quickly understand and explore all the available creative inventories Samsung Ads provide</p>
-                    <p className='interactive-qr-code-creative__questions__text'>• Reduces the time for Ad Ops Sales to spend on educating self serve or first time clients about all the available creative inventories</p>
-                </div>
-            </section> */}
         </main>
     )
 }

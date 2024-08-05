@@ -8,7 +8,6 @@ import LocalPro from '../Asset/Projects/Local_Pro_App-Cirect_Jobs.png';
 import ConfigServer from '../Asset/ConfigServer/Samsung_Config_Server_Project_Icon_Photo.png';
 import CreativePreviewGallery from '../Asset/CreativePreviewGallery/Creative_preview_icon.png';
 import InteractiveQRCodeCreative from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Icon.png'
-import Mindful from '../Asset/Projects/Mindful_App.png';
 
 import ProjectTitleCard from '../Components/ProjectTitleCard';
 
@@ -28,7 +27,7 @@ export default function Projects (){
                         <ProjectTitleCard titleImg={ConfigServer} description={'Samsung Ads: Config Server'} />
                     </Link>
                     <Link to={'/CreativePreviewGallery'}>
-                        <ProjectTitleCard titleImg={CreativePreviewGallery} description={'Samsung Ads: Creative Gallery Preview'} />
+                        <ProjectTitleCard titleImg={CreativePreviewGallery} description={'Samsung Ads: Creative Preview Gallery'} />
                     </Link>
                     <Link to={'/InteractiveQRCodeCreative'}>
                         <ProjectTitleCard titleImg={InteractiveQRCodeCreative} description={'Samsung Ads: Interactive QR Code Creative'} />
@@ -42,9 +41,6 @@ export default function Projects (){
                     <Link to={'/LocalPro'}>
                         <ProjectTitleCard titleImg={LocalPro} description={'The Home Depot: Local Pro App - Direct Jobs'} />
                     </Link>
-                    {/* <Link to={'/Mindful'}>
-                        <ProjectTitleCard titleImg={Mindful} description={'Case Study: Mindful App'} />
-                    </Link> */}
                 </div>
             </section>
         </main>

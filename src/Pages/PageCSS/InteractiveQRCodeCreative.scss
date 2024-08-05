@@ -24,6 +24,10 @@
   margin-right: 10px;
 }
 
+.margin-bottom {
+  margin-bottom: 20px !important;
+}
+
 .padding {
   padding-right: 10px;
 }
@@ -184,7 +188,7 @@
 
     &__img {
       width: 100%;
-      padding: 24px 0;
+      padding-top: 60px;
 
       @include desktop-view {
         max-width: 1220px;
@@ -270,7 +274,7 @@
 
     &__text-bold {
       @include paragraph-text-bold-style();
-      margin: 15px 0 5px 0;
+      margin: 5px 0;
     }
 
     &__img {

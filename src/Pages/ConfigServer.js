@@ -124,7 +124,7 @@ export default function ConfigServer() {
                 <p className='config-server__item'>Tools: Figma, Figjam</p>
                 <p className='config-server__item'>Platform: B2B SaaS on website</p>
             </div>
-            <section className='config-server__section'>
+            <section style={{ width: '100%' }} className='config-server__section'>
                 <h1 className='config-server__design-process__title'>Overview of Design Process</h1>
                 <img className='config-server__design-process__img' src={DesignProcess} alt='Design Process Image'/>
             </section>
