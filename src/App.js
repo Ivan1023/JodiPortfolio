@@ -12,6 +12,7 @@ import Nav from './Components/Nav';
 import Footer from './Components/Footer';
 import ConfigServer from './Pages/ConfigServer';
 import CreativePreviewGallery from './Pages/CreativePreviewGallery'
+import InteractiveQRCodeCreative from './Pages/InteractiveQRCodeCreative'
 import './App.scss';
 
 export default function App(){
@@ -35,6 +36,7 @@ export default function App(){
           <Route path="/LocalPro" element={<LocalPro/>}/>
           <Route path="/ConfigServer" element={<ConfigServer/>}/>
           <Route path="/CreativePreviewGallery" element={<CreativePreviewGallery/>}/>
+          <Route path="/InteractiveQRCodeCreative" element={<InteractiveQRCodeCreative/>}/>
         </Routes>
         <Footer/>
       </div>
