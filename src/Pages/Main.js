@@ -15,6 +15,7 @@ import LocalPro from '../Asset/Projects/Local_Pro_App-Cirect_Jobs.png';
 import GreyWaveTablet from '../Asset/Home/greyWaveTablet.svg'
 import ConfigServer from '../Asset/ConfigServer/Samsung_Config_Server_Project_Icon_Photo.png';
 import ProjectTitleCard from '../Components/ProjectTitleCard';
+import CreativePreviewGallery from '../Asset/CreativePreviewGallery/Creative_preview_icon.png';
 
 export default function Main (){
 
@@ -94,6 +95,9 @@ export default function Main (){
                 <div className='main__works__container'>
                     <Link to={'/ConfigServer'}>
                         <ProjectTitleCard titleImg={ConfigServer} description={'Samsung Ads: Config Server'} />
+                    </Link>
+                    <Link to={'/CreativePreviewGallery'}>
+                        <ProjectTitleCard titleImg={CreativePreviewGallery} description={'Samsung Ads: Creative Gallery Preview'} />
                     </Link>
                     <Link to={'/LocalPro'}>
                         <ProjectTitleCard titleImg={LocalPro} description={'The Home Depot: Local Pro App - Direct Jobs'} />

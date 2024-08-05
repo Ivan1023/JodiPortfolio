@@ -11,6 +11,7 @@ import LocalPro from './Pages/LocalPro';
 import Nav from './Components/Nav';
 import Footer from './Components/Footer';
 import ConfigServer from './Pages/ConfigServer';
+import CreativePreviewGallery from './Pages/CreativePreviewGallery'
 import './App.scss';
 
 export default function App(){
@@ -33,6 +34,7 @@ export default function App(){
           <Route path="/ToolRental" element={<ToolRental/>}/>
           <Route path="/LocalPro" element={<LocalPro/>}/>
           <Route path="/ConfigServer" element={<ConfigServer/>}/>
+          <Route path="/CreativePreviewGallery" element={<CreativePreviewGallery/>}/>
         </Routes>
         <Footer/>
       </div>

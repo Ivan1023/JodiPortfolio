@@ -6,6 +6,7 @@ import BuyAgain from '../Asset/Projects/Buy_Again.png';
 import OnlineToolRental from '../Asset/Projects/Online_Tool_Rental.png';
 import LocalPro from '../Asset/Projects/Local_Pro_App-Cirect_Jobs.png';
 import ConfigServer from '../Asset/ConfigServer/Samsung_Config_Server_Project_Icon_Photo.png';
+import CreativePreviewGallery from '../Asset/CreativePreviewGallery/Creative_preview_icon.png';
 import Mindful from '../Asset/Projects/Mindful_App.png';
 
 import ProjectTitleCard from '../Components/ProjectTitleCard';
@@ -24,6 +25,9 @@ export default function Projects (){
                 <div className='main__works__container'>
                     <Link to={'/ConfigServer'}>
                         <ProjectTitleCard titleImg={ConfigServer} description={'Samsung Ads: Config Server'} />
+                    </Link>
+                    <Link to={'/CreativePreviewGallery'}>
+                        <ProjectTitleCard titleImg={CreativePreviewGallery} description={'Samsung Ads: Creative Gallery Preview'} />
                     </Link>
                     <Link to={'/ToolRental'}>
                         <ProjectTitleCard titleImg={OnlineToolRental} description={'The Home Depot: Online Tool Rental'} />
