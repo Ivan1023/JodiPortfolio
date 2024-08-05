@@ -93,10 +93,10 @@ export default function Main (){
                 <p className='main__competencies__middle__skills__text'>To see all of my published case studies and works, please head over to <Link to={'/Portfolio'} style={{color: '#009CDF'}}>Portfolio</Link></p>
                 <div className='main__works__container'>
                     <Link to={'/ConfigServer'}>
-                        <ProjectTitleCard titleImg={LocalPro} description={'The Home Depot: Local Pro App - Direct Jobs'} />
+                        <ProjectTitleCard titleImg={ConfigServer} description={'Samsung Ads: Config Server'} />
                     </Link>
                     <Link to={'/LocalPro'}>
-                        <ProjectTitleCard titleImg={ConfigServer} description={'Samsung Ads: Config Server'} />
+                        <ProjectTitleCard titleImg={LocalPro} description={'The Home Depot: Local Pro App - Direct Jobs'} />
                     </Link>
                 </div>
             </section>
