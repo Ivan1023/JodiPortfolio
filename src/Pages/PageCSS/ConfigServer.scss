@@ -24,6 +24,10 @@
   margin-right: 10px;
 }
 
+.padding {
+  padding-right: 10px;
+}
+
 .config-server {
   display: flex;
   flex-direction: column;
@@ -34,6 +38,55 @@
     text-align: center;
     border-top: 1px solid $border-color;
     margin-top: 30px;
+  }
+
+  &__img-text-container {
+    width: 100%;
+    margin-bottom: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      @include tablet-desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: start;
+      }
+
+      &__img {
+        width: 100%;
+
+        @include tablet-desktop {
+          width: 50%;
+        }
+      }
+
+      &__three-img {
+        width: 100%;
+
+        @include tablet-desktop {
+          width: 33%;
+        }
+      }
+
+      &__text {
+        width: 100%;
+
+        @include tablet-desktop {
+          width: 50%;
+        }
+      }
+
+      &__title {
+        font-family: $font-bold;
+        font-size: $title-text;
+        color: $paragraph-text-color-title;
+        margin: 5px 0;
+      }
+    }
   }
 
   &__paired-image {
@@ -48,32 +101,6 @@
       @include tablet-desktop {
         width: 49%;
       }
-    }
-
-    &__img-with-text {
-      width: 98%;
-      margin-bottom: 20px;
-
-      @include tablet-desktop {
-        width: 98%;
-        text-align: start;
-      }
-    }
-
-    &__three-img {
-      width: 100%;
-      margin-bottom: 20px;
-      flex-direction: row;
-      justify-content: space-between;
-
-      &__img {
-        width: 33%;
-      }
-    }
-
-    &__three-text {
-      display: flex;
-      text-align: start;
     }
 
     @include tablet-desktop {

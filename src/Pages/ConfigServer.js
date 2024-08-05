@@ -8,10 +8,7 @@ import DesignProcess from '../Asset/ConfigServer/Samsung_Config_Server_Design_Pr
 // Discovery Research: Understanding the Problem
 import UnderstandingProblem1 from '../Asset/ConfigServer/Samsung_Config_Server_Understanding_Problem_1 2.51.05 PM.svg';
 import UnderstandingProblem2 from '../Asset/ConfigServer/Samsung_Config_Server_Understanding_Problem_2.svg';
-// import UnderstandingProblem2A from '../Asset/ConfigServer/Samsung_Config_Server_Understanding_Problem_2A 2.51.05 PM.svg';
-// import UnderstandingProblem2B from '../Asset/ConfigServer/Samsung_Config_Server_Understanding_Problem_2B 2.51.05 PM.svg';
 import UnderstandingProblem3 from '../Asset/ConfigServer/Samsung_Config_Server_Understanding_Problem_3.svg';
-// import UnderstandingProblem3B from '../Asset/ConfigServer/Samsung_Config_Server_Understanding_Problem_3B 2.51.05 PM.svg';
 import UnderstandingProblem4 from '../Asset/ConfigServer/Samsung_Config_Server_Understanding_Problem_4 2.51.05 PM.svg';
 import UnderstandingProblem5A from '../Asset/ConfigServer/Samsung_Config_Server_Understanding_Problem_5A 2.51.05 PM.svg';
 import UnderstandingProblem5B from '../Asset/ConfigServer/Samsung_Config_Server_Understanding_Problem_5B 2.51.05 PM.svg';
@@ -88,7 +85,7 @@ import SingleEdit1A from '../Asset/ConfigServer/Samsung_Config_Server_Final_Hand
 import SingleEdit1B from '../Asset/ConfigServer/Samsung_Config_Server_Final_Hand_Off_Single_Edit_14B 2.51.05 PM.svg';
 import SingleEdit2A from '../Asset/ConfigServer/Samsung_Config_Server_Final_Hand_Off_Single_Edit_15A 2.51.05 PM.svg';
 import SingleEdit2B from '../Asset/ConfigServer/Samsung_Config_Server_Final_Hand_Off_Single_Edit_15B 2.51.05 PM.svg';
-import SingleEdit3A from '../Asset/ConfigServer/Samsung_Config_Server_Final_Hand_Off_Single_Edit_16A 2.51.05 PM.svg';
+import SingleEdit3A from '../Asset/ConfigServer/Samsung_Config_Server_Final_Hand_Off_Single_Edit_16A.svg';
 import SingleEdit3B from '../Asset/ConfigServer/Samsung_Config_Server_Final_Hand_Off_Single_Edit_16B 2.51.05 PM.svg';
 
 //Batch Edit - B
@@ -110,59 +107,11 @@ import ResultAfterLaunch1 from '../Asset/ConfigServer/Samsung_Config_Server_Resu
 import ResultAfterLaunch2A from '../Asset/ConfigServer/Samsung_Config_Server_Result_After_Launch_2A.svg';
 import ResultAfterLaunch2B from '../Asset/ConfigServer/Samsung_Config_Server_Result_After_Launch_2B.svg';
 
-
-// -------------
-import CurrentState1 from '../Asset/ToolRental/tool rental US current state 1 1.svg';
-import CurrentState2 from '../Asset/ToolRental/tool rental US current state 2 1.svg';
-import CurrentState3 from '../Asset/ToolRental/tool rental US current state 3 1.svg';
-import CurrentState4 from '../Asset/ToolRental/tool rental US current state 4 1.svg';
-import CurrentState5 from '../Asset/ToolRental/tool rental US current state 5 1.svg';
-import CurrentState6 from '../Asset/ToolRental/tool rental US current state 6 1.svg';
-import CurrentState7 from '../Asset/ToolRental/tool rental US current state 7 1.svg';
-import CurrentState8 from '../Asset/ToolRental/tool rental US current state 8 1.svg';
-import CurrentState9 from '../Asset/ToolRental/tool rental US current state 9 1.svg';
-import CurrentStateMobile1 from '../Asset/ToolRental/tool rental US current state mobile 1 1.svg';
-import CurrentStateMobile2 from '../Asset/ToolRental/tool rental US current state mobile 2 1.svg';
-import CanadianTire1  from '../Asset/ToolRental/Comp Canadian Tire 1 1.svg';
-import CanadianTire2 from '../Asset/ToolRental/Comp Canadian Tire 2 1.svg';
-import HomeHardware1 from '../Asset/ToolRental/Comp Home Hardware 1 1.svg';
-import HomeHardware2 from '../Asset/ToolRental/Comp Home Hardware 2 1.svg';
-import HomeHardware3 from '../Asset/ToolRental/Comp Home Hardware 3 1.svg';
-import Lowes1 from '../Asset/ToolRental/Comp Lowes 1 1.svg';
-import Lowes2 from '../Asset/ToolRental/Comp Lowes 2 1.svg';
-import Lowes3 from '../Asset/ToolRental/Comp Lowes 3 1.svg';
-import Lowes4 from '../Asset/ToolRental/Comp Lowes 4 1.svg';
-import RentalTabOrder1 from '../Asset/ToolRental/Current Rental Tab Order 1.svg';
-import RentalTabOrder2 from '../Asset/ToolRental/current Rental alt text 1.svg';
-import RentalTabOrder3 from '../Asset/ToolRental/Current PIP tab 1.svg';
-import RentalTabOrder4 from '../Asset/ToolRental/Current PIP screen 1.svg';
-import RentalTabOrder5 from '../Asset/ToolRental/current PIP alt 1.svg';
-import RentalTabOrder6 from '../Asset/ToolRental/Current PIP dup 1.svg';
-import RentalTabOrder7 from '../Asset/ToolRental/current pip clicks 1.svg';
-import RentalTabOrder8 from '../Asset/ToolRental/Wireframe price 1.svg';
-import LoFiReview1 from '../Asset/ToolRental/tool rental PIP 1 1.svg';
-import LoFiReview2 from '../Asset/ToolRental/tool rental PIP 2 1.svg';
-import LoFiReview3 from '../Asset/ToolRental/Wireframe 2 1.svg';
-import LoFiReview4 from '../Asset/ToolRental/Wireframe 3 1.svg';
-import LoFiReview5 from '../Asset/ToolRental/Wireframe 4 1.svg';
-import LoFiReview6 from '../Asset/ToolRental/Wireframe 5 1.svg';
-import LoFiReview7 from '../Asset/ToolRental/Wireframe 6 1.svg';
-import FinalUI1 from '../Asset/ToolRental/Final 1 3.svg';
-import FinalUI2 from '../Asset/ToolRental/Final 2 3.svg';
-import FinalUI3 from '../Asset/ToolRental/Final 3 1.svg';
-import FinalUI4 from '../Asset/ToolRental/Final 4 1.svg';
-import FinalUI5 from '../Asset/ToolRental/Final 5 2.svg';
-import Result1 from '../Asset/ToolRental/Tool Rental Data important 1.svg';
-import Result2 from '../Asset/ToolRental/Tool Rental Data important 2 1.svg';
-
-//GIFS
-import FinalUI6 from '../Asset/ToolRental/GIFS/Vehicle Rental mid GIF.gif';
-
 export default function ConfigServer() {
 
-    // useEffect(()=>{
-    //     window.scrollTo(0, 0);
-    // },[])
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
 
     return (
         <main className='config-server'>
@@ -232,77 +181,93 @@ export default function ConfigServer() {
                 <img src={LofiWireFrame4} alt='Lo-Fi Review image 6' className='config-server__lo-fi__img'/>
                 <img src={LofiWireFrame5} alt='Lo-Fi Review image 7' className='config-server__lo-fi__img'/>
                 <p className='config-server__lo-fi__text'>These are the low fidelity sketches of the platform using various combinations of information architecture.</p>
-                <div className='config-server__paired-image'>
-                    <div className='config-server__paired-image__img-with-text margin'>
-                        <img src={LofiWireFrame6A} alt='current state image 6a' className='config-server__paired-image__img-with-text'/>
-                        <h1 className='config-server__lo-fi__title'>Pros</h1>
-                        <p className='config-server__questions__text'>• Summary shows the available ad types at a glance</p>
-                        <p className='config-server__questions__text'>• Dimension being model category and country on the side can reduce space required</p>
+                <div className='config-server__img-text-container'>
+                    <div className='config-server__img-text-container__wrapper'>
+                        <img src={LofiWireFrame6A} alt='current state image 6a' className='config-server__img-text-container__wrapper__img margin'/>
+                        <img src={LofiWireFrame6B} alt='current state image 6a' className='config-server__img-text-container__wrapper__img'/>
                     </div>
-                    <div className='config-server__paired-image__img-with-text'>
-                        <img src={LofiWireFrame6B} alt='current state image 6a' className='config-server__paired-image__img-with-text'/>
-                        <h1 className='config-server__lo-fi__title'>Cons</h1>
-                        <p className='config-server__questions__text'>• Can only show only one model category at once (Hi Medium or Low)</p>
-                        <p className='config-server__questions__text'>• Since we are only showing 2 dimensions, there may be repeats causing the list to be very long</p>
-                    </div>
-                </div>
-                <div className='config-server__paired-image'>
-                    <div className='config-server__paired-image__img-with-text margin'>
-                        <img src={LofiWireFrame7A} alt='current state image 7a' className='config-server__paired-image__img-with-text'/>
-                        <h1 className='config-server__lo-fi__title'>Pros</h1>
-                        <p className='config-server__questions__text'>• You can freely arrange the Axis using the 3 main categories for a more customized display of data</p>
-                    </div>
-                    <div className='config-server__paired-image__img-with-text'>
-                        <img src={LofiWireFrame7B} alt='current state image 7a' className='config-server__paired-image__img-with-text'/>
-                        <h1 className='config-server__lo-fi__title'>Cons</h1>
-                        <p className='config-server__questions__text'>• A lot of work needs to be done by the user every time</p>
-                        <p className='config-server__questions__text'>• If Country is in the X Axis, then the horizontal scroll is going to be very long</p>
+                    <div className='config-server__img-text-container__wrapper'>
+                        <div className='config-server__img-text-container__wrapper__text margin margin padding'> 
+                            <h1 className='config-server__img-text-container__wrapper__title'>Pros</h1>
+                            <p className='config-server__questions__text'>• Summary shows the available ad types at a glance</p>
+                            <p className='config-server__questions__text'>• Dimension being model category and country on the side can reduce space required</p>
+                        </div>
+                        <div className='config-server__img-text-container__wrapper__text'>
+                            <h1 className='config-server__img-text-container__wrapper__title'>Cons</h1>
+                            <p className='config-server__questions__text'>• Can only show only one model category at once (Hi Medium or Low)</p>
+                            <p className='config-server__questions__text'>• Since we are only showing 2 dimensions, there may be repeats causing the list to be very long</p>
+                        </div>
                     </div>
                 </div>
-                <div className='config-server__paired-image'>
-                    <div className='config-server__paired-image__img-with-text margin'>
-                        <img src={LofiWireFrame8A} alt='current state image 8a' className='config-server__paired-image__img-with-text'/>
-                        <h1 className='config-server__lo-fi__title'>Pros</h1>
-                        <p className='config-server__questions__text'>• You can have a comprehensive view of each individual country</p>
+                <div className='config-server__img-text-container'>
+                    <div className='config-server__img-text-container__wrapper'>
+                        <img src={LofiWireFrame7A} alt='current state image 7a'  className='config-server__img-text-container__wrapper__img margin'/>
+                        <img src={LofiWireFrame7B} alt='current state image 7a' className='config-server__img-text-container__wrapper__img'/>
                     </div>
-                    <div className='config-server__paired-image__img-with-text'>
-                        <img src={LofiWireFrame8B} alt='current state image 8a' className='config-server__paired-image__img-with-text'/>
-                        <h1 className='config-server__lo-fi__title'>Cons</h1>
-                        <p className='config-server__questions__text'>• The country list can get very long, causing the horizontal scroll to be long</p>
-                        <p className='config-server__questions__text'>• The number of PSID can be in the thousands, so this will not be feasible</p>
-                        <p className='config-server__questions__text'>• Confirmed with developer that PSID cannot exist in the same UI as the models</p>
+                    <div className='config-server__img-text-container__wrapper'>
+                        <div className='config-server__img-text-container__wrapper__text margin margin padding'> 
+                            <h1 className='config-server__img-text-container__wrapper__title'>Pros</h1>
+                            <p className='config-server__questions__text'>• You can freely arrange the Axis using the 3 main categories for a more customized display of data</p>
+                        </div>
+                        <div className='config-server__img-text-container__wrapper__text'>
+                            <h1 className='config-server__img-text-container__wrapper__title'>Cons</h1>
+                            <p className='config-server__questions__text'>• A lot of work needs to be done by the user every time</p>
+                            <p className='config-server__questions__text'>• If Country is in the X Axis, then the horizontal scroll is going to be very long</p>
+                        </div>
                     </div>
                 </div>
-                <div className='config-server__paired-image__three-img'>
-                    <div>
-                        <img src={LofiWireFrame9A} alt='current state image 9a' className='config-server__paired-image__three-img__img'/>
-                        <img src={LofiWireFrame9B} alt='current state image 9b' className='config-server__paired-image__three-img__img'/>
-                        <img src={LofiWireFrame9C} alt='current state image 9c' className='config-server__paired-image__three-img__img'/>
+                <div className='config-server__img-text-container'>
+                    <div className='config-server__img-text-container__wrapper'>
+                        <img src={LofiWireFrame8A} alt='current state image 8a' className='config-server__img-text-container__wrapper__img margin'/>
+                        <img src={LofiWireFrame8B} alt='current state image 8a' className='config-server__img-text-container__wrapper__img'/>
                     </div>
-                    <div className='config-server__paired-image__three-text'>
-                        <div style={{ width: '50%' }} className='margin'> 
-                            <h1 className='config-server__lo-fi__title'>Pros</h1>
+                    <div className='config-server__img-text-container__wrapper'>
+                        <div className='config-server__img-text-container__wrapper__text margin margin padding'> 
+                            <h1 className='config-server__img-text-container__wrapper__title'>Pros</h1>
+                            <p className='config-server__questions__text'>• You can have a comprehensive view of each individual country</p>
+                        </div>
+                        <div className='config-server__img-text-container__wrapper__text'>
+                            <h1 className='config-server__img-text-container__wrapper__title'>Cons</h1>
+                            <p className='config-server__questions__text'>• The country list can get very long, causing the horizontal scroll to be long</p>
+                            <p className='config-server__questions__text'>• The number of PSID can be in the thousands, so this will not be feasible</p>
+                            <p className='config-server__questions__text'>• Confirmed with developer that PSID cannot exist in the same UI as the models</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='config-server__img-text-container'>
+                    <div className='config-server__img-text-container__wrapper'>
+                        <img src={LofiWireFrame9A} alt='current state image 9a' className='config-server__img-text-container__wrapper__three-img margin'/>
+                        <img src={LofiWireFrame9B} alt='current state image 9b' className='config-server__img-text-container__wrapper__three-img margin'/>
+                        <img src={LofiWireFrame9C} alt='current state image 9c' className='config-server__img-text-container__wrapper__three-img'/>
+                    </div>
+                    <div className='config-server__img-text-container__wrapper'>
+                        <div className='config-server__img-text-container__wrapper__text margin margin padding'> 
+                            <h1 className='config-server__img-text-container__wrapper__title'>Pros</h1>
                             <p className='config-server__questions__text'>• You can customize different levels arrangement</p>
                             <p className='config-server__questions__text'>• The first level is the most precise since you can change it by tabs</p>
                         </div>
-                        <div style={{ width: '50%' }}>
-                            <h1 className='config-server__lo-fi__title'>Cons</h1>
+                        <div className='config-server__img-text-container__wrapper__text'>
+                            <h1 className='config-server__img-text-container__wrapper__title'>Cons</h1>
                             <p className='config-server__questions__text'>• User has to configure it themselves form the start</p>
                             <p className='config-server__questions__text'>• Different stakeholders may have different ways to customize, may cause confusions when in discussion with each other</p>
                         </div>
                     </div>
                 </div>
-                <div className='config-server__paired-image'>
-                    <div className='config-server__paired-image__img-with-text margin'>
-                        <img src={LofiWireFrame10A} alt='current state image 8a' className='config-server__paired-image__img-with-text'/>
-                        <h1 className='config-server__lo-fi__title'>Pros</h1>
-                        <p className='config-server__questions__text'>• Only 2 dimensions showing at one time can reduce complexity</p>
-                        <p className='config-server__questions__text'>• Can see from a summary point of view how many models are turned ON</p>
+                <div className='config-server__img-text-container'>
+                    <div className='config-server__img-text-container__wrapper'>
+                        <img src={LofiWireFrame10A} alt='current state image 8a' className='config-server__img-text-container__wrapper__img margin'/>
+                        <img src={LofiWireFrame10B} alt='current state image 8a' className='config-server__img-text-container__wrapper__img'/>
                     </div>
-                    <div className='config-server__paired-image__img-with-text'>
-                        <img src={LofiWireFrame10B} alt='current state image 8a' className='config-server__paired-image__img-with-text'/>
-                        <h1 className='config-server__lo-fi__title'>Cons</h1>
-                        <p className='config-server__questions__text'>• After expanding, the list of models have become too long</p>
+                    <div className='config-server__img-text-container__wrapper'>
+                        <div className='config-server__img-text-container__wrapper__text margin margin padding'> 
+                            <h1 className='config-server__img-text-container__wrapper__title'>Pros</h1>
+                            <p className='config-server__questions__text'>• Only 2 dimensions showing at one time can reduce complexity</p>
+                        <p className='config-server__questions__text'>• Can see from a summary point of view how many models are turned ON</p>
+                        </div>
+                        <div className='config-server__img-text-container__wrapper__text'>
+                            <h1 className='config-server__img-text-container__wrapper__title'>Cons</h1>
+                            <p className='config-server__questions__text'>• After expanding, the list of models have become too long</p>
+                        </div>
                     </div>
                 </div>
                 <img src={LofiWireFrame11} alt='Lo-Fi Review image 11' className='config-server__lo-fi__img'/>
