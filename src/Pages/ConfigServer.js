@@ -49,8 +49,8 @@ import LofiWireFrame11 from '../Asset/ConfigServer/Group 79.svg';
 import LofiWireFrame12 from '../Asset/ConfigServer/Samsung_Config_Server_LoFi_Wire_Frame_12 2.51.05 PM.svg';
 
 // High Fidelity Mocks, User Test, Changes
-import HifiMock1 from '../Asset/ConfigServer/Samsung_Config_Server_HiFi_Mocks_1 2.51.05 PM.svg';
-import HifiMock2 from '../Asset/ConfigServer/Samsung_Config_Server_HiFi_Mocks_2 2.51.05 PM.svg';
+import HifiMock1 from '../Asset/ConfigServer/Frame 3317.svg';
+import HifiMock2 from '../Asset/ConfigServer/Frame 3318 - 4.svg';
 
 // Final Hand Off
 import FinalHandOff1 from '../Asset/ConfigServer/Samsung_Config_Server_Final_Hand_Off_1.svg';
@@ -214,7 +214,7 @@ export default function ConfigServer() {
                     <Section id="section7">
                         <section className='config-server__section-start'>
                             <p className='config-server__questions__text'>Different possible arrangement by the below 4 categories:</p>
-                            <img src={InformationArthitectExploration} alt='info architect image 1' />
+                            <img src={InformationArthitectExploration} alt='info architect image 1' className='config-server__research__img'/>
                         </section>
                     </Section>
                     <Section id="section8">
