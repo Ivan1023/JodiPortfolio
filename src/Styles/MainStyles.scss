@@ -1,23 +1,24 @@
 //Global colors
-$paragraph-text-color: #38373A;
-$paragraph-text-color-dark: #FFFFFF;
-$paragraph-text-color-card: #3B6075;
-$paragraph-text-color-title: #3B6075;
-$nav-text-color: #6B6C71;
-$button-background-color: #93BEAE;
-$border-color: #6B6C71;
-$error-border: #C80000;
-$error-background: #FFDFDF;
+$paragraph-text-color: #38373a;
+$paragraph-text-color-dark: #ffffff;
+$paragraph-text-color-card: #3b6075;
+$paragraph-text-color-title: #3b6075;
+$nav-text-color: #6b6c71;
+$button-background-color: #93beae;
+$border-color: #6b6c71;
+$error-border: #c80000;
+$error-background: #ffdfdf;
 
-
-//Text Size 
+//Text Size
 $header-text: 24px;
 $title-text: 18px;
 $burger-text: 18px;
 $subtitle-text: 16px;
 $paragraph-text: 14px;
 $button-text: 14px;
-$line-height: 24px; 
+$sidebar-line-height: 20px;
+$line-height: 24px;
+$sidebar-description: 12px;
 
 //font
 $font-light: "OpenSans-light";
@@ -29,32 +30,31 @@ $titlefont-bold: "PlayfairDisplay-Bold";
 //screen size - moblie first logic
 
 @mixin mobile {
-    @media (min-width: 320px) {
-      @content;
-    }
+  @media (min-width: 320px) {
+    @content;
   }
+}
 
 @mixin mobile-tablet {
-    @media (min-width: 550px) {
-      @content;
-    }
+  @media (min-width: 550px) {
+    @content;
   }
+}
 
 @mixin tablet-view {
-    @media (min-width: 768px) {
-      @content;
-    }
+  @media (min-width: 768px) {
+    @content;
   }
+}
 
 @mixin tablet-desktop {
-    @media (min-width: 1024px) {
-        @content;
-    }
-} 
-
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
 
 @mixin desktop-view {
-    @media (min-width: 1440px) {
-        @content;
-    }
+  @media (min-width: 1440px) {
+    @content;
+  }
 }

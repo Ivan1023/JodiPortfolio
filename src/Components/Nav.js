@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import '../Components/ComponentCSS/Nav.scss';
 import Burger from '../Asset/Nav/burger.svg';
 import Logo from '../Asset/Logo/Jodi_Logo.svg'
-import Resume from '../Asset/Resume/Jodi Lam Resume - 2024.pdf';
+import Resume from '../Asset/Resume/Jodi Lam Sr Product Designer Resume.pdf';
 
 
 export default function Nav (){
@@ -36,7 +36,7 @@ export default function Nav (){
     window.addEventListener('scroll', checkNavBarScroll);
 
     return (
-    <nav className={navbar ? 'nav active' : 'nav' } >
+    <nav id="navbar" className={navbar ? 'nav active' : 'nav' } >
         <div className='nav__mobile'>
             <Menu width={'256px'} isOpen={isOpen} onStateChange={(state) => handleStateChange(state)}>
                 <Link to={'/'} className='menu-logo'><img onClick={() => closeMenu()} src={Logo} className="logo" alt="article cover"></img></Link>

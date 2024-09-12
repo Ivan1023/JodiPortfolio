@@ -28,21 +28,48 @@
   padding-right: 10px;
 }
 
-.creative-preview-gallery {
+.hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 18px;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 30px;
+}
+
+.creative-preview-gallery {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // margin: 20px 18px;
 
   &__section {
-    text-align: center;
-    border-top: 1px solid $border-color;
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__section-start {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &__section-end {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 130px;
+  }
+
+  &__section-divider {
+    border-top: 1px solid black;
+    width: 100%;
+    margin: 20px 0;
   }
 
   &__img-text-container {
     width: 100%;
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
     flex-direction: row;
     justify-content: space-between;
 
@@ -81,11 +108,27 @@
       }
 
       &__title {
-        font-family: $font-bold;
-        font-size: $title-text;
-        color: $paragraph-text-color-title;
-        margin: 5px 0;
+        // @include sub-title-style();
+        @include paragraph-text-bold-style();
+        margin: 0;
       }
+
+      &__text {
+        @include paragraph-text-style();
+        // margin: 5px 0 20px 0;
+      }
+
+      &__point-text {
+        @include paragraph-text-style();
+        margin: 5px 0 0 0;
+      }
+
+      // &__title {
+      //   font-family: $font-bold;
+      //   font-size: $title-text;
+      //   color: $paragraph-text-color-title;
+      //   margin: 5px 0;
+      // }
     }
   }
 
@@ -146,8 +189,19 @@
     margin-bottom: 30px;
 
     &__title {
-      @include sub-title-style();
-      margin: 30px 0;
+      // @include sub-title-style();
+      @include paragraph-text-bold-style();
+      margin: 0;
+    }
+
+    &__text {
+      @include paragraph-text-style();
+      margin: 5px 0 20px 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 5px 0 0 0;
     }
   }
 
@@ -157,11 +211,17 @@
     margin: 0 0 39px 0;
 
     &__title {
-      @include sub-title-style();
-      margin: 50px 0 0 0;
+      // @include sub-title-style();
+      @include paragraph-text-bold-style();
+      margin: 0;
     }
 
     &__text {
+      @include paragraph-text-style();
+      margin: 5px 0 20px 0;
+    }
+
+    &__point-text {
       @include paragraph-text-style();
       margin: 5px 0 0 0;
     }
@@ -172,14 +232,19 @@
     border-top: 1px solid $border-color;
 
     &__title {
-      @include sub-title-style();
-      margin: 30px 0 0 0;
+      // @include sub-title-style();
+      @include paragraph-text-bold-style();
+      margin: 0;
     }
 
     &__text {
       @include paragraph-text-style();
-      margin: 5px 0 25px 0;
-      // margin: 0;
+      margin: 5px 0 20px 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 5px 0 0 0;
     }
 
     &__img {
@@ -208,13 +273,19 @@
     }
 
     &__title {
-      @include sub-title-style();
-      margin: 30px 0 0 0;
+      // @include sub-title-style();
+      @include paragraph-text-bold-style();
+      margin: 0;
     }
 
     &__text {
       @include paragraph-text-style();
-      margin: 5px 0 25px 0;
+      margin: 5px 0 20px 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 5px 0 0 0;
     }
 
     &__sm-img {
@@ -259,13 +330,24 @@
     }
 
     &__title {
-      @include sub-title-style();
-      margin: 30px 0 0 0;
+      // @include sub-title-style();
+      @include paragraph-text-bold-style();
+      margin: 0;
     }
 
     &__text {
       @include paragraph-text-style();
-      margin: 5px 0 25px 0;
+      margin: 5px 0 20px 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 5px 0 0 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 5px 0 0 0;
     }
 
     &__text-bold {
@@ -302,13 +384,19 @@
     margin-top: 30px;
 
     &__title {
-      @include sub-title-style();
-      margin: 30px 0 0 0;
+      // @include sub-title-style();
+      @include paragraph-text-bold-style();
+      margin: 0;
     }
 
     &__text {
       @include paragraph-text-style();
-      margin: 5px 0 25px 0;
+      margin: 5px 0 20px 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 5px 0 0 0;
     }
 
     &__img {
@@ -327,13 +415,19 @@
     margin-top: 30px;
 
     &__title {
-      @include sub-title-style();
-      margin: 30px 0 0 0;
+      // @include sub-title-style();
+      @include paragraph-text-bold-style();
+      margin: 0;
     }
 
     &__text {
       @include paragraph-text-style();
-      margin: 5px 0 25px 0;
+      margin: 5px 0 20px 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 5px 0 0 0;
     }
   }
 
