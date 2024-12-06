@@ -14,9 +14,7 @@ const Sidebar = ({ sections, checkIsSticky }) => {
       setNavbarHeight(navbar.offsetHeight);
     }
 
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
-      
+    const handleScroll = () => {     
       // Detect when to make the sidebar sticky (after scrolling past the hero image)
       const sidebarStartPosition = document.getElementById('sidebar-start').offsetTop - navbarHeight;
       if (window.scrollY >= sidebarStartPosition) {
@@ -27,11 +25,28 @@ const Sidebar = ({ sections, checkIsSticky }) => {
         checkIsSticky(false);
       }
 
-      // Highlight the active section
+      // const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      // // Highlight the active section
+      // sections.forEach(({ id }) => {
+      //   const element = document.getElementById(id);
+      //   if (element && element.offsetTop <= scrollPosition && element.offsetTop + element.clientHeight > scrollPosition) {
+      //     setActiveSection(id);
+      //   }
+      // });
+
+      const scrollPosition = window.scrollY + (window.innerHeight * 2) / 3;
+
       sections.forEach(({ id }) => {
         const element = document.getElementById(id);
-        if (element && element.offsetTop <= scrollPosition && element.offsetTop + element.clientHeight > scrollPosition) {
-          setActiveSection(id);
+        if (element) {
+          const elementTop = element.offsetTop;
+          const elementBottom = elementTop + element.clientHeight;
+
+          // Check if the lower third intersects the section
+          if (elementTop <= scrollPosition && elementBottom > scrollPosition) {
+            setActiveSection(id);
+          }
         }
       });
     };
@@ -43,7 +58,6 @@ const Sidebar = ({ sections, checkIsSticky }) => {
   }, [sections, navbarHeight]);
 
   return (
-    // <div className='sidebar'>
     <div id="sidebar-start">
       <div style={{
         position: isSticky ? 'fixed' : 'relative', 
@@ -126,50 +140,5 @@ const SidebarItem = ({ id, label, description, isActive, navbarHeight }) => {
     </div>
   );
 };
-
-
-// Sidebar item component
-// const SidebarItem = ({ id, label, description, isActive, navbarHeight }) => {
-//   const handleScroll = (e) => {
-//     e.preventDefault();
-//     const sectionElement = document.getElementById(id);
-//     const offset = -navbarHeight - 10; // Adjust offset for the navbar height and some margin
-
-//     if (sectionElement) {
-//       const yOffset = sectionElement.getBoundingClientRect().top + window.pageYOffset + offset;
-//       window.scrollTo({ top: yOffset, behavior: 'smooth' });
-//     }
-//   };
-
-//   return (
-//     <div style={{ padding: '10px 0', fontWeight: isActive ? 'bold' : 'normal', position: 'relative' }}>
-//       <a
-//         href={`#${id}`}
-//         onClick={handleScroll}
-//         style={{ textDecoration: 'none', color: isActive ? '#000' : '#666', display: 'block' }}
-//       >
-//         <div>{label}</div>
-//         {isActive && (
-//           <small style={{ color: '#999', display: 'block' }}>
-//             {description}
-//           </small>
-//         )}
-//       </a>
-//       {isActive && (
-//         <span style={{
-//           position: 'absolute',
-//           right: '-10px',
-//           top: '50%',
-//           transform: 'translateY(-50%)',
-//           width: '10px',
-//           height: '10px',
-//           borderRadius: '50%',
-//           backgroundColor: '#000',
-//         }}></span>
-//       )}
-//     </div>
-//   );
-// };
-
 
 export default Sidebar;
