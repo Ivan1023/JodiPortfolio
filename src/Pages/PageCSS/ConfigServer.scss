@@ -37,23 +37,13 @@
 }
 
 .config-server {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // margin: 20px 18px;
-
-  // &__section {
-  //   text-align: center;
-  //   border-top: 1px solid $border-color;
-  //   margin-top: 30px;
-  // }
-  &__section {
+  &__section-center {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  &__section-start {
+  &__section {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -71,20 +61,20 @@
   &__section-divider {
     border-top: 1px solid black;
     width: 100%;
-    margin: 20px 0;
+    margin: 25px 0 0 0;
   }
 
   &__img-text-container {
     width: 100%;
-    // margin-bottom: 60px;
     flex-direction: row;
     justify-content: space-between;
 
     &__wrapper {
       display: flex;
       flex-direction: column;
+      width: 100%;
 
-      @include tablet-desktop {
+      @include desktop-view {
         flex-direction: row;
         justify-content: space-between;
         text-align: start;
@@ -93,42 +83,35 @@
       &__img {
         width: 100%;
 
-        @include tablet-desktop {
+        @include desktop-view {
           width: 50%;
+          margin-top: 15px;
         }
       }
 
-      &__three-img {
-        width: 100%;
+      // &__three-img {
+      //   width: 100%;
 
-        @include tablet-desktop {
-          width: 33%;
-        }
-      }
-      &__title {
-        // @include sub-title-style();
-        @include paragraph-text-bold-style();
-        margin: 10px 0 0 0;
-      }
-
-      &__point-text {
-        @include paragraph-text-style();
-        margin: 5px 0 0 0;
-      }
-
-      &__text {
-        width: 100%;
-
-        @include tablet-desktop {
-          width: 50%;
-        }
-      }
-
+      //   @include tablet-desktop {
+      //     width: 33%;
+      //   }
+      // }
       // &__title {
-      //   font-family: $font-bold;
-      //   font-size: $title-text;
-      //   color: $paragraph-text-color-title;
-      //   margin: 5px 0;
+      //   @include paragraph-text-bold-style();
+      //   margin: 10px 0 0 0;
+      // }
+
+      // &__point-text {
+      //   @include paragraph-text-style();
+      //   margin: 5px 0 0 0;
+      // }
+
+      // &__text {
+      //   width: 100%;
+
+      //   @include tablet-desktop {
+      //     width: 50%;
+      //   }
       // }
     }
   }
@@ -220,12 +203,18 @@
     &__title {
       // @include sub-title-style();
       @include paragraph-text-bold-style();
-      margin: 15px 0 0 0;
+      margin: 25px 0 0 0;
     }
 
     &__text {
       @include paragraph-text-style();
+      margin: 0;
+    }
+
+    &__text-bold {
+      @include paragraph-text-style();
       margin: 0 0 10px 0;
+      font-weight: 600;
     }
 
     &__point-text {
@@ -235,220 +224,172 @@
   }
 
   &__research {
-    text-align: center;
+    // text-align: center;
     border-top: 1px solid $border-color;
 
-    // &__title {
-    //   @include sub-title-style();
-    //   margin: 30px 0 0 0;
-    // }
+    &__title {
+      @include paragraph-text-bold-style();
+      margin: 25px 0 0 0;
+    }
 
-    // &__text {
-    //   @include paragraph-text-style();
-    //   margin: 5px 0 25px 0;
-    //   // margin: 0;
-    // }
+    &__text {
+      @include paragraph-text-style();
+      margin: 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 0;
+    }
+
+    &__img {
+      width: 100%;
+
+      // @include desktop-view {
+      //   max-width: 1220px;
+      // }
+    }
+  }
+
+  &__ideation {
+    border-top: 1px solid $border-color;
 
     &__title {
-      // @include sub-title-style();
+      @include paragraph-text-bold-style();
+      margin: 25px 0 0 0;
+    }
+
+    &__text {
+      @include paragraph-text-style();
+      margin: 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 0;
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__design-process-testing {
+    &__title {
+      @include paragraph-text-bold-style();
+      margin: 25px 0 0 0;
+    }
+
+    &__text {
+      @include paragraph-text-style();
+      margin: 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 0;
+    }
+
+    &__img {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    &__img-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+
+      &__img {
+        width: 55%;
+        padding-right: 15px;
+      }
+
+      &__point-container {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+
+        &__point-text {
+          @include paragraph-text-style();
+          margin: 0;
+        }
+      }
+
+      // @include desktop-view {
+      //   max-width: 1220px;
+      // }
+    }
+  }
+
+  &__iteration-final-solution {
+    &__title {
+      @include paragraph-text-bold-style();
+      margin: 25px 0 0 0;
+    }
+
+    &__text {
+      @include paragraph-text-style();
+      margin: 0;
+    }
+
+    &__point-text {
+      @include paragraph-text-style();
+      margin: 0;
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__reflection {
+    &__title {
       @include paragraph-text-bold-style();
       margin: 0;
     }
 
     &__text {
       @include paragraph-text-style();
-      // margin: 5px 0 20px 0;
-    }
-
-    &__point-text {
-      @include paragraph-text-style();
-      margin: 5px 0 0 0;
-    }
-
-    &__img {
-      width: 100%;
-      padding: 24px 0;
-
-      @include desktop-view {
-        max-width: 1220px;
-      }
-    }
-  }
-
-  &__lo-fi {
-    text-align: center;
-    border-top: 1px solid $border-color;
-    margin-top: 30px;
-
-    &__container {
-      display: flex;
-      flex-direction: column;
-
-      @include desktop-view {
-        display: flex;
-        flex-direction: row;
-      }
-    }
-
-    &__title {
-      @include sub-title-style();
-      margin: 30px 0 0 0;
-    }
-
-    &__text {
-      @include paragraph-text-style();
-      margin: 5px 0 25px 0;
-    }
-
-    &__sm-img {
-      width: 400px;
-      padding: 24px 0;
-    }
-
-    &__img {
-      width: 100%;
-      padding: 24px 0;
-
-      @include desktop-view {
-        max-width: 1220px;
-      }
-    }
-  }
-
-  &__final {
-    text-align: center;
-    border-top: 1px solid $border-color;
-    margin-top: 30px;
-
-    &__container {
-      display: flex;
-      flex-direction: column;
-
-      @include tablet-desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        flex-wrap: wrap;
-      }
-
-      @include desktop-view {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        flex-wrap: wrap;
-      }
-    }
-
-    // &__title {
-    //   @include sub-title-style();
-    //   margin: 30px 0 0 0;
-    // }
-
-    // &__text {
-    //   @include paragraph-text-style();
-    //   margin: 5px 0 25px 0;
-    // }
-
-    &__title {
-      // @include sub-title-style();
-      @include paragraph-text-bold-style();
       margin: 0;
     }
 
-    &__text {
-      @include paragraph-text-style();
-      // margin: 5px 0 20px 0;
-    }
-
     &__point-text {
       @include paragraph-text-style();
-      margin: 5px 0 0 0;
+      margin: 0;
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__results {
+    &__title {
+      @include paragraph-text-bold-style();
+      margin: 25px 0 0 0;
+    }
+
+    &__text {
+      @include paragraph-text-style();
+      margin: 0;
     }
 
     &__text-bold {
-      @include paragraph-text-bold-style();
-      // margin: 5px 0;
-    }
-
-    &__img {
-      width: 100%;
-      padding: 24px 5px;
-
-      @include tablet-desktop {
-        max-width: 450px;
-      }
-
-      @include desktop-view {
-        max-width: 1220px;
-      }
-    }
-
-    &__gif {
-      width: 100%;
-      padding: 24px 0;
-
-      @include desktop-view {
-        max-width: 1220px;
-      }
-    }
-  }
-
-  &__result {
-    text-align: center;
-    border-top: 1px solid $border-color;
-    margin-top: 30px;
-
-    // &__title {
-    //   @include sub-title-style();
-    //   margin: 30px 0 0 0;
-    // }
-
-    // &__text {
-    //   @include paragraph-text-style();
-    //   margin: 5px 0 25px 0;
-    // }
-
-    &__title {
-      // @include sub-title-style();
-      @include paragraph-text-bold-style();
-      margin: 0;
-    }
-
-    &__text {
       @include paragraph-text-style();
-      // margin: 5px 0 20px 0;
+      margin: 0 0 10px 0;
+      font-weight: 600;
     }
 
     &__point-text {
       @include paragraph-text-style();
-      margin: 5px 0 0 0;
+      margin: 0;
     }
 
     &__img {
       width: 100%;
-      padding: 24px 0;
-
-      @include desktop-view {
-        max-width: 1220px;
-      }
-    }
-  }
-
-  &__next-step {
-    text-align: center;
-    border-top: 1px solid $border-color;
-    margin-top: 30px;
-
-    &__title {
-      @include sub-title-style();
-      margin: 30px 0 0 0;
-    }
-
-    &__text {
-      @include paragraph-text-style();
-      margin: 5px 0 25px 0;
+      padding-top: 15px;
     }
   }
 
