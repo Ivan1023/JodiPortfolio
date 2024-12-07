@@ -5,7 +5,7 @@ const ResponsiveContainer = ({ isStickyColumn, children }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 550);
+      setIsSmallScreen(window.innerWidth < 1024);
     };
 
     window.addEventListener('resize', handleResize);

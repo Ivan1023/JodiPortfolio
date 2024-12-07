@@ -1,57 +1,44 @@
 import { useEffect, useState } from 'react';
 import '../Pages/PageCSS/CreativePreviewGallery.scss';
 import SideBar from '../Components/SideBar';
+import ResponsiveContainer from '../Components/ResponsiveContainer';
 
 import MainImage from '../Asset/CreativePreviewGallery/Creative_preview_gallery_hero_photo.svg';
 import DesignProcess from '../Asset/CreativePreviewGallery/Creative_preview_gallery_design_process.svg';
-import UnderstandingProblem1 from '../Asset/CreativePreviewGallery/Creative_preview_gallery_understanding_problem_1.svg';
-import UnderstandingProblem2 from '../Asset/CreativePreviewGallery/Creative_preview_gallery_understanding_problem_2.svg';
-import UnderstandingProblem3A from '../Asset/CreativePreviewGallery/Creative_preview_gallery_understanding_problem_3A.svg';
-import UnderstandingProblem3B from '../Asset/CreativePreviewGallery/Creative_preview_gallery_understanding_problem_3B.svg';
-import UnderstandingProblem4 from '../Asset/CreativePreviewGallery/Creative_preview_gallery_understanding_problem_4.svg';
+import Discovery1 from '../Asset/CreativePreviewGallery/Creative_preview_gallery_understanding_problem_1.svg';
+import Discovery2 from '../Asset/CreativePreviewGallery/Creative_preview_gallery_understanding_problem_4.svg';
 import CompetitiveBrenchmarking1 from '../Asset/CreativePreviewGallery/Creative_preview_gallery_competitive_benchmarking_1.svg';
 import CompetitiveBrenchmarking2 from '../Asset/CreativePreviewGallery/Creative_preview_gallery_competitive_benchmarking_2.svg';
-import MappingInfo1A from '../Asset/CreativePreviewGallery/Creative_preview_gallery_mapping_info_1A.svg';
-import MappingInfo1B from '../Asset/CreativePreviewGallery/Creative_preview_gallery_mapping_info_1B.svg';
-import MappingInfo2A from '../Asset/CreativePreviewGallery/Creative_preview_gallery_mapping_info_2A.svg';
-import MappingInfo2B from '../Asset/CreativePreviewGallery/Creative_preview_gallery_mapping_info_2B.svg';
-import Lofi1A from '../Asset/CreativePreviewGallery/Creative_preview_lofi_1A.svg';
-import Lofi1B from '../Asset/CreativePreviewGallery/Creative_preview_lofi_1B.svg';
-import Lofi1C from '../Asset/CreativePreviewGallery/Creative_preview_lofi_1C.svg';
-import Lofi2A from '../Asset/CreativePreviewGallery/Creative_preview_lofi_2A.svg';
-import Lofi2B from '../Asset/CreativePreviewGallery/Creative_preview_lofi_2B.svg';
-import Lofi2C from '../Asset/CreativePreviewGallery/Creative_preview_lofi_2C.svg';
-import Lofi3A from '../Asset/CreativePreviewGallery/Creative_preview_lofi_3A.svg';
-import Lofi3B from '../Asset/CreativePreviewGallery/Creative_preview_lofi_3B.svg';
-import Lofi3C from '../Asset/CreativePreviewGallery/Creative_preview_lofi_3C.svg';
-import HiFi1A from '../Asset/CreativePreviewGallery/Creative_preview_hifi_1A.svg';
-import HiFi1B from '../Asset/CreativePreviewGallery/Creative_preview_hifi_1B.svg';
-import HiFi2 from '../Asset/CreativePreviewGallery/Creative_preview_hifi_2.svg';
-import HiFi3 from '../Asset/CreativePreviewGallery/Creative_preview_hifi_3.svg';
-import HiFi4 from '../Asset/CreativePreviewGallery/Creative_preview_hifi_4.svg';
-import HiFi5 from '../Asset/CreativePreviewGallery/Creative_preview_hifi_5.svg';
-import HiFi6 from '../Asset/CreativePreviewGallery/Creative_preview_hifi_6.svg';
-import Reiteration from '../Asset/CreativePreviewGallery/Creative_preview_reiteration_1.svg';
-import FinalHandOff1A from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_1A.svg';
-import FinalHandOff1B from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_1B.svg';
-import FinalHandOff2A from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_2A.svg';
-import FinalHandOff2B from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_2B.svg';
-import FinalHandOff3A from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_3A.svg';
-import FinalHandOff3B from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_3B.svg';
-import FinalHandOff4A from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_4A.svg';
-import FinalHandOff4B from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_4B.svg';
+import Ideation1 from '../Asset/CreativePreviewGallery/Creative_preview_gallery_mapping_info_2B.svg';
+import Ideation2A from '../Asset/CreativePreviewGallery/Creative_preview_lofi_2A.svg';
+import Ideation2B from '../Asset/CreativePreviewGallery/Creative_preview_lofi_3B.svg';
+import Ideation2C from '../Asset/CreativePreviewGallery/Creative_preview_lofi_3C.svg';
+import Testing1A from '../Asset/CreativePreviewGallery/Creative_preview_hifi_1A.svg';
+import Testing1B from '../Asset/CreativePreviewGallery/Creative_preview_hifi_1B.svg';
+import Testing2 from '../Asset/CreativePreviewGallery/Creative_preview_hifi_2.svg';
+import Testing3 from '../Asset/CreativePreviewGallery/Creative_preview_hifi_3.svg';
+import Testing4 from '../Asset/CreativePreviewGallery/Creative_preview_hifi_4.svg';
+import Testing5 from '../Asset/CreativePreviewGallery/Creative_preview_hifi_5.svg';
+import Iteration from '../Asset/CreativePreviewGallery/Creative_preview_reiteration_1.svg';
+import FinalSolution1A from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_1A.svg';
+import FinalSolution1B from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_1B.svg';
+import FinalSolution2A from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_2A.svg';
+import FinalSolution2B from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_2B.svg';
+import FinalSolution3A from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_3A.svg';
+import FinalSolution3B from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_3B.svg';
+import FinalSolution4A from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_4A.svg';
+import FinalSolution4B from '../Asset/CreativePreviewGallery/Creative_preview_final_handoff_4B.svg';
 
 const sections = [
     { id: 'section1', label: 'Overview of Design Process', description: 'The overview of the design process for this project.' },
-    { id: 'section2', label: 'Project Details', description: 'Project details summary received from the product manager outlining the requirements.' },
-    { id: 'section3', label: 'Discovery - Current State', description: 'I looked into the current state of the user journey for submitting a new creative. I also read up on every single creative regarding the information needed to be entered and the actual placement on the TV.' },
-    { id: 'section4', label: 'Competitive Benchmarking', description: 'Competitive Benchmarking was done in order to understand how other ad managers are displaying their creative forms.' },
-    { id: 'section5', label: 'Information Architect Explorations', description: 'After understanding each creative inventory type, I began to map out how the information architect can be organized. I took each exploration to the UX Researcher, several end users and SME, where we collaborated and worked on refining the information architect and organized them.' },
-    { id: 'section6', label: 'Low Fidelity Explorations', description: 'Since the scope was relatively small, a simple layout exploration was started to gauge the feasibility.' },
-    { id: 'section7', label: 'Hi Fidelity Mocks for User Test', description: 'We are testing the layout, the icons, the interaction, and most importantly the information within the detail panels.' },
-    { id: 'section8', label: 'Iteration for 2nd User Test', description: 'Adjustments were made to the designs based on the 1st round of user test.' },
-    { id: 'section9', label: 'Final Hand Off', description: 'Final mockups and prototypes were handed off to the product manager and engineers.' },
-    { id: 'section10', label: 'Results', description: 'Results after launching' },
+    { id: 'section2', label: 'Project Details', description: 'Project details outlining the problem and scope constraints.' },
+    { id: 'section3', label: 'Discovery', description: 'Discover the current user journey and the issues with the current form' },
+    { id: 'section4', label: 'Competitive Benchmarking', description: 'Competitive benchmarking to see how others present their list of ad inventories' },
+    { id: 'section5', label: 'Ideation', description: 'Exploration on information architecture and layouts via low fidelity sketches' },
+    { id: 'section6', label: 'Testing', description: 'Taking the low fidelity sketch and turn into high fidelity mocks and prototype to user test' },
+    { id: 'section7', label: 'Iteration', description: 'Translating user test findings into design changes' },
+    { id: 'section8', label: 'Final Solution', description: 'The final high fidelity mocks and prototype' },
+    { id: 'section9', label: 'Reflection and Results', description: 'What I learned from the project and how it has influenced my design approach' },
   ];
 
 const Section = ({ id, children }) => {
@@ -88,7 +75,7 @@ export default function CreativePreviewGallery() {
             </div>
             <div style={{display: 'flex'}}>
                 <SideBar sections={sections} checkIsSticky={checkIsSticky} />
-                <div style={isStickyColumn ? { width: '100%', marginLeft: '360px' } : { width: '100%', marginLeft: '15px' } }>
+                <ResponsiveContainer isStickyColumn={isStickyColumn}>
                     <Section id="section1">
                         <section style={{ width: '100%' }} className='creative-preview-gallery__section'>
                             <img className='creative-preview-gallery__design-process__img' src={DesignProcess} alt='Design Process Image'/>
@@ -115,21 +102,14 @@ export default function CreativePreviewGallery() {
                         <section className='creative-preview-gallery__section-start'>
                             <p className='creative-preview-gallery__research__text'>As show in the visual below, we are presenting the list of available creative inventory types in a drop down list format, where there are no explanation or visual to what they are.</p>
                             <p className='creative-preview-gallery__research__text'>This is meant for experienced clients, but for first time or self serve users this drop down list provide little to no indication of what they are. If you choose a creative, it navigates you directly to the form. In case you want to understand what the creative is, how it looks like or to know what inputs are required, you will have to go back a page to select a different creative.</p>
-                            <img src={UnderstandingProblem1} alt='current state image 1' className='creative-preview-gallery__research__img'/>
-                            <img src={UnderstandingProblem2} alt='current state image 2' className='creative-preview-gallery__research__img'/>
-                            <p className='creative-preview-gallery__research__text'>Understanding the current state, I had to look into each and every single available creative inventory type. It is important to understand how the creative ad works on the TV, each field that is required, the media assets required along with all the click actions. Below is only one of many documentations I read over, and also consulted a SME and Ad Op in order to truly understand how the creative works, and how it looks like on live production TV.</p>
-                            <div className='creative-preview-gallery__paired-image'>
-                                <img src={UnderstandingProblem3A} alt='current state image 3' className='creative-preview-gallery__paired-image__img'/>
-                                <img src={UnderstandingProblem3B} alt='current state image 4' className='creative-preview-gallery__paired-image__img'/>
-                            </div>
-                            <img src={UnderstandingProblem4} alt='current state image 4' className='creative-preview-gallery__research__img'/>
+                            <img src={Discovery1} alt='current state image 1' className='creative-preview-gallery__research__img'/>
+                            <p className='creative-preview-gallery__research__text'>Understanding the current state, I had to look into each and every single available creative inventory type. It is important to understand how the creative ad works on the TV and all the required information.</p>
+                            <img src={Discovery2} alt='current state image 2' className='creative-preview-gallery__research__img'/>
                             <h1 className='creative-preview-gallery__research__title'>Understanding End User</h1>
                             <p className='creative-preview-gallery__questions__text'>With the help of the UX Researcher, we were able to speak with several end users, which were self serve clients:</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Most use case they already have the main media asset ready (either video or image)</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Not sure what input fields are required, and where their placements are on the creative itself when shown on TV</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Not sure what other possible creative templates exist other than what the Ad Ops recommend</p>
-                            <img src={CompetitiveBrenchmarking1} alt='CompetitiveBrenchmarking1' className='creative-preview-gallery__research__img'/>
-                            <img src={CompetitiveBrenchmarking2} alt='CompetitiveBrenchmarking2' className='creative-preview-gallery__research__img'/>
                         </section>
                     </Section>
                     <Section id="section4">
@@ -140,144 +120,84 @@ export default function CreativePreviewGallery() {
                     </Section>
                     <Section id="section5">
                         <section className='creative-preview-gallery__section-start'>
-                            <div className='creative-preview-gallery__paired-image'>
-                                <img src={MappingInfo1A} alt='MappingInfo1A' className='creative-preview-gallery__paired-image__img'/>
-                                <img src={MappingInfo1B} alt='MappingInfo1B' className='creative-preview-gallery__paired-image__img'/>
-                            </div>
-                            <div className='creative-preview-gallery__paired-image'>
-                                <img src={MappingInfo2A} alt='MappingInfo2A' className='creative-preview-gallery__paired-image__img'/>
-                                <img src={MappingInfo2B} alt='MappingInfo2B' className='creative-preview-gallery__paired-image__img'/>
-                            </div>
-                            <p className='creative-preview-gallery__final__text-bold'>Summary</p>
+                            <p className='creative-preview-gallery__final__text-bold'>Information Architecture Exploration - Chosen direction</p>
                             <p className='creative-preview-gallery__questions__point-text'>• The organization with Mobile, TV, Displays and OLV/CTV made the most sense as they are all types of platforms</p>
-                            <p className='creative-preview-gallery__questions__point-text'>• Only Video and Images did not make sense as “TV” did not fit in the same category, but required its own section due to business needs</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Hosted by 3rd Party or Samsung, through user feedback, did not matter too much to require it’s own category</p>
+                            <img src={Ideation1} alt='MappingInfo1A' className='creative-preview-gallery__paired-image__img'/>
+                            <p className='creative-preview-gallery__final__text-bold'>Layout Exploration - Deciding on a direction</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• After finalizing how to present the information in terms of hierarchy, layout explorations were done via low fidelity sketches</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• It is important to keep experienced and first time users in mind without sacrificing efficiency</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Give experienced users the option to click into the inventory straight away, while lettings first time users the ability to explore</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• It is important to keep the options available on the side while exploring the details of the selected inventory to allow easy access back to other options without the user having to do too many clicks</p>
+                            <div className='creative-preview-gallery__img-text-container__wrapper'>
+                                <img src={Ideation2A} alt='MappingInfo2A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={Ideation2B} alt='MappingInfo2B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={Ideation2C} alt='MappingInfo2B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                            </div>
                         </section>
                     </Section>
                     <Section id="section6">
                         <section className='creative-preview-gallery__section-start'>
-                            <div className='creative-preview-gallery__img-text-container'>
-                                <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                    <img src={Lofi1A} alt='Lofi1A' className='creative-preview-gallery__img-text-container__wrapper__three-img margin'/>
-                                    <img src={Lofi1B} alt='Lofi1B' className='creative-preview-gallery__img-text-container__wrapper__three-img margin'/>
-                                    <img src={Lofi1C} alt='Lofi1C' className='creative-preview-gallery__img-text-container__wrapper__three-img'/>
-                                </div>
-                                <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                    <div className='creative-preview-gallery__img-text-container__wrapper__text margin margin padding'> 
-                                        <h1 className='creative-preview-gallery__img-text-container__wrapper__title'>Pros</h1>
-                                        <p className='creative-preview-gallery__questions__point-text'>• Users can still see the context of the creatives library in the background without completing jumping to a new page</p>
-                                    </div>
-                                    <div className='creative-preview-gallery__img-text-container__wrapper__text'>
-                                        <h1 className='creative-preview-gallery__img-text-container__wrapper__title'>Cons</h1>
-                                        <p className='creative-preview-gallery__questions__point-text'>• Experienced users lose the convenience of clicking straight into the creative from the drop down list</p>
-                                        <p className='creative-preview-gallery__questions__point-text'>• If users select a creative to see the details and they want to explore others, they have to click back first from the drawer</p>
-                                    </div>
-                                </div>
+                            <p className='creative-preview-gallery__questions__text'>We have enabled one detail panel per creative under each of the 4 categories for user testing. 1st Screen Plus was chosen to be the main focus of this user test, since that is the most complex creative inventory Samsung Ads offers.</p>
+                            <div className='creative-preview-gallery__img-text-container__wrapper'>
+                                <img src={Testing1A} alt='HiFi1A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={Testing1B} alt='HiFi1B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
                             </div>
+                            <img src={Testing2} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
                             <div className='creative-preview-gallery__section-divider' />
-                            <div className='creative-preview-gallery__img-text-container'>
-                                <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                    <img src={Lofi2A} alt='Lofi2A' className='creative-preview-gallery__img-text-container__wrapper__three-img margin'/>
-                                    <img src={Lofi2B} alt='Lofi2B' className='creative-preview-gallery__img-text-container__wrapper__three-img margin'/>
-                                    <img src={Lofi2C} alt='Lofi2C' className='creative-preview-gallery__img-text-container__wrapper__three-img'/>
-                                </div>
-                                <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                    <div className='creative-preview-gallery__img-text-container__wrapper__text margin margin padding'> 
-                                        <h1 className='creative-preview-gallery__img-text-container__wrapper__title'>Pros</h1>
-                                        <p className='creative-preview-gallery__questions__point-text'>• Experienced users still get the convenience of clicking the creative straight from the drop down list</p>
-                                        <p className='creative-preview-gallery__questions__point-text'>• New page to show all creative inventories gives it more space and seem less clutter, good for scalability</p>
-                                    </div>
-                                    <div className='creative-preview-gallery__img-text-container__wrapper__text'>
-                                        <h1 className='creative-preview-gallery__img-text-container__wrapper__title'>Cons</h1>
-                                        <p className='creative-preview-gallery__questions__point-text'>• If users select a creative to see the details and they want to explore others, they have to click back first from the drawer</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='creative-preview-gallery__section-divider' />
-                            <div className='creative-preview-gallery__img-text-container'>
-                                <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                    <img src={Lofi3A} alt='Lofi3A' className='creative-preview-gallery__img-text-container__wrapper__three-img margin'/>
-                                    <img src={Lofi3B} alt='Lofi3B' className='creative-preview-gallery__img-text-container__wrapper__three-img margin'/>
-                                    <img src={Lofi3C} alt='Lofi3C' className='creative-preview-gallery__img-text-container__wrapper__three-img'/>
-                                </div>
-                                <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                    <div className='creative-preview-gallery__img-text-container__wrapper__text margin margin padding'> 
-                                        <h1 className='creative-preview-gallery__img-text-container__wrapper__title'>Pros</h1>
-                                        <p className='creative-preview-gallery__questions__point-text'>• When users are exploring the details of one creative, they can easily click on a different choice to view the details without having to navigate back</p>
-                                    </div>
-                                    <div className='creative-preview-gallery__img-text-container__wrapper__text'>
-                                        <h1 className='creative-preview-gallery__img-text-container__wrapper__title'>Cons</h1>
-                                        <p className='creative-preview-gallery__questions__point-text'>• Experienced users lose the convenience of clicking straight into the creative from the drop down list</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </Section>
-                    <Section id="section7">
-                        <section className='creative-preview-gallery__section-start'>
-                            <p className='creative-preview-gallery__questions__text'>We have enabled one detail panel per creative under each of the 4 categories for user testing. In this user test, we are testing the layout, the icons, the interaction, and most importantly the information within the detail panels.</p>
-                            <p className='creative-preview-gallery__questions__text'>1st Screen Plus was chosen to be the main focus of this user test, since that is the most complex creative inventory Samsung Ads offers.</p>
-                            <div className='creative-preview-gallery__paired-image'>
-                                <img src={HiFi1A} alt='HiFi1A' className='creative-preview-gallery__paired-image__img'/>
-                                <img src={HiFi1B} alt='HiFi1B' className='creative-preview-gallery__paired-image__img'/>
-                            </div>
-                            <img src={HiFi2} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
-                            <div className='creative-preview-gallery__section-divider' />
-                            <img src={HiFi3} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
-                            <div className='creative-preview-gallery__section-divider' />
-                            <img src={HiFi4} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
-                            <div className='creative-preview-gallery__section-divider' />
-                            <img src={HiFi5} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
-                            <div className='creative-preview-gallery__section-divider' />
-                            <img src={HiFi6} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
+                            <img src={Testing3} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
+                            <img src={Testing4} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
+                            <img src={Testing5} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
                             <div className='creative-preview-gallery__section-divider' />
                             <h1 className='creative-preview-gallery__lo-fi__title'>Next Steps</h1>
                             <p className='creative-preview-gallery__questions__point-text'>• Circle back to re-iterate the side panel, and the information displayed for the user (what are the most important information?)</p>
                             <p className='creative-preview-gallery__questions__point-text'>• If the users thought the side panel were a step-to-step to fill in the form, how can we fix this misinterpretation?</p>
                         </section>
                     </Section>
-                    <Section id="section8">
+                    <Section id="section7">
                         <section className='creative-preview-gallery__section-start'>
                             <p className='creative-preview-gallery__questions__text'>Since the overall layout was well received, there was no need to change. The side panel was the part that needed the most reiteration.</p>
-                            <img src={Reiteration} alt='Reiteration image 1' className='creative-preview-gallery__lo-fi__img'/>
+                            <img src={Iteration} alt='Reiteration image 1' className='creative-preview-gallery__lo-fi__img'/>
                         </section>
                     </Section>
-                    <Section id="section9">
+                    <Section id="section8">
                         <section className='creative-preview-gallery__section-start'>
                             <p className='creative-preview-gallery__final__text'>Below is part of all the final hand off of the mocks (prototypes were also provided to the engineers to show interactions).</p>
                             <p className='creative-preview-gallery__final__text'>Due to the amount of mocks involved, only one example of each category mock is shown.</p>
                             <p className='creative-preview-gallery__final__text-bold'>CTV/OLV</p>
-                            <div className='creative-preview-gallery__paired-image'>
-                                <img src={FinalHandOff1A} alt='FinalHandOff1A' className='creative-preview-gallery__paired-image__img'/>
-                                <img src={FinalHandOff1B} alt='FinalHandOff1B' className='creative-preview-gallery__paired-image__img'/>
+                            <div className='creative-preview-gallery__img-text-container__wrapper'>
+                                <img src={FinalSolution1A} alt='FinalHandOff1A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={FinalSolution1B} alt='FinalHandOff1B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
                             </div>
                             <p className='creative-preview-gallery__final__text-bold'>Samsung TV Native</p>
-                            <div className='creative-preview-gallery__paired-image'>
-                                <img src={FinalHandOff2A} alt='FinalHandOff2A' className='creative-preview-gallery__paired-image__img'/>
-                                <img src={FinalHandOff2B} alt='FinalHandOff2B' className='creative-preview-gallery__paired-image__img'/>
+                            <div className='creative-preview-gallery__img-text-container__wrapper'>
+                                <img src={FinalSolution2A} alt='FinalHandOff2A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={FinalSolution2B} alt='FinalHandOff2B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
                             </div>
                             <p className='creative-preview-gallery__final__text-bold'>Samsung Mobile Native</p>
-                            <div className='creative-preview-gallery__paired-image'>
-                                <img src={FinalHandOff3A} alt='FinalHandOff3A' className='creative-preview-gallery__paired-image__img'/>
-                                <img src={FinalHandOff3B} alt='FinalHandOff3B' className='creative-preview-gallery__paired-image__img'/>
+                            <div className='creative-preview-gallery__img-text-container__wrapper'>
+                                <img src={FinalSolution3A} alt='FinalHandOff3A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={FinalSolution3B} alt='FinalHandOff3B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
                             </div>
                             <p className='creative-preview-gallery__final__text-bold'>Displays</p>
-                            <div className='creative-preview-gallery__paired-image'>
-                                <img src={FinalHandOff4A} alt='FinalHandOff4A' className='creative-preview-gallery__paired-image__img'/>
-                                <img src={FinalHandOff4B} alt='FinalHandOff4B' className='creative-preview-gallery__paired-image__img'/>
+                            <div className='creative-preview-gallery__img-text-container__wrapper'>
+                                <img src={FinalSolution4A} alt='FinalHandOff4A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={FinalSolution4B} alt='FinalHandOff4B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
                             </div>
                         </section>
                     </Section>
-                    <Section id="section10">
-                        <section className='creative-preview-gallery__section-end'>
-                            <div style={{padding: '20px 0'}}>
-                                <p className='creative-preview-gallery__final__text-bold'>Key benefits</p>
-                                <p className='creative-preview-gallery__questions__point-text'>• Provides self serve users a convenient UI to quickly understand and explore all the available creative inventories Samsung Ads provide</p>
-                                <p className='creative-preview-gallery__questions__point-text'>• Reduces the time for Ad Ops Sales to spend on educating self serve or first time clients about all the available creative inventories</p>
-                            </div>
-                        </section> 
+                    <Section id="section9">
+                        <section className='creative-preview-gallery__section-start margin-end'>
+                            <p className='creative-preview-gallery__final__text-bold'>What I learned that improved my design process</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• It is important to weight different types of user persona equally even though the project was meant for improving the user journey for one persona type</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• While presenting all crucial information in a clear and easy to navigate way is important, think about whether or not this level of information should be at this stage of the user’s whole journey of creating a campaign</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Do not be afraid to delegate where it makes sense (If the user needs to know the intended information at a prior step before this UI, communicate with the correct department to align in order to give the best user experience) </p>
+                            <p className='creative-preview-gallery__final__text-bold'>Results after launch</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Provides self serve users a convenient UI to quickly understand and explore all the available creative inventories Samsung Ads provide</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Reduces the time for Ad Ops Sales to spend on educating self serve or first time clients about all the available creative inventories</p>
+                        </section>
                     </Section>
-                </div>
+                </ResponsiveContainer>    
             </div>
         </main>
     )

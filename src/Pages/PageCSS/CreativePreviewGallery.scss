@@ -24,6 +24,10 @@
   margin-right: 10px;
 }
 
+.margin-end {
+  margin-bottom: 400px;
+}
+
 .padding {
   padding-right: 10px;
 }
@@ -37,11 +41,6 @@
 }
 
 .creative-preview-gallery {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // margin: 20px 18px;
-
   &__section {
     display: flex;
     flex-direction: column;
@@ -71,66 +70,30 @@
 
   &__img-text-container {
     width: 100%;
-    // margin-bottom: 60px;
     flex-direction: row;
     justify-content: space-between;
 
     &__wrapper {
       display: flex;
       flex-direction: column;
+      width: 100%;
 
-      @include tablet-desktop {
+      @include desktop-view {
         flex-direction: row;
         justify-content: space-between;
         text-align: start;
+        flex-wrap: wrap;
+        align-items: start;
       }
 
       &__img {
         width: 100%;
 
-        @include tablet-desktop {
+        @include desktop-view {
           width: 50%;
+          margin-top: 15px;
         }
       }
-
-      &__three-img {
-        width: 100%;
-
-        @include tablet-desktop {
-          width: 33%;
-        }
-      }
-
-      &__text {
-        width: 100%;
-
-        @include tablet-desktop {
-          width: 50%;
-        }
-      }
-
-      &__title {
-        // @include sub-title-style();
-        @include paragraph-text-bold-style();
-        margin: 0;
-      }
-
-      &__text {
-        @include paragraph-text-style();
-        // margin: 5px 0 20px 0;
-      }
-
-      &__point-text {
-        @include paragraph-text-style();
-        margin: 5px 0 0 0;
-      }
-
-      // &__title {
-      //   font-family: $font-bold;
-      //   font-size: $title-text;
-      //   color: $paragraph-text-color-title;
-      //   margin: 5px 0;
-      // }
     }
   }
 
@@ -142,10 +105,6 @@
     &__img {
       width: 100%;
       margin-bottom: 20px;
-
-      @include tablet-desktop {
-        width: 49%;
-      }
     }
 
     @include tablet-desktop {
@@ -354,7 +313,7 @@
 
     &__text-bold {
       @include paragraph-text-bold-style();
-      margin: 5px 0;
+      margin: 15px 0 5px 0;
     }
 
     &__img {
@@ -431,6 +390,14 @@
       @include paragraph-text-style();
       margin: 5px 0 0 0;
     }
+  }
+
+  @include mobile {
+    margin: 20px 15px;
+  }
+
+  @include mobile-tablet {
+    margin: 20px 15px;
   }
 
   @include tablet-view {

@@ -88,31 +88,6 @@
           margin-top: 15px;
         }
       }
-
-      // &__three-img {
-      //   width: 100%;
-
-      //   @include tablet-desktop {
-      //     width: 33%;
-      //   }
-      // }
-      // &__title {
-      //   @include paragraph-text-bold-style();
-      //   margin: 10px 0 0 0;
-      // }
-
-      // &__point-text {
-      //   @include paragraph-text-style();
-      //   margin: 5px 0 0 0;
-      // }
-
-      // &__text {
-      //   width: 100%;
-
-      //   @include tablet-desktop {
-      //     width: 50%;
-      //   }
-      // }
     }
   }
 
@@ -391,6 +366,14 @@
       width: 100%;
       padding-top: 15px;
     }
+  }
+
+  @include mobile {
+    margin: 20px 15px;
+  }
+
+  @include mobile-tablet {
+    margin: 20px 15px;
   }
 
   @include tablet-view {

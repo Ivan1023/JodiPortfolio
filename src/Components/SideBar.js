@@ -44,20 +44,28 @@ const Sidebar = ({ sections, checkIsSticky }) => {
         checkIsSticky(false);
       }
 
-      const scrollPosition = window.scrollY + (window.innerHeight * 2) / 3;
+      // const scrollPosition = window.scrollY + (window.innerHeight * 2) / 3;
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
+      // Highlight the active section
       sections.forEach(({ id }) => {
         const element = document.getElementById(id);
-        if (element) {
-          const elementTop = element.offsetTop;
-          const elementBottom = elementTop + element.clientHeight;
-
-          // Check if the lower third intersects the section
-          if (elementTop <= scrollPosition && elementBottom > scrollPosition) {
-            setActiveSection(id);
-          }
+        if (element && element.offsetTop <= scrollPosition && element.offsetTop + element.clientHeight > scrollPosition) {
+          setActiveSection(id);
         }
       });
+      // sections.forEach(({ id }) => {
+      //   const element = document.getElementById(id);
+      //   if (element) {
+      //     const elementTop = element.offsetTop;
+      //     const elementBottom = elementTop + element.clientHeight;
+
+      //     // Check if the lower third intersects the section
+      //     if (elementTop <= scrollPosition && elementBottom > scrollPosition) {
+      //       setActiveSection(id);
+      //     }
+      //   }
+      // });
     };
 
     window.addEventListener('scroll', handleScroll);
