@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../Pages/PageCSS/ConfigServer.scss';
 import SideBar from '../Components/SideBar';
+import ResponsiveContainer from '../Components/ResponsiveContainer';
 
 //images
 import MainImage from '../Asset/ConfigServer/Samsung_Config_Server_Project_Hero_Photo.svg';
@@ -86,10 +87,6 @@ const sections = [
     { id: 'section6', label: 'Iteration & Final Solution', description: 'Final Mocks and Prototypes and the reasoning behind the design approach.' },
     { id: 'section7', label: 'Reflection', description: 'What I learned from the project and how it has influenced my design approach' },
     { id: 'section8', label: 'Results After Launch', description: 'Impact of finished product after launch' },
-    // { id: 'section9', label: 'Tweaking Requirements for User Test', description: 'After reviewing the concept designs with stakeholders, some requirements were also tweaked before user test was conducted. As a result, edits were made before turning mocks into high fidelity.' },
-    // { id: 'section10', label: 'User Test Results', description: 'Overall the user test went relatively well with proven success on the core functionalities. Some adjustments are required on certain details based on user test results.' },
-    // { id: 'section11', label: 'Iteration and Final Hand Off', description: 'The designs were updated based on user test results, and final mockups and prototypes were handed off to the product manager and engineers.' },
-    // { id: 'section12', label: 'Results After Launch', description: 'Key Benefits and Business Success after launch' },
   ];
 
 const Section = ({ id, children }) => {
@@ -126,7 +123,8 @@ export default function ConfigServer() {
             </div>
             <div style={{display: 'flex'}}>
                 <SideBar sections={sections} checkIsSticky={checkIsSticky} />
-                <div style={isStickyColumn ? { width: '100%', marginLeft: '360px' } : { width: '100%', marginLeft: '15px' } }>
+                {/* <div style={isStickyColumn ? { width: '100%', marginLeft: '360px' } : { width: '100%', marginLeft: '15px' } }> */}
+                <ResponsiveContainer isStickyColumn={isStickyColumn}>
                     <Section id="section1">
                         <section style={{ width: '100%' }} className='config-server__section-center'>
                             <img className='config-server__design-process__img' src={DesignProcess} alt='Design Process Image'/>
@@ -347,7 +345,7 @@ export default function ConfigServer() {
                             <img src={ResultAfterLaunch2} alt='info architect image 1' className='config-server__results__img'/>
                         </section>
                     </Section>
-                </div>
+                </ResponsiveContainer>
             </div>
         </main>
     )

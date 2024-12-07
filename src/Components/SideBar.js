@@ -5,9 +5,28 @@ const Sidebar = ({ sections, checkIsSticky }) => {
   const [activeSection, setActiveSection] = useState('section1');
   const [isSticky, setIsSticky] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState(0); // Track navbar height for offset
-
+  const [shouldRenderSidebar, setShouldRenderSidebar] = useState(window.innerWidth > 1024);
 
   useEffect(() => {
+    const handleResize = () => {
+      setShouldRenderSidebar(window.innerWidth > 1024);
+    };
+
+    // Attach resize event listener
+    window.addEventListener('resize', handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!shouldRenderSidebar) return;
+
     // Get the navbar height and set it
     const navbar = document.getElementById('navbar');
     if (navbar) {
@@ -24,16 +43,6 @@ const Sidebar = ({ sections, checkIsSticky }) => {
         setIsSticky(false);
         checkIsSticky(false);
       }
-
-      // const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-      // // Highlight the active section
-      // sections.forEach(({ id }) => {
-      //   const element = document.getElementById(id);
-      //   if (element && element.offsetTop <= scrollPosition && element.offsetTop + element.clientHeight > scrollPosition) {
-      //     setActiveSection(id);
-      //   }
-      // });
 
       const scrollPosition = window.scrollY + (window.innerHeight * 2) / 3;
 
@@ -55,7 +64,9 @@ const Sidebar = ({ sections, checkIsSticky }) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [sections, navbarHeight]);
+  }, [sections, navbarHeight, shouldRenderSidebar]);
+
+  if (!shouldRenderSidebar) return null;
 
   return (
     <div id="sidebar-start">
