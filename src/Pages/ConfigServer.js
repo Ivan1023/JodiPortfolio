@@ -123,7 +123,6 @@ export default function ConfigServer() {
             </div>
             <div style={{display: 'flex'}}>
                 <SideBar sections={sections} checkIsSticky={checkIsSticky} />
-                {/* <div style={isStickyColumn ? { width: '100%', marginLeft: '360px' } : { width: '100%', marginLeft: '15px' } }> */}
                 <ResponsiveContainer isStickyColumn={isStickyColumn}>
                     <Section id="section1">
                         <section style={{ width: '100%' }} className='config-server__section-center'>

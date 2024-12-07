@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import '../Pages/PageCSS/InteractiveQRCodeCreative.scss';
 import SideBar from '../Components/SideBar';
+import ResponsiveContainer from '../Components/ResponsiveContainer';
 
 import MainImage from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Main_Image.svg';
 import DesignProcess from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Design_Process.svg';
 import ProductKickoff1 from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Product_Kickkoff_1.svg';
 import ProductKickoff2 from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Product_Kickkoff_2.svg';
-import CompetitiveBrenchmarking1 from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Competitive_Benchmark_1.svg';
-import CompetitiveBrenchmarking2 from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Competitive_Benchmark_2.svg';
-import CompetitiveBrenchmarking3 from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Competitive_Benchmark_3.svg';
+import CompetitiveBrenchmarking1 from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Competitive_Benchmark_2.svg';
+import CompetitiveBrenchmarking2 from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Competitive_Benchmark_3.svg';
 import CreativeForm1A from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Creative_Form_1A.svg';
 import CreativeForm1B from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Creative_Form_1B.svg';
 import ExplorativeLayout1A from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Explorative_Layouts_1A.svg';
@@ -29,15 +29,14 @@ import BackgroundSettingQRCodeLabel from '../Asset/InteractiveQRCodeCreative/Int
 
 const sections = [
     { id: 'section1', label: 'Overview of Design Process', description: 'The overview of the design process for this project.' },
-    { id: 'section2', label: 'Project Details', description: 'Project details summary received from the product manager outlining the requirements.' },
-    { id: 'section3', label: 'Product Kick Off', description: 'Showcasing the creative ad that this project needs to be designed for.' },
-    { id: 'section4', label: 'Competitive Benchmarking', description: 'Competitive Benchmarking was done in order to understand how other ad managers are displaying their creative forms.' },
-    { id: 'section5', label: 'Current Creative Forms', description: 'Current creative forms in the DSP have a set template that is outdated with a lack of usability affordance.' },
-    { id: 'section6', label: 'Layout Exploration', description: 'Since the scope was relatively small, a simple layout exploration was started to gauge the feasibility.' },
-    { id: 'section7', label: 'Finalizing the Layout and Justification', description: 'The layout was finalized and scope was confirmed with the product manager and engineer team.' },
-    { id: 'section8', label: 'High Fidelity Mocks and Prototype', description: 'High fidelity mocks and prototypes were produced and handed off to the product manager and engineer team' },
-    { id: 'section9', label: 'Summary', description: '' },
-    
+    { id: 'section2', label: 'Project Details', description: 'Project details outlining the problem and scope constraints.' },
+    { id: 'section3', label: 'Product Requirements', description: 'Project details outlining the problem and scope constraints.' },
+    { id: 'section4', label: 'Competitive Benchmarking', description: 'Competitive benchmarking on how other creative forms display the creative in real time.' },
+    { id: 'section5', label: 'Current User Journey', description: 'Showcases the current state of a creative form.' },
+    { id: 'section6', label: 'Layout Ideation', description: 'Ideation done for layout explorations.' },
+    { id: 'section7', label: 'Iteration', description: 'Iterated from the exploration and finalized on the layout.' },
+    { id: 'section8', label: 'Final Solution', description: 'Final mocks and prototypes for the creative form.' },
+    { id: 'section9', label: 'Reflection', description: 'What I learned to improve my design process and outcome' },
   ];
 
 const Section = ({ id, children }) => {
@@ -74,7 +73,7 @@ export default function InteractiveQRCodeCreative() {
             </div>
             <div style={{display: 'flex'}}>
                 <SideBar sections={sections} checkIsSticky={checkIsSticky} />
-                <div style={isStickyColumn ? { width: '100%', marginLeft: '360px' } : { width: '100%', marginLeft: '15px' } }>
+                <ResponsiveContainer isStickyColumn={isStickyColumn}>
                     <Section id="section1">
                         <section className='interactive-qr-code-creative__section'>
                             <img className='interactive-qr-code-creative__design-process__img' src={DesignProcess} alt='Design Process Image'/>
@@ -114,15 +113,14 @@ export default function InteractiveQRCodeCreative() {
                     </Section>
                     <Section id="section4">
                         <section className='interactive-qr-code-creative__section-start'>
-                            <p className='interactive-qr-code-creative__questions__text'>Competitive benchmarking was done across other ad platforms to see how their creative forms were filled. 4 competitors were highlighted to showcase their ability to show preview as the user completes the form. The preview are always on the right, showing real time edits as the user fills out the form. This gives the users assurance of how the creative will eventually look in production.</p>
+                            <p className='interactive-qr-code-creative__questions__text'>Competitive benchmarking was done across other ad platforms to see how their creative forms were filled. 4 competitors were highlighted to showcase their ability to show preview as the user completes the form. This gives the users assurance of how the creative will eventually look in production.</p>
                             <img src={CompetitiveBrenchmarking1} alt='CompetitiveBrenchmarking1' className='interactive-qr-code-creative__research__img'/>
                             <img src={CompetitiveBrenchmarking2} alt='CompetitiveBrenchmarking2' className='interactive-qr-code-creative__research__img'/>
-                            <img src={CompetitiveBrenchmarking3} alt='CompetitiveBrenchmarking3' className='interactive-qr-code-creative__research__img'/>
                         </section>
                     </Section>
                     <Section id="section5">
                         <section className='interactive-qr-code-creative__section-start'>
-                            <p className='interactive-qr-code-creative__questions__text'>Below are some examples of how Samsung Ads DSP creative forms currently look. They do not have any preview elements, and is only a long form with input fields.</p>
+                            <p className='interactive-qr-code-creative__questions__text'>Below are some examples of how Samsung Ads DSP creative forms currently look. They do not have any preview elements, and is only a long form with input fields where users have to fill out.</p>
                             <div className='interactive-qr-code-creative__paired-image'>
                                 <img src={CreativeForm1A} alt='CreativeForm1A' className='interactive-qr-code-creative__paired-image__img'/>
                                 <img src={CreativeForm1B} alt='MappingInfo2B' className='interactive-qr-code-creative__paired-image__img'/>
@@ -144,7 +142,7 @@ export default function InteractiveQRCodeCreative() {
                     </Section>
                     <Section id="section7">
                         <section className='interactive-qr-code-creative__section-start'>
-                            <p className='interactive-qr-code-creative__lo-fi__text'>Ultimately, I decided to go with the preview on the right side, below the general settings. The reason is because the preview will only have changes shown once they end user starts filling out the form below general settings. Since general settings does not affect the preview, I have decided to place the preview to the right of the section that will have an effect to real time edits. </p>
+                            <p className='interactive-qr-code-creative__lo-fi__text'>Ultimately, I decided to go with the preview on the right side, below the general settings. The reason is because the preview will only have <span className='interactive-qr-code-creative__text-bold'>changes shown once they end user starts filling out the form below general settings.</span> Since general settings does not affect the preview, I have decided to place the preview to the right of the section that will have an effect to real time edits. </p>
                             <p className='interactive-qr-code-creative__final__text-bold'>Size of Preview</p>
                             <p className='interactive-qr-code-creative__lo-fi__text'>With consideration of the Samsung Ads design system’s grid and column layout, 31.25% scaled version of the preview is chosen for the optimal size. This was also confirmed with a quick user review from 5 Ad Ops to ensure they can see all the details in this size without compromises.</p>
                             <p className='interactive-qr-code-creative__final__text-bold'>Expandable Feature</p>
@@ -156,7 +154,7 @@ export default function InteractiveQRCodeCreative() {
                     </Section>
                     <Section id="section8">
                         <section className='interactive-qr-code-creative__section-start'>
-                            <p className='interactive-qr-code-creative__final__text-bold'>Overall Form Layout</p>
+                            <p className='interactive-qr-code-creative__final__text-bold'>Final Form Layout</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• General Settings remain unchanged due to scope requirements</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• Template Settings is disabled by default due to business strategy (this is to advertise that there will be more templates coming soon)</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• Preview section is on the right of the form below general settings, and is sticky once you scroll past general settings</p>
@@ -217,7 +215,7 @@ export default function InteractiveQRCodeCreative() {
                             <p className='interactive-qr-code-creative__questions__text'>• Since the preview function is incorporated in this creative form, all other creative forms can benefit from this as necessary, giving Ad Ops a more comprehensive view of the creative they are filling. This can be turned into an external link for Ad Ops to send over to their clients to review as well.</p>
                         </section>
                     </Section>
-                </div>
+                </ResponsiveContainer>
             </div>
         </main>
     )

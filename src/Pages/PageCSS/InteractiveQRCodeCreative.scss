@@ -51,11 +51,6 @@
 }
 
 .interactive-qr-code-creative {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // margin: 20px 18px;
-
   &__section {
     display: flex;
     flex-direction: column;
@@ -72,6 +67,10 @@
     border-top: 1px solid black;
     width: 100%;
     margin: 20px 0 10px 0;
+  }
+
+  &__text-bold {
+    font-weight: 600;
   }
 
   &__img-text-container {
@@ -395,6 +394,14 @@
       @include paragraph-text-style();
       margin: 5px 0 25px 0;
     }
+  }
+
+  @include mobile {
+    margin: 20px 15px;
+  }
+
+  @include mobile-tablet {
+    margin: 20px 15px;
   }
 
   @include tablet-view {

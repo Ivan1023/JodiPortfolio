@@ -32,12 +32,12 @@ export default function Projects (){
                     <Link to={'/InteractiveQRCodeCreative'}>
                         <ProjectTitleCard titleImg={InteractiveQRCodeCreative} description={'Samsung Ads: Interactive QR Code Creative'} />
                     </Link>
-                    <Link to={'/ToolRental'}>
+                    {/* <Link to={'/ToolRental'}>
                         <ProjectTitleCard titleImg={OnlineToolRental} description={'The Home Depot: Online Tool Rental'} />
-                    </Link>
-                    <Link to={'/BuyAgain'}>
+                    </Link> */}
+                    {/* <Link to={'/BuyAgain'}>
                         <ProjectTitleCard titleImg={BuyAgain} description={'The Home Depot: Buy Again'} />
-                    </Link>
+                    </Link> */}
                     <Link to={'/LocalPro'}>
                         <ProjectTitleCard titleImg={LocalPro} description={'The Home Depot: Local Pro App - Direct Jobs'} />
                     </Link>
