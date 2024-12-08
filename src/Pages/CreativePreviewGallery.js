@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import '../Pages/PageCSS/CreativePreviewGallery.scss';
 import SideBar from '../Components/SideBar';
 import ResponsiveContainer from '../Components/ResponsiveContainer';
+import { Modal } from '../Components/Modal';
 
 import MainImage from '../Asset/CreativePreviewGallery/Creative_preview_gallery_hero_photo.svg';
 import DesignProcess from '../Asset/CreativePreviewGallery/Creative_preview_gallery_design_process.svg';
@@ -51,6 +52,10 @@ const Section = ({ id, children }) => {
 
 export default function CreativePreviewGallery() {
     const [isStickyColumn, setIsStickyColumn] = useState(false);
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        imageUrl: "",
+      });
 
     useEffect(()=>{
         window.scrollTo(0, 0);
@@ -59,6 +64,20 @@ export default function CreativePreviewGallery() {
     const checkIsSticky = (value) => {
         setIsStickyColumn(value)
     }
+
+    // Function to open the modal with the selected image
+    const openModal = (imageUrl) => {
+        if (window.innerWidth >= 1024) {
+          setModalState({ isOpen: true, imageUrl });
+        } else {
+          setModalState({ isOpen: false, imageUrl: "" });
+        } 
+      };
+
+    // Function to close the modal
+    const closeModal = () => {
+        setModalState({ isOpen: false, imageUrl: "" });
+    };
 
     return (
         <main className='creative-preview-gallery'>
@@ -102,9 +121,9 @@ export default function CreativePreviewGallery() {
                         <section className='creative-preview-gallery__section-start'>
                             <p className='creative-preview-gallery__research__text'>As show in the visual below, we are presenting the list of available creative inventory types in a drop down list format, where there are no explanation or visual to what they are.</p>
                             <p className='creative-preview-gallery__research__text'>This is meant for experienced clients, but for first time or self serve users this drop down list provide little to no indication of what they are. If you choose a creative, it navigates you directly to the form. In case you want to understand what the creative is, how it looks like or to know what inputs are required, you will have to go back a page to select a different creative.</p>
-                            <img src={Discovery1} alt='current state image 1' className='creative-preview-gallery__research__img'/>
+                            <img src={Discovery1} alt='current state image 1' className='creative-preview-gallery__research__img modal-cursor' onClick={() => openModal(Discovery1)}/>
                             <p className='creative-preview-gallery__research__text'>Understanding the current state, I had to look into each and every single available creative inventory type. It is important to understand how the creative ad works on the TV and all the required information.</p>
-                            <img src={Discovery2} alt='current state image 2' className='creative-preview-gallery__research__img'/>
+                            <img src={Discovery2} alt='current state image 2' className='creative-preview-gallery__research__img modal-cursor' onClick={() => openModal(Discovery2)}/>
                             <h1 className='creative-preview-gallery__research__title'>Understanding End User</h1>
                             <p className='creative-preview-gallery__questions__text'>With the help of the UX Researcher, we were able to speak with several end users, which were self serve clients:</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Most use case they already have the main media asset ready (either video or image)</p>
@@ -114,8 +133,8 @@ export default function CreativePreviewGallery() {
                     </Section>
                     <Section id="section4">
                         <section className='creative-preview-gallery__section-start'>
-                            <img src={CompetitiveBrenchmarking1} alt='CompetitiveBrenchmarking1' className='creative-preview-gallery__research__img'/>
-                            <img src={CompetitiveBrenchmarking2} alt='CompetitiveBrenchmarking2' className='creative-preview-gallery__research__img'/>
+                            <img src={CompetitiveBrenchmarking1} alt='CompetitiveBrenchmarking1' className='creative-preview-gallery__research__img modal-cursor' onClick={() => openModal(CompetitiveBrenchmarking1)}/>
+                            <img src={CompetitiveBrenchmarking2} alt='CompetitiveBrenchmarking2' className='creative-preview-gallery__research__img modal-cursor' onClick={() => openModal(CompetitiveBrenchmarking2)}/>
                         </section>
                     </Section>
                     <Section id="section5">
@@ -123,16 +142,16 @@ export default function CreativePreviewGallery() {
                             <p className='creative-preview-gallery__final__text-bold'>Information Architecture Exploration - Chosen direction</p>
                             <p className='creative-preview-gallery__questions__point-text'>• The organization with Mobile, TV, Displays and OLV/CTV made the most sense as they are all types of platforms</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Hosted by 3rd Party or Samsung, through user feedback, did not matter too much to require it’s own category</p>
-                            <img src={Ideation1} alt='MappingInfo1A' className='creative-preview-gallery__paired-image__img'/>
+                            <img src={Ideation1} alt='MappingInfo1A' className='creative-preview-gallery__paired-image__img modal-cursor' onClick={() => openModal(Ideation1)}/>
                             <p className='creative-preview-gallery__final__text-bold'>Layout Exploration - Deciding on a direction</p>
                             <p className='creative-preview-gallery__questions__point-text'>• After finalizing how to present the information in terms of hierarchy, layout explorations were done via low fidelity sketches</p>
                             <p className='creative-preview-gallery__questions__point-text'>• It is important to keep experienced and first time users in mind without sacrificing efficiency</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Give experienced users the option to click into the inventory straight away, while lettings first time users the ability to explore</p>
                             <p className='creative-preview-gallery__questions__point-text'>• It is important to keep the options available on the side while exploring the details of the selected inventory to allow easy access back to other options without the user having to do too many clicks</p>
                             <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                <img src={Ideation2A} alt='MappingInfo2A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
-                                <img src={Ideation2B} alt='MappingInfo2B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
-                                <img src={Ideation2C} alt='MappingInfo2B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={Ideation2A} alt='MappingInfo2A' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Ideation2A)}/>
+                                <img src={Ideation2B} alt='MappingInfo2B' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Ideation2B)}/>
+                                <img src={Ideation2C} alt='MappingInfo2B' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Ideation2C)}/>
                             </div>
                         </section>
                     </Section>
@@ -140,14 +159,14 @@ export default function CreativePreviewGallery() {
                         <section className='creative-preview-gallery__section-start'>
                             <p className='creative-preview-gallery__questions__text'>We have enabled one detail panel per creative under each of the 4 categories for user testing. 1st Screen Plus was chosen to be the main focus of this user test, since that is the most complex creative inventory Samsung Ads offers.</p>
                             <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                <img src={Testing1A} alt='HiFi1A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
-                                <img src={Testing1B} alt='HiFi1B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={Testing1A} alt='HiFi1A' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Testing1A)}/>
+                                <img src={Testing1B} alt='HiFi1B' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Testing1B)}/>
                             </div>
-                            <img src={Testing2} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
+                            <img src={Testing2} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img modal-cursor' onClick={() => openModal(Testing2)}/>
                             <div className='creative-preview-gallery__section-divider' />
-                            <img src={Testing3} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
-                            <img src={Testing4} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
-                            <img src={Testing5} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img'/>
+                            <img src={Testing3} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img modal-cursor' onClick={() => openModal(Testing3)}/>
+                            <img src={Testing4} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img modal-cursor' onClick={() => openModal(Testing4)}/>
+                            <img src={Testing5} alt='Hi-Fi Review image 1' className='creative-preview-gallery__lo-fi__img modal-cursor' onClick={() => openModal(Testing5)}/>
                             <div className='creative-preview-gallery__section-divider' />
                             <h1 className='creative-preview-gallery__lo-fi__title'>Next Steps</h1>
                             <p className='creative-preview-gallery__questions__point-text'>• Circle back to re-iterate the side panel, and the information displayed for the user (what are the most important information?)</p>
@@ -157,7 +176,7 @@ export default function CreativePreviewGallery() {
                     <Section id="section7">
                         <section className='creative-preview-gallery__section-start'>
                             <p className='creative-preview-gallery__questions__text'>Since the overall layout was well received, there was no need to change. The side panel was the part that needed the most reiteration.</p>
-                            <img src={Iteration} alt='Reiteration image 1' className='creative-preview-gallery__lo-fi__img'/>
+                            <img src={Iteration} alt='Reiteration image 1' className='creative-preview-gallery__lo-fi__img modal-cursor' onClick={() => openModal(Iteration)}/>
                         </section>
                     </Section>
                     <Section id="section8">
@@ -166,23 +185,23 @@ export default function CreativePreviewGallery() {
                             <p className='creative-preview-gallery__final__text'>Due to the amount of mocks involved, only one example of each category mock is shown.</p>
                             <p className='creative-preview-gallery__final__text-bold'>CTV/OLV</p>
                             <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                <img src={FinalSolution1A} alt='FinalHandOff1A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
-                                <img src={FinalSolution1B} alt='FinalHandOff1B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={FinalSolution1A} alt='FinalHandOff1A' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(FinalSolution1A)}/>
+                                <img src={FinalSolution1B} alt='FinalHandOff1B' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(FinalSolution1B)}/>
                             </div>
                             <p className='creative-preview-gallery__final__text-bold'>Samsung TV Native</p>
                             <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                <img src={FinalSolution2A} alt='FinalHandOff2A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
-                                <img src={FinalSolution2B} alt='FinalHandOff2B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={FinalSolution2A} alt='FinalHandOff2A' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(FinalSolution2A)}/>
+                                <img src={FinalSolution2B} alt='FinalHandOff2B' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(FinalSolution2B)}/>
                             </div>
                             <p className='creative-preview-gallery__final__text-bold'>Samsung Mobile Native</p>
                             <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                <img src={FinalSolution3A} alt='FinalHandOff3A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
-                                <img src={FinalSolution3B} alt='FinalHandOff3B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={FinalSolution3A} alt='FinalHandOff3A' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(FinalSolution3A)}/>
+                                <img src={FinalSolution3B} alt='FinalHandOff3B' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(FinalSolution3B)}/>
                             </div>
                             <p className='creative-preview-gallery__final__text-bold'>Displays</p>
                             <div className='creative-preview-gallery__img-text-container__wrapper'>
-                                <img src={FinalSolution4A} alt='FinalHandOff4A' className='creative-preview-gallery__img-text-container__wrapper__img'/>
-                                <img src={FinalSolution4B} alt='FinalHandOff4B' className='creative-preview-gallery__img-text-container__wrapper__img'/>
+                                <img src={FinalSolution4A} alt='FinalHandOff4A' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(FinalSolution4A)}/>
+                                <img src={FinalSolution4B} alt='FinalHandOff4B' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(FinalSolution4B)}/>
                             </div>
                         </section>
                     </Section>
@@ -197,7 +216,12 @@ export default function CreativePreviewGallery() {
                             <p className='creative-preview-gallery__questions__point-text'>• Reduces the time for Ad Ops Sales to spend on educating self serve or first time clients about all the available creative inventories</p>
                         </section>
                     </Section>
-                </ResponsiveContainer>    
+                </ResponsiveContainer>  
+                <Modal
+                    isOpen={modalState.isOpen}
+                    imageUrl={modalState.imageUrl}
+                    onClose={closeModal}
+                />  
             </div>
         </main>
     )

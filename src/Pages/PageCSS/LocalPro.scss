@@ -122,6 +122,11 @@
         align-self: flex-start;
         cursor: pointer;
 
+        // Remove pointer for smaller screens
+        @media (max-width: 1023px) {
+          cursor: default;
+        }
+
         @include desktop-view {
           width: 50%;
           margin-top: 15px;
@@ -159,6 +164,11 @@
     &__img {
       width: 100%;
       cursor: pointer;
+
+      // Remove pointer for smaller screens
+      @media (max-width: 1023px) {
+        cursor: default;
+      }
     }
   }
 

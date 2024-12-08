@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import '../Pages/PageCSS/InteractiveQRCodeCreative.scss';
 import SideBar from '../Components/SideBar';
 import ResponsiveContainer from '../Components/ResponsiveContainer';
+import { Modal } from '../Components/Modal';
 
 import MainImage from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Main_Image.svg';
 import DesignProcess from '../Asset/InteractiveQRCodeCreative/Interactive_QR_Code_Creative_Design_Process.svg';
@@ -49,6 +50,10 @@ const Section = ({ id, children }) => {
 
 export default function InteractiveQRCodeCreative() {
     const [isStickyColumn, setIsStickyColumn] = useState(false);
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        imageUrl: "",
+      });
     
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -57,6 +62,20 @@ export default function InteractiveQRCodeCreative() {
     const checkIsSticky = (value) => {
         setIsStickyColumn(value)
     }
+
+     // Function to open the modal with the selected image
+     const openModal = (imageUrl) => {
+        if (window.innerWidth >= 1024) {
+          setModalState({ isOpen: true, imageUrl });
+        } else {
+          setModalState({ isOpen: false, imageUrl: "" });
+        } 
+      };
+
+    // Function to close the modal
+    const closeModal = () => {
+        setModalState({ isOpen: false, imageUrl: "" });
+    };
 
     return (
         <main className='interactive-qr-code-creative'>
@@ -107,23 +126,23 @@ export default function InteractiveQRCodeCreative() {
                             <p className='interactive-qr-code-creative__questions__point-text'>• Option of 2 copy lines</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• QR Code (URL)</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• QR Code label</p>
-                            <img src={ProductKickoff1} alt='ProductKickoff1' className='interactive-qr-code-creative__research__img'/>
-                            <img src={ProductKickoff2} alt='ProductKickoff2' className='interactive-qr-code-creative__research__img'/>
+                            <img src={ProductKickoff1} alt='ProductKickoff1' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(ProductKickoff1)}/>
+                            <img src={ProductKickoff2} alt='ProductKickoff2' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(ProductKickoff2)}/>
                         </section>
                     </Section>
                     <Section id="section4">
                         <section className='interactive-qr-code-creative__section-start'>
                             <p className='interactive-qr-code-creative__questions__text'>Competitive benchmarking was done across other ad platforms to see how their creative forms were filled. 4 competitors were highlighted to showcase their ability to show preview as the user completes the form. This gives the users assurance of how the creative will eventually look in production.</p>
-                            <img src={CompetitiveBrenchmarking1} alt='CompetitiveBrenchmarking1' className='interactive-qr-code-creative__research__img'/>
-                            <img src={CompetitiveBrenchmarking2} alt='CompetitiveBrenchmarking2' className='interactive-qr-code-creative__research__img'/>
+                            <img src={CompetitiveBrenchmarking1} alt='CompetitiveBrenchmarking1' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(CompetitiveBrenchmarking1)}/>
+                            <img src={CompetitiveBrenchmarking2} alt='CompetitiveBrenchmarking2' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(CompetitiveBrenchmarking2)}/>
                         </section>
                     </Section>
                     <Section id="section5">
                         <section className='interactive-qr-code-creative__section-start'>
                             <p className='interactive-qr-code-creative__questions__text'>Below are some examples of how Samsung Ads DSP creative forms currently look. They do not have any preview elements, and is only a long form with input fields where users have to fill out.</p>
                             <div className='interactive-qr-code-creative__paired-image'>
-                                <img src={CreativeForm1A} alt='CreativeForm1A' className='interactive-qr-code-creative__paired-image__img'/>
-                                <img src={CreativeForm1B} alt='MappingInfo2B' className='interactive-qr-code-creative__paired-image__img'/>
+                                <img src={CreativeForm1A} alt='CreativeForm1A' className='interactive-qr-code-creative__paired-image__img modal-cursor' onClick={() => openModal(CreativeForm1A)}/>
+                                <img src={CreativeForm1B} alt='MappingInfo2B' className='interactive-qr-code-creative__paired-image__img modal-cursor' onClick={() => openModal(CreativeForm1B)}/>
                             </div>
                         </section>
                     </Section>
@@ -132,12 +151,12 @@ export default function InteractiveQRCodeCreative() {
                             <p className='interactive-qr-code-creative__lo-fi__text'>I began by working on the scaling of the creative as a preview, and exploring different orientation of the preview with the form. Several layouts were explored.</p>
                             <div className='interactive-qr-code-creative__img-text-container'>
                                 <div className='interactive-qr-code-creative__img-text-container__wrapper'>
-                                    <img src={ExplorativeLayout1A} alt='ExplorativeLayout1A' className='interactive-qr-code-creative__img-text-container__wrapper__three-img margin'/>
-                                    <img src={ExplorativeLayout1B} alt='ExplorativeLayout1B' className='interactive-qr-code-creative__img-text-container__wrapper__three-img margin'/>
-                                    <img src={ExplorativeLayout1C} alt='ExplorativeLayout1C' className='interactive-qr-code-creative__img-text-container__wrapper__three-img'/>
+                                    <img src={ExplorativeLayout1A} alt='ExplorativeLayout1A' className='interactive-qr-code-creative__img-text-container__wrapper__three-img margin  modal-cursor' onClick={() => openModal(ExplorativeLayout1A)}/>
+                                    <img src={ExplorativeLayout1B} alt='ExplorativeLayout1B' className='interactive-qr-code-creative__img-text-container__wrapper__three-img margin  modal-cursor' onClick={() => openModal(ExplorativeLayout1B)}/>
+                                    <img src={ExplorativeLayout1C} alt='ExplorativeLayout1C' className='interactive-qr-code-creative__img-text-container__wrapper__three-img modal-cursor' onClick={() => openModal(ExplorativeLayout1C)}/>
                                 </div>
                             </div>
-                            <img src={ExplorativeLayout2} alt='ExplorativeLayout2' className='interactive-qr-code-creative__research__img'/>
+                            <img src={ExplorativeLayout2} alt='ExplorativeLayout2' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(ExplorativeLayout2)}/>
                         </section>
                     </Section>
                     <Section id="section7">
@@ -149,7 +168,7 @@ export default function InteractiveQRCodeCreative() {
                             <p className='interactive-qr-code-creative__lo-fi__text'>I have also incorporated an expandable feature in the preview for use cases that users want to see a bigger scaled version.</p>
                             <p className='interactive-qr-code-creative__final__text-bold'>Sticky Feature</p>
                             <p className='interactive-qr-code-creative__lo-fi__text'>Since the preview is the essential part of this form, I have designed the preview section to be sticky once the user scrolls past the general settings. This is due to the fact that as user continue to fill out the rest of the form, they can still see the preview above the fold at all times to ensure there are no mistakes.</p>
-                            <img src={LayoutFinalization} alt='ExplorativeLayout2' className='interactive-qr-code-creative__research__img'/>
+                            <img src={LayoutFinalization} alt='ExplorativeLayout2' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(LayoutFinalization)}/>
                         </section>
                     </Section>
                     <Section id="section8">
@@ -159,49 +178,49 @@ export default function InteractiveQRCodeCreative() {
                             <p className='interactive-qr-code-creative__questions__point-text'>• Template Settings is disabled by default due to business strategy (this is to advertise that there will be more templates coming soon)</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• Preview section is on the right of the form below general settings, and is sticky once you scroll past general settings</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• The input fields go in order to match with the preview from top to bottom, left to right</p>
-                            <img src={Hifi} alt='Hifi' className='interactive-qr-code-creative__research__img'/>
+                            <img src={Hifi} alt='Hifi' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(Hifi)}/>
                             <div className='interactive-qr-code-creative__section-divider' />
                             <p className='interactive-qr-code-creative__final__text-bold'>Background Settings - Gradient</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• Due to the design of the actual creative ad, the user is given 2 choices: either a gradient background or upload a custom image</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• The gradient background is a drop-down list consisted of the colour swatch, hex code and colour description</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• As you choose between each colour, the preview on the right will change in real time as well</p>
-                            <img src={OverallFormLayout1} alt='OverallFormLayout1' className='interactive-qr-code-creative__research__img'/>
-                            <img src={OverallFormLayout2} alt='OverallFormLayout2' className='interactive-qr-code-creative__research__img'/>
+                            <img src={OverallFormLayout1} alt='OverallFormLayout1' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(OverallFormLayout1)}/>
+                            <img src={OverallFormLayout2} alt='OverallFormLayout2' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(OverallFormLayout2)}/>
                             <div className='interactive-qr-code-creative__section-divider' />
                             <p className='interactive-qr-code-creative__final__text-bold'>Background Settings - Custom Image</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• The other option for background is for user to upload a custom image</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• Explained in the tooltip, the uploaded image will have a 50% dark overlay to ensure copy of the creative remains legible</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• The user can switch back and forth between solid gradient or custom image even after uploading an image</p>
-                            <img src={BackgroundSettingGradient} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img'/>
+                            <img src={BackgroundSettingGradient} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(BackgroundSettingGradient)}/>
                             <div className='interactive-qr-code-creative__section-divider' />
                             <p className='interactive-qr-code-creative__final__text-bold'>Content Settings - Video</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• The moment user uploads the video, the video will show up in the preview and starts playing in mute</p>
-                            <img src={BackgroundSettingCustomImage} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img'/>
+                            <img src={BackgroundSettingCustomImage} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(BackgroundSettingCustomImage)}/>
                             <div className='interactive-qr-code-creative__section-divider' />
                             <p className='interactive-qr-code-creative__final__text-bold'>Content Settings - Advertiser Logo</p>
                             <p className='interactive-qr-code-creative__questions__text'>• The moment user uploads the logo, it will show up in the preview</p>
-                            <img src={BackgroundSettingVideo} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img'/>
+                            <img src={BackgroundSettingVideo} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(BackgroundSettingVideo)}/>
                             <div className='interactive-qr-code-creative__section-divider' />
                             <p className='interactive-qr-code-creative__final__text-bold'>Content Settings - Headline</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• The two headlines are optional, therefore there was no indication of the placement in the preview by default</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• Once the user enters a line of headline, it will be vertically center aligned to right of the logo</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• If the user chooses to enter a second headline, then both headlines will be vertically center aligned to right of the logo</p>                            
-                            <img src={BackgroundSettingAdvertiserLogo} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img'/>
+                            <img src={BackgroundSettingAdvertiserLogo} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(BackgroundSettingAdvertiserLogo)}/>
                             <div className='interactive-qr-code-creative__section-divider' />
                             <p className='interactive-qr-code-creative__final__text-bold'>Content Settings - QR Code URL</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• The user will need to enter a URL, and the backend system will be able to generate a QR Code to be shown at the preview in real time</p>
-                            <img src={BackgroundSettingHeadline} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img'/>
+                            <img src={BackgroundSettingHeadline} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(BackgroundSettingHeadline)}/>
                             <div className='interactive-qr-code-creative__section-divider' />
                             <p className='interactive-qr-code-creative__final__text-bold'>Content Settings - QR Code label</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• The user be required to choose a label to go under the QR Code as an action item </p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• The labels are predefined by the marketing team and have set categories like basic, food &amp; beverage etc</p>
-                            <img src={BackgroundSettingQRCodeURL} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img'/>
+                            <img src={BackgroundSettingQRCodeURL} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(BackgroundSettingQRCodeURL)}/>
                             <div className='interactive-qr-code-creative__section-divider' />
                             <p className='interactive-qr-code-creative__final__text-bold'>Creative Details Page and Preview</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• Once all the mandatory fields are filled in, the user can submit the form</p>
                             <p className='interactive-qr-code-creative__questions__point-text'>• The user will be navigated to the Creative Details Page, where it will display a summary of the creative user just submitted</p>
                             <p className='interactive-qr-code-creative__questions__point-text margin-bottom'>• There is the option to view the preview again, but this time it will open up a drawer to show a larger scale of the preview for user to clearly see it</p>
-                            <img src={BackgroundSettingQRCodeLabel} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img'/>
+                            <img src={BackgroundSettingQRCodeLabel} alt='BackgroundSettingGradient' className='interactive-qr-code-creative__research__img modal-cursor' onClick={() => openModal(BackgroundSettingQRCodeLabel)}/>
                         </section>
                     </Section>
                     <Section id="section9">
@@ -216,6 +235,11 @@ export default function InteractiveQRCodeCreative() {
                         </section>
                     </Section>
                 </ResponsiveContainer>
+                <Modal
+                    isOpen={modalState.isOpen}
+                    imageUrl={modalState.imageUrl}
+                    onClose={closeModal}
+                />
             </div>
         </main>
     )

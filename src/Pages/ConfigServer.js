@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import '../Pages/PageCSS/ConfigServer.scss';
 import SideBar from '../Components/SideBar';
 import ResponsiveContainer from '../Components/ResponsiveContainer';
+import { Modal } from '../Components/Modal';
 
 //images
 import MainImage from '../Asset/ConfigServer/Samsung_Config_Server_Project_Hero_Photo.svg';
@@ -99,6 +100,10 @@ const Section = ({ id, children }) => {
 
 export default function ConfigServer() {
     const [isStickyColumn, setIsStickyColumn] = useState(false);
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        imageUrl: "",
+      });
 
     useEffect(()=>{
         window.scrollTo(0, 0);
@@ -107,6 +112,21 @@ export default function ConfigServer() {
     const checkIsSticky = (value) => {
         setIsStickyColumn(value)
     }
+
+    // Function to open the modal with the selected image
+    const openModal = (imageUrl) => {
+        if (window.innerWidth >= 1024) {
+          setModalState({ isOpen: true, imageUrl });
+        } else {
+          setModalState({ isOpen: false, imageUrl: "" });
+        } 
+      };
+
+    // Function to close the modal
+    const closeModal = () => {
+        setModalState({ isOpen: false, imageUrl: "" });
+    };
+
 
     return (
         <main className='config-server'>
@@ -144,16 +164,16 @@ export default function ConfigServer() {
                             <p className='config-server__research__text'>In order to understand the process and complexity, I scheduled several meetings with the back-end developer and UX researcher to fully understand all the use cases and current user journey.</p>
                             <h1 className='config-server__research__title'>Current User Journey Map</h1>
                             <p className='config-server__research__point-text'>• Very long and time consuming process with chances of error and lack of history recording.</p>
-                            <img src={DiscoveryResearchCurrentUserJourney} alt='Discovery &amp; Research image 1' className='config-server__research__img'/>
+                            <img src={DiscoveryResearchCurrentUserJourney} alt='Discovery &amp; Research image 1' className='config-server__research__img modal-cursor' onClick={() => openModal(DiscoveryResearchCurrentUserJourney)}/>
                             <h1 className='config-server__research__title'>Understanding the configuration possibilities</h1>
                             <p className='config-server__research__point-text'>• A single TV model can be composed of product type, ad type, model ID, PSID, country and year</p>
                             <p className='config-server__research__point-text'>• A request to edit a TV model can be in any combination (ex: turning all 2020 TV models in Canada off)</p>
-                            <img src={DiscoveryResearchUnderstandConfigPossiblility1} alt='current state image 3' className='config-server__research__img'/>
-                            <img src={DiscoveryResearchUnderstandConfigPossiblility2} alt='current state image 4' className='config-server__research__img'/>
+                            <img src={DiscoveryResearchUnderstandConfigPossiblility1} alt='current state image 3' className='config-server__research__img modal-cursor' onClick={() => openModal(DiscoveryResearchUnderstandConfigPossiblility1)}/>
+                            <img src={DiscoveryResearchUnderstandConfigPossiblility2} alt='current state image 4' className='config-server__research__img modal-cursor' onClick={() => openModal(DiscoveryResearchUnderstandConfigPossiblility2)}/>
                             <h1 className='config-server__research__title'>Mapping Current VS Future Users</h1>
                             <p className='config-server__research__point-text'>• Current User: Only one engineer and one person from the company HQ</p>
                             <p className='config-server__research__point-text'>• Future State: Allow view and edit permission to multiple engineers and HQ, and view access to Ad Ops and Biz Ops</p>
-                            <img src={DiscoveryResearchMappingCurrentAndFutureUsers} alt='current state image 4' className='config-server__research__img'/>
+                            <img src={DiscoveryResearchMappingCurrentAndFutureUsers} alt='current state image 4' className='config-server__research__img modal-cursor' onClick={() => openModal(DiscoveryResearchMappingCurrentAndFutureUsers)}/>
                         </section>
                     </Section>
                     <Section id="section4">
@@ -162,16 +182,16 @@ export default function ConfigServer() {
                             <p className='config-server__ideation__point-text'>• ideation on how to best visually display the information associated with a TV model</p>
                             <p className='config-server__ideation__point-text'>• the 4 main categories were model by year, ad type, country and model category</p>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={Ideation_1} alt='ideation image 1' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={Ideation_2} alt='ideation image 2' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={Ideation_1} alt='ideation image 1' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Ideation_1)}/>
+                                <img src={Ideation_2} alt='ideation image 2' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Ideation_2)}/>
                             </div>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={Ideation_3} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={Ideation_4} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={Ideation_3} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Ideation_3)}/>
+                                <img src={Ideation_4} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Ideation_4)}/>
                             </div>
                             <h1 className='config-server__ideation__title'>Low Fidelity Sketches Exploration</h1>
                             <p className='config-server__ideation__point-text'>• some examples of exploration done on visually showcasing the available information in a concise way that is easy to view and edit</p>
-                            <img src={Ideation_Lofi} alt='ideation image 5' className='config-server__ideation__img'/>
+                            <img src={Ideation_Lofi} alt='ideation image 5' className='config-server__ideation__img modal-cursor' onClick={() => openModal(Ideation_Lofi)}/>
                             <h1 className='config-server__ideation__title'>Learnings and Summary after Exploration</h1>
                             <p className='config-server__ideation__point-text'>• The 2 main categories are country and ad type</p>
                             <p className='config-server__ideation__point-text'>• Model year, category and model ID are subcategories within the 2 main dimensions</p>
@@ -189,20 +209,20 @@ export default function ConfigServer() {
                             <p className='config-server__design-process-testing__point-text'>• Upon discussions with the stakeholders, a design direction was established</p>
                             <p className='config-server__design-process-testing__point-text'>• A set of new low fidelity sketches were made to accommodate the design direction for concept proving before proceeding with high fidelity mocks and prototype for user testing</p>
                             <div className='config-server__design-process-testing__img-container'>
-                                <img src={DesignProcessTesting1} alt='design process testing' className='config-server__design-process-testing__img-container__img'/>
+                                <img src={DesignProcessTesting1} alt='design process testing' className='config-server__design-process-testing__img-container__img modal-cursor' onClick={() => openModal(DesignProcessTesting1)}/>
                                 <div className='config-server__design-process-testing__point-container__point-text'>
                                     <p className='config-server__design-process-testing__point-text'>• 2 main dimensions are country and ad type</p>
                                     <p className='config-server__design-process-testing__point-text'>• Models On VS Off now a toggle </p>
                                 </div>
                             </div>
                             <div className='config-server__design-process-testing__img-container'>
-                                <img src={DesignProcessTesting2} alt='design process testing' className='config-server__design-process-testing__img-container__img'/>
+                                <img src={DesignProcessTesting2} alt='design process testing' className='config-server__design-process-testing__img-container__img modal-cursor' onClick={() => openModal(DesignProcessTesting2)}/>
                                 <div className='config-server__design-process-testing__point-container__point-text'>
                                     <p className='config-server__design-process-testing__point-text'>• Other dimensions like ID, year and category are in a sub page</p>
                                 </div>
                             </div>
                             <div className='config-server__design-process-testing__img-container'>
-                                <img src={DesignProcessTesting3} alt='design process testing' className='config-server__design-process-testing__img-container__img'/>
+                                <img src={DesignProcessTesting3} alt='design process testing' className='config-server__design-process-testing__img-container__img modal-cursor' onClick={() => openModal(DesignProcessTesting3)}/>
                                 <div className='config-server__design-process-testing__point-container__point-text'>
                                     <p className='config-server__design-process-testing__point-text'>• Other than editing per ad type and country, offer a more complex way to edit via edge cases</p>
                                     <p className='config-server__design-process-testing__point-text'>• Provide area to add reason</p>
@@ -211,8 +231,8 @@ export default function ConfigServer() {
                             <h1 className='config-server__design-process-testing__title'>High Fidelity Mocks &amp; Prototypes for User Testing</h1>
                             <p className='config-server__design-process-testing__point-text'>• Low fidelity mocks were turned into high fidelity mocks and prototypes to prepare for user testing</p>
                             <p className='config-server__design-process-testing__point-text'>• User Test script was prepared by me and the UX Researcher to test out usability concerns and layout formats</p>
-                            <img src={DesignProcessTesting4} alt='ideation image 5' className='config-server__design-process-testing__img'/>
-                            <img src={DesignProcessTesting5} alt='ideation image 5' className='config-server__design-process-testing__img'/>
+                            <img src={DesignProcessTesting4} alt='ideation image 5' className='config-server__design-process-testing__img modal-cursor' onClick={() => openModal(DesignProcessTesting4)}/>
+                            <img src={DesignProcessTesting5} alt='ideation image 5' className='config-server__design-process-testing__img modal-cursor' onClick={() => openModal(DesignProcessTesting5)}/>
                             <h1 className='config-server__design-process-testing__title'>Needs Some Attention:</h1>
                             <p className='config-server__design-process-testing__point-text'>• Summary Chart not as useful all the time, depending on the user’s needs</p>
                             <p className='config-server__design-process-testing__point-text'>• The On and Off switch was not as noticeable on the table as user wasn’t sure if they were looking at On or Off</p>
@@ -235,17 +255,17 @@ export default function ConfigServer() {
                             <p className='config-server__iteration-final-solution__point-text'>2. Custom Edit - allows users to use any combination od ad type, country and or model to batch edit</p>
                             <p className='config-server__iteration-final-solution__point-text'>3. Batch Edit by Country and Ad Type</p>
                             <p className='config-server__iteration-final-solution__point-text'>4. Individual Edit within the selected Country and Ad type to edit sub details like Ad Server URL, Blank Server URL, Model Status and Real Time Ad</p>
-                            <img src={Iteration1} alt='ideation image 5' className='config-server__iteration-final-solution__img'/>
+                            <img src={Iteration1} alt='ideation image 5' className='config-server__iteration-final-solution__img modal-cursor' onClick={() => openModal(Iteration1)}/>
                             <div className='config-server__section-divider' />
                             <h1 className='config-server__iteration-final-solution__title'>Create and View Custom Country Listing Function:</h1>
                             <p className='config-server__iteration-final-solution__point-text'>• Users are able to select common country groupings by regions</p>
                             <p className='config-server__iteration-final-solution__point-text'>• Users can also create their own country groupings to allow easy batch edits</p>
                             <p className='config-server__iteration-final-solution__point-text'>• This allows user to only look at countries they care for without having to perform filters every time to reduce time</p>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={CountryListingA} alt='ideation image 1' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={CountryListingB} alt='ideation image 2' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={CountryListingC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={CountryListingD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={CountryListingA} alt='ideation image 1' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CountryListingA)}/>
+                                <img src={CountryListingB} alt='ideation image 2' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CountryListingB)}/>
+                                <img src={CountryListingC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CountryListingC)}/>
+                                <img src={CountryListingD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CountryListingD)}/>
                             </div>
                             <div className='config-server__section-divider' />
                             <h1 className='config-server__iteration-final-solution__title'>Custom Edit Function:</h1>
@@ -253,28 +273,28 @@ export default function ConfigServer() {
                             <p className='config-server__iteration-final-solution__point-text'>• In “Custom Edit”, you can decide which exact groupings of models, countries and ad type to select</p>
                             <p className='config-server__iteration-final-solution__point-text'>• Once the user has made the selections and entered the “Change Reason”, it goes into a review state first</p>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={CustomEditA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={CustomEditB} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={CustomEditA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CustomEditA)}/>
+                                <img src={CustomEditA} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CustomEditA)}/>
                             </div>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={CustomEditC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={CustomEditD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={CustomEditC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CustomEditC)}/>
+                                <img src={CustomEditD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CustomEditD)}/>
                             </div>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={CustomEditE} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={CustomEditF} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={CustomEditE} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CustomEditE)}/>
+                                <img src={CustomEditF} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CustomEditF)}/>
                             </div>
                             <div className='config-server__section-divider' />
                             <h1 className='config-server__iteration-final-solution__title'>Batch Edit Function - By Country and Ad Type:</h1>
                             <p className='config-server__iteration-final-solution__point-text'>• Users are able to perform filter on the Model Availability before selecting multiple or all line items</p>
                             <p className='config-server__iteration-final-solution__point-text'>• Since they are on the “Model On” status, batch editing them will turn them off, and user need to input a “Change Reason”</p>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={BatchEditA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={BatchEditB} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={BatchEditA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(BatchEditA)}/>
+                                <img src={BatchEditB} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(BatchEditB)}/>
                             </div>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={BatchEditC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={BatchEditD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={BatchEditC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(BatchEditC)}/>
+                                <img src={BatchEditD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(BatchEditD)}/>
                             </div>
                             <div className='config-server__section-divider' />
                             <h1 className='config-server__iteration-final-solution__title'>Single Edit Function - By a single country and ad type:</h1>
@@ -282,23 +302,23 @@ export default function ConfigServer() {
                             <p className='config-server__iteration-final-solution__point-text'>• Once a status has been chosen to be edited, the line item is selected where you can choose to edit the other status or URL</p>
                             <p className='config-server__iteration-final-solution__point-text'>• Once all the edits have been made, user will need to review before committing to the change</p>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={SingleEditA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={SingleEditB} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={SingleEditA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(SingleEditA)}/>
+                                <img src={SingleEditB} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(SingleEditB)}/>
                             </div>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={SingleEditC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={SingleEditD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={SingleEditC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(SingleEditC)}/>
+                                <img src={SingleEditD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(SingleEditD)}/>
                             </div>
                             <div className='config-server__section-divider' />
                             <h1 className='config-server__iteration-final-solution__title'>Batch Edit Function - By a single country and ad type:</h1>
                             <p className='config-server__iteration-final-solution__point-text'>• Users can go into a particular country’s ad type, and make batch edit to a status or URL</p>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={BatchEditFunctionA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={BatchEditFunctionB} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={BatchEditFunctionA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(BatchEditFunctionA)}/>
+                                <img src={BatchEditFunctionB} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(BatchEditFunctionB)}/>
                             </div>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={BatchEditFunctionC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={BatchEditFunctionD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={BatchEditFunctionC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(BatchEditFunctionC)}/>
+                                <img src={BatchEditFunctionD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(BatchEditFunctionD)}/>
                             </div>
                             <div className='config-server__section-divider' />
                             <h1 className='config-server__iteration-final-solution__title'>PSID Edit:</h1>
@@ -306,12 +326,12 @@ export default function ConfigServer() {
                             <p className='config-server__iteration-final-solution__point-text'>• For PSID the categorizations are simpler, ther fore it involves less complex steps to edit</p>
                             <p className='config-server__iteration-final-solution__point-text'>• You can edit a single PSID, or batch edit multiple PSIDs at once</p>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={PSIDEditA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={PSIDEditB} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={PSIDEditA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(PSIDEditA)}/>
+                                <img src={PSIDEditB} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(PSIDEditB)}/>
                             </div>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={PSIDEditC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={PSIDEditD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={PSIDEditC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(PSIDEditC)}/>
+                                <img src={PSIDEditD} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(PSIDEditD)}/>
                             </div>
                         </section>
                     </Section>
@@ -321,7 +341,7 @@ export default function ConfigServer() {
                             <p className='config-server__reflection__point-text'>• An enterprise platform for such an internal tool requires very technical user journey that must be simple yet precise</p>
                             <p className='config-server__reflection__point-text'>• Important to separate complex user flows to reduce confusion (allowing simple edits at the first layer, but also provide the ability to perform intricate level of editing on another page)</p>
                             <p className='config-server__reflection__point-text'>• Important to advocate for features that will save a lot of time for the users for the MVP stage (Adding a custom Country Listing)</p>
-                            <img src={ReflectionA} alt='info architect image 1' className='config-server__reflection__img'/>
+                            <img src={ReflectionA} alt='info architect image 1' className='config-server__reflection__img modal-cursor' onClick={() => openModal(ReflectionA)}/>
                         </section>
                     </Section>
                     <Section id="section8">
@@ -338,13 +358,18 @@ export default function ConfigServer() {
                             <p className='config-server__results__point-text'>• Reduced Blank Impressions occurrence by 30%</p>
                             <p className='config-server__results__point-text'>• New RTAC logic delivers 15% more impressions</p>
                             <div className='config-server__img-text-container__wrapper'>
-                                <img src={ResultAfterLaunch1A} alt='ideation image 3' className='config-server__img-text-container__wrapper__img'/>
-                                <img src={ResultAfterLaunch1B} alt='ideation image 4' className='config-server__img-text-container__wrapper__img'/>
+                                <img src={ResultAfterLaunch1A} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(ResultAfterLaunch1A)}/>
+                                <img src={ResultAfterLaunch1B} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(ResultAfterLaunch1B)}/>
                             </div>
                             <img src={ResultAfterLaunch2} alt='info architect image 1' className='config-server__results__img'/>
                         </section>
                     </Section>
                 </ResponsiveContainer>
+                <Modal
+                    isOpen={modalState.isOpen}
+                    imageUrl={modalState.imageUrl}
+                    onClose={closeModal}
+                />
             </div>
         </main>
     )

@@ -10,7 +10,6 @@ import DesignProcess from '../Asset/LocalPro/OverviewDesign.svg'
 import DesignSprint1 from '../Asset/LocalPro/DesignSprint1AB.svg'
 import DesignSprint2 from '../Asset/LocalPro/DesignSprint2.svg'
 import DesignSprint3 from '../Asset/LocalPro/DesignSprint3.svg'
-import DesignSprint3B from '../Asset/LocalPro/DesignSprint3B.svg'
 import CompetitiveBenchmarking1 from '../Asset/LocalPro/CompetitiveBenchmarking1.svg'
 import CompetitiveBenchmarking2 from '../Asset/LocalPro/CompetitiveBenchmarking2.svg'
 import CompetitiveBenchmarking3 from '../Asset/LocalPro/CompetitiveBenchmarking3.svg'
@@ -83,8 +82,12 @@ export default function LocalPro() {
     
     // Function to open the modal with the selected image
     const openModal = (imageUrl) => {
-        setModalState({ isOpen: true, imageUrl });
-    };
+        if (window.innerWidth >= 1024) {
+          setModalState({ isOpen: true, imageUrl });
+        } else {
+          setModalState({ isOpen: false, imageUrl: "" });
+        } 
+      };
 
     // Function to close the modal
     const closeModal = () => {

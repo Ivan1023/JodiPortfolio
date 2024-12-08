@@ -20,7 +20,11 @@ export const Modal = ({ isOpen, imageUrl, onClose }) => {
       }
     }, [isOpen, imageUrl]);
   
+    // Do not render if the modal is not open
     if (!isOpen) return null;
+  
+    // Screen size check
+    if (window.innerWidth < 1024) return null;
   
     return (
       <div className="modal-overlay" onClick={onClose}>

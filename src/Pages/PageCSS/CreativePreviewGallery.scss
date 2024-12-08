@@ -20,6 +20,15 @@
   line-height: $line-height;
 }
 
+.modal-cursor {
+  cursor: pointer;
+
+  // Remove pointer for smaller screens
+  @media (max-width: 1023px) {
+    cursor: default;
+  }
+}
+
 .margin {
   margin-right: 10px;
 }
