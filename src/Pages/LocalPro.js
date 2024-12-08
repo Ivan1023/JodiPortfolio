@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import '../Pages/PageCSS/LocalPro.scss';
 import SideBar from '../Components/SideBar';
 import ResponsiveContainer from '../Components/ResponsiveContainer';
+import { Modal } from '../Components/Modal';
 
 //images
 import MainImage from '../Asset/LocalPro/Main Image 2a 1.svg'
@@ -67,6 +68,10 @@ const Section = ({ id, children }) => {
 
 export default function LocalPro() {
     const [isStickyColumn, setIsStickyColumn] = useState(false);
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        imageUrl: "",
+      });
 
     useEffect(()=>{
         window.scrollTo(0, 0);
@@ -74,7 +79,18 @@ export default function LocalPro() {
 
     const checkIsSticky = (value) => {
         setIsStickyColumn(value)
-    }        
+    }   
+    
+    // Function to open the modal with the selected image
+    const openModal = (imageUrl) => {
+        setModalState({ isOpen: true, imageUrl });
+    };
+
+    // Function to close the modal
+    const closeModal = () => {
+        setModalState({ isOpen: false, imageUrl: "" });
+    };
+
 
     return(
         <main className='local-pro'>
@@ -129,18 +145,18 @@ export default function LocalPro() {
                             <p className='local-pro__content__text'>4. Competitor analysis</p>
                             <p className='local-pro__content__text'>5. How might we questions</p>
                             <p className='local-pro__content__text'>6. Participant sketches + voting round</p>
-                            <img src={DesignSprint1} alt='ideation image 5' className='local-pro__content__img margin-top'/>
-                            <img src={DesignSprint2} alt='ideation image 5' className='local-pro__content__img'/>
-                            <img src={DesignSprint3} alt='ideation image 5' className='local-pro__content__img'/>
+                            <img src={DesignSprint1} alt='ideation image 5' className='local-pro__content__img margin-top' onClick={() => openModal(DesignSprint1)} />
+                            <img src={DesignSprint2} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(DesignSprint2)} />
+                            <img src={DesignSprint3} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(DesignSprint3)} />
                         </section>
                     </Section>
                     <Section id="section4">
                         <section className='local-pro__section'>
                             <p className='local-pro__content__text'>With the limitations of not having an actual business number or business insurance number, I tried to research on the invitation/enrollment stage of competitor apps as best I could. I reviewed both the customer facing and contractor facing experience to get the most thorough details, up until a business number or payment was required.</p>
-                            <img src={CompetitiveBenchmarking1} alt='ideation image 5' className='local-pro__content__img margin-top'/>
-                            <img src={CompetitiveBenchmarking2} alt='ideation image 5' className='local-pro__content__img'/>
-                            <img src={CompetitiveBenchmarking3} alt='ideation image 5' className='local-pro__content__img'/>
-                            <img src={CompetitiveBenchmarking4} alt='ideation image 5' className='local-pro__content__img'/>
+                            <img src={CompetitiveBenchmarking1} alt='ideation image 5' className='local-pro__content__img margin-top' onClick={() => openModal(CompetitiveBenchmarking1)} />
+                            <img src={CompetitiveBenchmarking2} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(CompetitiveBenchmarking2)} />
+                            <img src={CompetitiveBenchmarking3} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(CompetitiveBenchmarking3)} />
+                            <img src={CompetitiveBenchmarking4} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(CompetitiveBenchmarking4)} />
                         </section>
                     </Section>
                     <Section id="section5">
@@ -154,20 +170,20 @@ export default function LocalPro() {
                             <h1 className='local-pro__content__title'>Dot Voting Results:</h1>
                             <p className='local-pro__content__text'>After the dot voting ended, I arranged all the sketches in terms of requirements, and looked at areas that received votes. By organizing this way, the UX team can holistically look at all the needed steps with areas of opportunity and concerns.)</p>
                             <div className='local-pro__img-text-container__wrapper'>
-                                <img src={IdeationDotVotingEmail} alt='ideation image 3' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IdeationDotVotingNotification} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IdeationDotVotingInvitePage} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IdeationDotVotingGettingHourlyRate} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IdeationDotVotingGettingHours} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
+                                <img src={IdeationDotVotingEmail} alt='ideation image 3' className='local-pro__img-text-container__wrapper__img' onClick={() => openModal(IdeationDotVotingEmail)}/>
+                                <img src={IdeationDotVotingNotification} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'onClick={() => openModal(IdeationDotVotingNotification)}/>
+                                <img src={IdeationDotVotingInvitePage} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'onClick={() => openModal(IdeationDotVotingInvitePage)}/>
+                                <img src={IdeationDotVotingGettingHourlyRate} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'onClick={() => openModal(IdeationDotVotingGettingHourlyRate)}/>
+                                <img src={IdeationDotVotingGettingHours} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'onClick={() => openModal(IdeationDotVotingGettingHours)}/>
                             </div>
                             <div className='local-pro__img-text-container__wrapper'>
-                                <img src={IdeationDotVotingGST} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IdeationDotVotingDirectDeposit} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IdeationDotVotingProfilePic} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IdeationDotVotingProfileSetting} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IdeationDotVotingProfileSettingTransact} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
+                                <img src={IdeationDotVotingGST} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'onClick={() => openModal(IdeationDotVotingGST)}/>
+                                <img src={IdeationDotVotingDirectDeposit} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'onClick={() => openModal(IdeationDotVotingDirectDeposit)}/>
+                                <img src={IdeationDotVotingProfilePic} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'onClick={() => openModal(IdeationDotVotingProfilePic)}/>
+                                <img src={IdeationDotVotingProfileSetting} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'onClick={() => openModal(IdeationDotVotingProfileSetting)}/>
+                                <img src={IdeationDotVotingProfileSettingTransact} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'onClick={() => openModal(IdeationDotVotingProfileSettingTransact)}/>
                             </div>
-                            <img src={IdeationDotVotingGoals} alt='ideation image 5' className='local-pro__content__img'/>
+                            <img src={IdeationDotVotingGoals} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(IdeationDotVotingGoals)} />
                         </section>
                     </Section>
                     <Section id="section6">
@@ -175,14 +191,14 @@ export default function LocalPro() {
                             <h1 className='local-pro__content__title'>Wireframing</h1>
                             <p className='local-pro__content__text'>These wireframes are taken in front of stakeholders and reviewed. Notes were gathered as the UX team continued to work with these wireframes to turn into a prototype for moderated usability testing.</p>
                             <div className='local-pro__img-text-container__wrapper'>
-                                <img src={IterationWireframe1A} alt='ideation image 3' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IterationWireframe1B} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IterationWireframe1C} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
+                                <img src={IterationWireframe1A} alt='ideation image 3' className='local-pro__img-text-container__wrapper__img' onClick={() => openModal(IterationWireframe1A)} />
+                                <img src={IterationWireframe1B} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img' onClick={() => openModal(IterationWireframe1B)} />
+                                <img src={IterationWireframe1C} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img' onClick={() => openModal(IterationWireframe1C)} />
                             </div>
                             <div className='local-pro__img-text-container__wrapper'>
-                                <img src={IterationWireframe2A} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IterationWireframe2B} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
-                                <img src={IterationWireframe2C} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
+                                <img src={IterationWireframe2A} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img' onClick={() => openModal(IterationWireframe2A)} />
+                                <img src={IterationWireframe2B} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img' onClick={() => openModal(IterationWireframe2B)} />
+                                <img src={IterationWireframe2C} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img' onClick={() => openModal(IterationWireframe2C)} />
                             </div>
                             <h1 className='local-pro__content__title'>Concerns and Challenges:</h1>
                             <p className='local-pro__content__text'>The biggest concern was how to display the survey to ask users what they believe their occupation’s average market rate is, and what they believe certain services durations are with a capped range as per business requirement. </p>
@@ -195,20 +211,20 @@ export default function LocalPro() {
                             <p className='local-pro__content__text'>• Depending on how large the capped range is, the slider may also become very sensitive to slide</p>
                             <h1 className='local-pro__content__title'>Decision and Justification</h1>
                             <p className='local-pro__content__text'>• Stakeholders and UX team decided to go with Version 1 using the stepper instead of slider since we won’t show the entire range, and every dollar increase/decrease is a click so user will put more thoughts (though user can also select the input box and enter an amount).</p>
-                            <img src={IterationWireframe3} alt='ideation image 5' className='local-pro__content__img margin-top'/>
+                            <img src={IterationWireframe3} alt='ideation image 5' className='local-pro__content__img margin-top' onClick={() => openModal(IterationWireframe3)} />
                         </section>
                     </Section>
                     <Section id="section7">
                         <section className='local-pro__section'>
                             <h1 className='local-pro__content__title'>Moderated Usability Test</h1>
                             <p className='local-pro__content__text'>A prototype was created for a moderated usability test for this project. An email was sent to a list of Local Pros signed up with Home Depot with a 4 or above star ratings. Each participant was in a 1 hour session with the UX researcher, with the UX team sitting in on the background as the test went on.</p>
-                            <img src={UserTestResults1} alt='ideation image 5' className='local-pro__content__img'/>
-                            <img src={UserTestResults2} alt='ideation image 5' className='local-pro__content__img'/>
-                            <img src={UserTestResults3} alt='ideation image 5' className='local-pro__content__img'/>
-                            <img src={UserTestResults4} alt='ideation image 5' className='local-pro__content__img'/>
-                            <img src={UserTestResults5} alt='ideation image 5' className='local-pro__content__img'/>
-                            <img src={UserTestResults6} alt='ideation image 5' className='local-pro__content__img'/>
-                            <img src={UserTestResults7} alt='ideation image 5' className='local-pro__content__img'/>
+                            <img src={UserTestResults1} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults1)} />
+                            <img src={UserTestResults2} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults2)} />
+                            <img src={UserTestResults3} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults3)} />
+                            <img src={UserTestResults4} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults4)} />
+                            <img src={UserTestResults5} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults5)} />
+                            <img src={UserTestResults6} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults6)} />
+                            <img src={UserTestResults7} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults7)} />
                         </section>
                     </Section>
                     <Section id="section8">
@@ -233,6 +249,11 @@ export default function LocalPro() {
                         </section>
                     </Section>
                 </ResponsiveContainer>
+                <Modal
+                    isOpen={modalState.isOpen}
+                    imageUrl={modalState.imageUrl}
+                    onClose={closeModal}
+                />
             </div>
         </main>
     )
