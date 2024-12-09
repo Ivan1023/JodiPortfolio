@@ -175,7 +175,23 @@ export default function CreativePreviewGallery() {
                     </Section>
                     <Section id="section7">
                         <section className='creative-preview-gallery__section-start'>
+                        <h1 className='creative-preview-gallery__lo-fi__title'>Iteration</h1>
                             <p className='creative-preview-gallery__questions__text'>Since the overall layout was well received, there was no need to change. The side panel was the part that needed the most reiteration.</p>
+                            <h1 className='creative-preview-gallery__lo-fi__title'>Translating User Test Findings into Iteration - What I changed and the Reasoning</h1>
+                            <ul>
+                                <li className='creative-preview-gallery__questions__point-text'>Simplified everything - I scrapped 80% of the information from the design so users will not be overwhelmed and confused</li>
+                                <ul>
+                                    <li className='creative-preview-gallery__questions__point-text'>Users do not need the fine level of details at this stage since they are exploring the different options at a glance</li>
+                                    <li className='creative-preview-gallery__questions__point-text'>Confirmed with the marketing team and aligned with them that there will be a one source of truth PDF provided for all the fine details</li>
+                                </ul>
+                                <li className='creative-preview-gallery__questions__point-text'>Highlight the visuals - let users know how the TV creative will show up on the TV</li>
+                                <li className='creative-preview-gallery__questions__point-text'>Link the one source of truth where all the fine detailed information will be, so users can always refer to that upon exploring the options Samsung provides</li>
+                            </ul>
+                            {/* <p className='creative-preview-gallery__questions__point-text'>• Simplified everything - I scrapped 80% of the information from the design so users will not be overwhelmed and confused</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Users do not need the fine level of details at this stage since they are exploring the different options at a glance</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Confirmed with the marketing team and aligned with them that there will be a one source of truth PDF provided for all the fine details</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Highlight the visuals - let users know how the TV creative will show up on the TV</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Link the one source of truth where all the fine detailed information will be, so users can always refer to that upon exploring the options Samsung provides</p> */}
                             <img src={Iteration} alt='Reiteration image 1' className='creative-preview-gallery__lo-fi__img modal-cursor' onClick={() => openModal(Iteration)}/>
                         </section>
                     </Section>
@@ -210,10 +226,11 @@ export default function CreativePreviewGallery() {
                             <p className='creative-preview-gallery__final__text-bold'>What I learned that improved my design process</p>
                             <p className='creative-preview-gallery__questions__point-text'>• It is important to weight different types of user persona equally even though the project was meant for improving the user journey for one persona type</p>
                             <p className='creative-preview-gallery__questions__point-text'>• While presenting all crucial information in a clear and easy to navigate way is important, think about whether or not this level of information should be at this stage of the user’s whole journey of creating a campaign</p>
-                            <p className='creative-preview-gallery__questions__point-text'>• Do not be afraid to delegate where it makes sense (If the user needs to know the intended information at a prior step before this UI, communicate with the correct department to align in order to give the best user experience) </p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Do not be afraid to scrap the whole design or delegate where it makes sense (If the user needs to know the intended information at a different step before this UI, communicate with the correct department to align in order to give the best user experience) </p>
                             <p className='creative-preview-gallery__final__text-bold'>Results after launch</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Provides self serve users a convenient UI to quickly understand and explore all the available creative inventories Samsung Ads provide</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Reduces the time for Ad Ops Sales to spend on educating self serve or first time clients about all the available creative inventories</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Aligned with marketing team to keep a one source of truth PDF for information that will also be easy to update</p>
                         </section>
                     </Section>
                 </ResponsiveContainer>  

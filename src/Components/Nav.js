@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import '../Components/ComponentCSS/Nav.scss';
 import Burger from '../Asset/Nav/burger.svg';
 import Logo from '../Asset/Logo/Jodi_Logo.svg'
-import Resume from '../Asset/Resume/Jodi Lam Sr Product Designer Resume.pdf';
+import Resume from '../Asset/Resume/Jodi Lam Senior Product Designer Resume Dec 2024.pdf';
 
 
 export default function Nav (){

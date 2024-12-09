@@ -153,6 +153,14 @@ export default function ConfigServer() {
                         <section style={{ width: '100%' }} className='config-server__section'>
                             <h1 className='config-server__questions__title'>Problem</h1>
                             <p className='config-server__questions__text'>Since there was <span className='config-server__questions__text-bold'>no previous platform or UI to perform the intended tasks</span>, the problem is that all changes were dependent on only one backend developer for all configuration changes. This task alone is very manual and takes hours to perform one change.</p>
+                            <h1 className='config-server__questions__title'>What</h1>
+                            <p className='config-server__questions__text'>A platform that allows users with permission to quickly view and modify ad configurations in production without requiring a production release. A platform to allow users (ie business, sales, product, engineering) to quickly understand ad configurations for different device groupings around the regions of the world and manage changes in real time. </p>
+                            <h1 className='config-server__questions__title'>Who</h1>
+                            <p className='config-server__questions__text'>All backend developers should be able to view and edit, and all users with granted permission should be able to view and export the data.</p>
+                            <h1 className='config-server__questions__title'>How</h1>
+                            <p className='config-server__questions__text'>Features that allow users to categorize and analyze data. Features that allow single and batch edits in multiple level and combinations to allow the most advance edits in TV configurations with a recorded history.</p>
+                            <h1 className='config-server__questions__title'>Goals</h1>
+                            <p className='config-server__questions__text'>To drastically reduce the turn-around time from days to minutes and reduces the chances of error in the requests for Configuration changes and the actual changes being made.</p>
                             <h1 className='config-server__questions__title'>Scope Constraints</h1>
                             <p className='config-server__questions__point-text'>• The requirements are ambiguous as there are no previous platforms to perform the intended actions</p>
                             <p className='config-server__questions__point-text'>• The request was to leverage as much existing components as possible without much flexibility</p>
@@ -246,12 +254,12 @@ export default function ConfigServer() {
                     </Section>
                     <Section id="section6">
                         <section className='config-server__section'>
-                            <h1 className='config-server__iteration-final-solution__title'>Final Dashboard:</h1>
+                            <h1 className='config-server__iteration-final-solution__title'>Iteration &amp; Final Dashboard:</h1>
                             <p className='config-server__iteration-final-solution__point-text'>• The summary chart and Model Availability table are separated by accordions, allowing users to easily collapse the summary when not needed</p>
-                            <p className='config-server__iteration-final-solution__point-text'>• New Country Group Listing is introduced</p>
+                            <p className='config-server__iteration-final-solution__point-text'>• New Country Group Listing is introduced - This is to allow users to get to the information that matters to them faster</p>
                             <p className='config-server__iteration-final-solution__point-text'>• Added “On” or “Off” in the table itself to remind users what status they are looking at for affordability</p>
                             <h1 className='config-server__iteration-final-solution__title'>Main Edit Features:</h1>
-                            <p className='config-server__iteration-final-solution__point-text'>1. Country Group - allows user to create custom country listings</p>
+                            <p className='config-server__iteration-final-solution__point-text'>1. Country Group (NEW) - allows user to create custom country listings</p>
                             <p className='config-server__iteration-final-solution__point-text'>2. Custom Edit - allows users to use any combination od ad type, country and or model to batch edit</p>
                             <p className='config-server__iteration-final-solution__point-text'>3. Batch Edit by Country and Ad Type</p>
                             <p className='config-server__iteration-final-solution__point-text'>4. Individual Edit within the selected Country and Ad type to edit sub details like Ad Server URL, Blank Server URL, Model Status and Real Time Ad</p>
@@ -274,7 +282,7 @@ export default function ConfigServer() {
                             <p className='config-server__iteration-final-solution__point-text'>• Once the user has made the selections and entered the “Change Reason”, it goes into a review state first</p>
                             <div className='config-server__img-text-container__wrapper'>
                                 <img src={CustomEditA} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CustomEditA)}/>
-                                <img src={CustomEditA} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CustomEditA)}/>
+                                <img src={CustomEditB} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CustomEditB)}/>
                             </div>
                             <div className='config-server__img-text-container__wrapper'>
                                 <img src={CustomEditC} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(CustomEditC)}/>
