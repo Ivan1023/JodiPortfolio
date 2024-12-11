@@ -27,8 +27,7 @@ export default function Main (){
         <main className='main'>
             <section className='main__hero'>
                 <div className='main__hero__title-container'>
-                    <p className='main__hero__title-container__text'>Hello, I’m Jodi.</p>
-                    <p className='main__hero__title-container__text'>I’m a Senior Product Designer and UX strategist.</p>
+                    <p className='main__hero__title-container__text'>I’m a Senior Product Designer with 5 years of experience in B2C and B2B Ad Tech SaaS</p>
                 </div>
                 <Link to={'/Portfolio'}><button className='main__hero__button'>View My Portfolio</button></Link>
             </section>

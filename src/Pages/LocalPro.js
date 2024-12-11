@@ -115,18 +115,15 @@ export default function LocalPro() {
                 </div>
                 <div className='local-pro__section-content'>
                     <section className='local-pro__section'>
-                        <h1 className='local-pro__content__title'>Problem</h1>
-                        <p className='local-pro__content__text'>• No current UI platform to perform edit tasks</p>
-                        <p className='local-pro__content__text'>• Long turn around time (up to 2 weeks) for one edit change</p>
-                        <p className='local-pro__content__text'>• No documentation for change reason</p>
-                        <p className='local-pro__content__text'>• No viewing abilities for Ad Ops (those who are not engineers)</p>
+                        <p style={{ marginTop: '40px' }} className='local-pro__section-title'>Problem</p>
+                        <p style={{paddingRight: '40px'}} className='local-pro__content__text'>• Promote the new “Direct Job” features and entice Pros to join</p>
+                        <p style={{paddingRight: '40px'}} className='local-pro__content__text'>• The enrollment has to be very simple to go through, and the benefits needs to be easily scannable and understood</p>
+                        <p style={{paddingRight: '40px'}} className='local-pro__content__text'>• Business requirements need a way to get Pros to agree to disclose their payment range and average hours depending on the specific job</p>
                     </section>
                     <section className='local-pro__section'>
-                        <h1 className='local-pro__content__title'>Solution</h1>
-                        <p className='local-pro__content__text'>• A streamlined platform with abilities to edit TV model in any level combination of categories</p>
-                        <p className='local-pro__content__text'>• Ability to set custom country listing to view and edit without having to filter every time</p>
-                        <p className='local-pro__content__text'>• Separate permission to view and edit</p>
-                        <p className='local-pro__content__text'>• Documentation set in place for edits to record change reason</p>
+                        <p style={{ marginTop: '40px' }} className='local-pro__section-title'>Solution</p>
+                        <p className='local-pro__content__text'>• An invitation that provides value proposition and introduction to Direct Jobs</p>
+                        <p className='local-pro__content__text'>• The form captures all necessary information to kickstart “Direct Job”</p>
                     </section>                    
                 </div>
             </div>
@@ -140,7 +137,7 @@ export default function LocalPro() {
                     </Section>
                     <Section id="section2">
                         <section className='local-pro__section'>
-                            <p className='local-pro__section-title'>Design Sprint</p>
+                            <p style={{ marginTop: '40px' }} className='local-pro__section-title'>Design Sprint</p>
                             <h1 style={{ margin: '0' }} className='local-pro__content__title'>Overall Information</h1>
                             <p className='local-pro__content__text'>Preparation and Facilitator: Me</p>
                             <p className='local-pro__content__text'>Participants (stakeholders): Engineers, Product manager, Business Analyst, Legal, UX Researcher, UX Designers, Copy writer</p>
@@ -159,7 +156,7 @@ export default function LocalPro() {
                     </Section>
                     <Section id="section3">
                         <section className='local-pro__section'>
-                            <p className='local-pro__section-title'>Competitive Benchmarking Summary</p>
+                            <p style={{ marginTop: '40px' }} className='local-pro__section-title'>Competitive Benchmarking Summary</p>
                             <p className='local-pro__content__text'>With the limitations of not having an actual business number or business insurance number, I tried to research on the invitation/enrollment stage of competitor apps as best I could. I reviewed both the customer facing and contractor facing experience to get the most thorough details, up until a business number or payment was required.</p>
                             <img src={CompetitiveBenchmarking1} alt='ideation image 5' className='local-pro__content__img margin-top' onClick={() => openModal(CompetitiveBenchmarking1)} />
                             <img src={CompetitiveBenchmarking2} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(CompetitiveBenchmarking2)} />
@@ -169,8 +166,8 @@ export default function LocalPro() {
                     </Section>
                     <Section id="section4">
                         <section className='local-pro__section'>
-                            <p className='local-pro__section-title'>Ideation Sketches &amp; Dot Voting</p>
-                            <h1 className='local-pro__content__title'>This exercise sketches should consist the experience to:</h1>
+                            <p style={{ marginTop: '40px' }} className='local-pro__section-title'>Ideation Sketches &amp; Dot Voting</p>
+                            <h1 style={{ margin: '0' }} className='local-pro__content__title'>This exercise sketches should consist the experience to:</h1>
                             <p className='local-pro__content__text'>1. Introduce the benefits of Local Pro Transact</p>
                             <p className='local-pro__content__text'>2. Capture Banking Information</p>
                             <p className='local-pro__content__text'>3. Capture the Local Pro’s Services</p>
@@ -197,8 +194,8 @@ export default function LocalPro() {
                     </Section>
                     <Section id="section5">
                         <section className='local-pro__section'>
-                            <p className='local-pro__section-title'>Iteration - Translating Sprint Findings to Wireframes</p>
-                            <h1 className='local-pro__content__title'>Wireframing</h1>
+                            <p style={{ marginTop: '40px' }} className='local-pro__section-title'>Iteration - Translating Sprint Findings to Wireframes</p>
+                            <h1 style={{ margin: '0' }} className='local-pro__content__title'>Wireframing</h1>
                             <p className='local-pro__content__text'>These wireframes are taken in front of stakeholders and reviewed. Notes were gathered as the UX team continued to work with these wireframes to turn into a prototype for moderated usability testing.</p>
                             <div className='local-pro__img-text-container__wrapper'>
                                 <img src={IterationWireframe1A} alt='ideation image 3' className='local-pro__img-text-container__wrapper__img' onClick={() => openModal(IterationWireframe1A)} />
@@ -226,15 +223,15 @@ export default function LocalPro() {
                     </Section>
                     <Section id="section6">
                         <section className='local-pro__section'>
-                            <p className='local-pro__section-title'>User Test</p>
+                            <p style={{ marginTop: '40px' }} className='local-pro__section-title'>User Test</p>
                             <p className='local-pro__content__text'>A prototype was created for a moderated usability test for this project. An email was sent to a list of Local Pros signed up with Home Depot with a 4 or above star ratings. Each participant was in a 1 hour session with the UX researcher, with the UX team sitting in on the background as the test went on.</p>
                             <h1 className='local-pro__content__title'>Test Objectives</h1>
                             <p className='local-pro__content__text'>• Findability on locating the new feature</p>
                             <p className='local-pro__content__text'>• Usability on completing the form</p>
                             <p className='local-pro__content__text'>• Understanding all the questions requiring an input</p>
                             <h1 className='local-pro__content__title'>Test Results Summary</h1>
-                            <ul>
-                                <li className='local-pro__content__point-text'>Overall no major issues on the findability or usability</li>
+                            <ul style={{ margin: '0' }}>
+                                <li style={{ margin: '0' }} className='local-pro__content__point-text'>Overall no major issues on the findability or usability</li>
                                 <li className='local-pro__content__point-text'>A lot of <span className='local-pro__content__text-bold'>concerns over how the app will charge VS the reality</span> of a contractor job</li>
                                 <ul>
                                     <li className='local-pro__content__point-text'>A good number of contractors we tested do not charge per hour</li>
@@ -247,8 +244,8 @@ export default function LocalPro() {
                     </Section>
                     <Section id="section7">
                         <section className='local-pro__section'>
-                            <p className='local-pro__section-title'>Final Solution</p>
-                            <h1 className='local-pro__content__title'>Mocks and Prototype Hand Off</h1>
+                            <p style={{ marginTop: '40px' }} className='local-pro__section-title'>Final Solution</p>
+                            <h1 style={{ margin: '0' }} className='local-pro__content__title'>Mocks and Prototype Hand Off</h1>
                             <p className='local-pro__content__text'>Taking all the insights from the moderated usability tests, the UX team went back to tweak the designs before handing off to the developers.</p>
                             <p className='local-pro__content__text'>A visual of the final prototype:</p>
                             <div className='local-pro__img-text-container__wrapper'>
@@ -259,12 +256,12 @@ export default function LocalPro() {
                     </Section>
                     <Section id="section8">
                         <section className='local-pro__section margin-page-end'>
-                            <p className='local-pro__section-title'>Reflection &amp; Results</p>
-                            <h1 className='local-pro__content__title'>What could have went better and what I learned</h1>
+                            <p style={{ marginTop: '40px' }} className='local-pro__section-title'>Reflection &amp; Results</p>
+                            <h1 style={{ margin: '0' }}className='local-pro__content__title'>What could have went better and what I learned</h1>
                             <p className='local-pro__content__text'>• it would have been more beneficial to recruit the targeted personas amongst the entire pool of Local Pros, especially when it comes to their expectations for this new benefit (focus on a few occupations)</p>
                             <p className='local-pro__content__text'>• I learned a lot about helping set context in a moderated usability test and the testing script, because it matters a lot when we are trying to extract useful insights from the target audience through their tone, words and thoughts. When the context is set properly, insights become clearer.</p>
                             <h1 className='local-pro__content__title'>KPIs</h1>
-                            <div className='config-server__section-container'>
+                            <div style={{ width: '100%' }} className='config-server__section-container'>
                                 <section className='config-server__section-container__center'>
                                     <p className='config-server__section-container__center__title'>4 stars</p>
                                     <p className='config-server__section-container__center__sub-title'>Improvement Rating</p>

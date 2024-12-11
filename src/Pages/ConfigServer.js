@@ -141,14 +141,14 @@ export default function ConfigServer() {
                 </div>
                 <div className='config-server__questions'>
                     <section className='config-server__section'>
-                        <h1 className='config-server__questions__title'>Problem</h1>
+                        <p style={{ marginTop: '40px' }} className='config-server__section-title'>Problem</p>
                         <p className='config-server__questions__text'>• No current UI platform to perform edit tasks</p>
                         <p className='config-server__questions__text'>• Long turn around time (up to 2 weeks) for one edit change</p>
                         <p className='config-server__questions__text'>• No documentation for change reason</p>
                         <p className='config-server__questions__text'>• No viewing abilities for Ad Ops (those who are not engineers)</p>
                     </section>
                     <section className='config-server__section'>
-                        <h1 className='config-server__questions__title'>Solution</h1>
+                        <p style={{ marginTop: '40px' }} className='config-server__section-title'>Solution</p>
                         <p className='config-server__questions__text'>• A streamlined platform with abilities to edit TV model in any level combination of categories</p>
                         <p className='config-server__questions__text'>• Ability to set custom country listing to view and edit without having to filter every time</p>
                         <p className='config-server__questions__text'>• Separate permission to view and edit</p>
@@ -185,9 +185,9 @@ export default function ConfigServer() {
                     </Section>
                     <Section id="section3">
                         <section className='config-server__section'>
-                            <p className='config-server__section-title'>Ideation</p>
-                            <h1 className='config-server__ideation__title'>Information Architect Ideation</h1>
-                            <ul>
+                            <p style={{ marginTop: '20px' }} className='config-server__section-title'>Ideation</p>
+                            <h1 className='config-server__ideation__title'>Information Architecture Ideation</h1>
+                            <ul style={{ margin: '0' }}>
                                 <li className='config-server__ideation__point-text'>ideation on how to best visually display the information associated with a TV model</li>
                                 <li className='config-server__ideation__point-text'>the 4 main categories were:</li>
                                 <ul>
@@ -205,12 +205,12 @@ export default function ConfigServer() {
                                 <img src={Ideation_3} alt='ideation image 3' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Ideation_3)}/>
                                 <img src={Ideation_4} alt='ideation image 4' className='config-server__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Ideation_4)}/>
                             </div>
-                            <h1 className='config-server__ideation__title'>Low Fidelity Sketches Exploration - Potential Design Solutions</h1>
+                            <h1 style={{ marginTop: '40px' }} className='config-server__ideation__title'>Low Fidelity Sketches Exploration - Potential Design Solutions</h1>
                             <p className='config-server__ideation__point-text'>• Displaying different sets of information architecture</p>
                             <p className='config-server__ideation__point-text'>• Ability to customize table charts at the top of the page VS separating into a drawer</p>
                             <p className='config-server__ideation__point-text'>• Having tabs on top of table to add extra level of information</p>
                             <img src={Ideation_Lofi} alt='ideation image 5' className='config-server__ideation__img modal-cursor' onClick={() => openModal(Ideation_Lofi)}/>
-                            <h1 className='config-server__ideation__title'>Learnings and Summary after Exploration</h1>
+                            <h1 style={{ marginTop: '40px' }} className='config-server__ideation__title'>Learnings and Summary after Exploration</h1>
                             <p className='config-server__ideation__point-text'>• The 2 main categories are country and ad type</p>
                             <p className='config-server__ideation__point-text'>• Model year, category and model ID are subcategories within the 2 main dimensions</p>
                             <p className='config-server__ideation__point-text'>• PSID needs to be on a separate page due to legal reasons</p>
@@ -218,12 +218,11 @@ export default function ConfigServer() {
                             <p className='config-server__ideation__point-text'>• There needs to be a “Change Reason” to be logged in a history log</p>
                             <p className='config-server__ideation__point-text'>• Users need to be able to download the data in a CSV format</p>
                             <p className='config-server__ideation__point-text'>• There needs to be a view for users with permission to edit, and one to just view</p>
-
                         </section>
                     </Section>
                     <Section id="section4">
                         <section className='config-server__section'>
-                            <p className='config-server__section-title'>Iteration - Translating findings into new design direction</p>
+                            <p style={{ marginTop: '40px' }} className='config-server__section-title'>Iteration - Translating findings into new design direction</p>
                             <p className='config-server__design-process-testing__point-text'>• Upon discussions with the stakeholders, a design direction was established</p>
                             <p className='config-server__design-process-testing__point-text'>• A set of new low fidelity sketches were made to accommodate the design direction for concept proving before proceeding with high fidelity mocks and prototype for user testing</p>
                             <div className='config-server__design-process-testing__img-container'>
@@ -246,16 +245,16 @@ export default function ConfigServer() {
                                     <p className='config-server__design-process-testing__point-text'>• Provide area to add reason</p>
                                 </div>
                             </div>
-                            <p className='config-server__section-title'>Testing</p>
+                            <p style={{ marginTop: '40px' }} className='config-server__section-title'>Testing</p>
                             <p className='config-server__design-process-testing__point-text'>• Low fidelity mocks were turned into high fidelity mocks and prototypes to prepare for user testing</p>
                             <p className='config-server__design-process-testing__point-text'>• User Test script was prepared by me and the UX Researcher to test out usability concerns and layout formats</p>
                             <h1 className='config-server__design-process-testing__title'>Testing Objectives</h1>
                             <p className='config-server__design-process-testing__point-text'>• Information architecture (understanding content and available edit functions)</p>
-                            <p className='config-server__design-process-testing__point-text'>• Enable/disable TV models based on requirements</p>
+                            <p style={{ marginBottom: '10px' }} className='config-server__design-process-testing__point-text'>• Enable/disable TV models based on requirements</p>
                             <img src={DesignProcessTesting4} alt='ideation image 5' className='config-server__design-process-testing__img modal-cursor' onClick={() => openModal(DesignProcessTesting4)}/>
                             <img src={DesignProcessTesting5} alt='ideation image 5' className='config-server__design-process-testing__img modal-cursor' onClick={() => openModal(DesignProcessTesting5)}/>
-                            <p className='config-server__section-title'>Testing Results</p>
-                            <h1 className='config-server__design-process-testing__title'>Needs Some Attention:</h1>
+                            <p style={{ marginTop: '40px' }} className='config-server__section-title'>Testing Results</p>
+                            <h1 style={{ marginTop: '0' }} className='config-server__design-process-testing__title'>Needs Some Attention:</h1>
                             <p className='config-server__design-process-testing__point-text'>• Summary Chart not as useful all the time, depending on the user’s needs</p>
                             <p className='config-server__design-process-testing__point-text'>• The On and Off switch was not as noticeable on the table as user wasn’t sure if they were looking at On or Off</p>
                             <p className='config-server__design-process-testing__point-text'>• Missing functionality for choosing a country group (customizing it)</p>
@@ -268,8 +267,8 @@ export default function ConfigServer() {
                     </Section>
                     <Section id="section5">
                         <section className='config-server__section'>
-                            <p className='config-server__section-title'>Implementation &amp; Final Solution</p>
-                            <h1 className='config-server__iteration-final-solution__title'>Final Dashboard:</h1>
+                            <p style={{ marginTop: '40px' }} className='config-server__section-title'>Implementation &amp; Final Solution</p>
+                            <h1 style={{ marginTop: '0px' }}className='config-server__iteration-final-solution__title'>Final Dashboard:</h1>
                             <p className='config-server__iteration-final-solution__point-text'>• The summary chart and Model Availability table are separated by accordions, allowing users to easily collapse the summary when not needed</p>
                             <p className='config-server__iteration-final-solution__point-text'>• New Country Group Listing is introduced - This is to allow users to get to the information that matters to them faster</p>
                             <p className='config-server__iteration-final-solution__point-text'>• Added “On” or “Off” in the table itself to remind users what status they are looking at for affordability</p>
@@ -277,7 +276,7 @@ export default function ConfigServer() {
                             <p className='config-server__iteration-final-solution__point-text'>1. Country Group (NEW) - allows user to create custom country listings</p>
                             <p className='config-server__iteration-final-solution__point-text'>2. Custom Edit - allows users to use any combination od ad type, country and or model to batch edit</p>
                             <p className='config-server__iteration-final-solution__point-text'>3. Batch Edit by Country and Ad Type</p>
-                            <p className='config-server__iteration-final-solution__point-text'>4. Individual Edit within the selected Country and Ad type to edit sub details like Ad Server URL, Blank Server URL, Model Status and Real Time Ad</p>
+                            <p style={{ marginBottom: '10px' }}  className='config-server__iteration-final-solution__point-text'>4. Individual Edit within the selected Country and Ad type to edit sub details like Ad Server URL, Blank Server URL, Model Status and Real Time Ad</p>
                             <img src={Iteration1} alt='ideation image 5' className='config-server__iteration-final-solution__img modal-cursor' onClick={() => openModal(Iteration1)}/>
                             <div className='config-server__section-divider' />
                             <h1 className='config-server__iteration-final-solution__title'>01: Create and View Custom Country Listing Function:</h1>
@@ -294,7 +293,7 @@ export default function ConfigServer() {
                             <h1 className='config-server__iteration-final-solution__title'>02: Custom Edit Function:</h1>
                             <p className='config-server__iteration-final-solution__point-text'>• When the use case involves more complex configuration, “Custom Edit” becomes an essential feature</p>
                             <p className='config-server__iteration-final-solution__point-text'>• In “Custom Edit”, you can decide which exact groupings of models, countries and ad type to select</p>
-                            <p className='config-server__iteration-final-solution__point-text'>• Once the user has made the selections and entered the “Change Reason”, it goes into a review state first</p>
+                            <p style={{ marginBottom: '10px' }} className='config-server__iteration-final-solution__point-text'>• Once the user has made the selections and entered the “Change Reason”, it goes into a review state first</p>
                             <img src={CustomEditD} alt='ideation image 5' className='config-server__iteration-final-solution__img modal-cursor' onClick={() => openModal(CustomEditD)}/>                            
                             <div className='config-server__section-divider' />
                             <h1 className='config-server__iteration-final-solution__title'>03: Batch Edit Function - By Country and Ad Type:</h1>
@@ -324,18 +323,18 @@ export default function ConfigServer() {
                     </Section>
                     <Section id="section6">
                         <section className='config-server__section-start'>
-                            <p className='config-server__section-title'>Reflection</p>
+                            <p style={{ marginTop: '40px' }}className='config-server__section-title'>Reflection</p>
                             <h1 className='config-server__reflection__title'>What I learned and how it influenced my design approach:</h1>
                             <p className='config-server__reflection__point-text'>• An enterprise platform for such an internal tool requires very technical user journey that must be simple yet precise</p>
                             <p className='config-server__reflection__point-text'>• Important to separate complex user flows to reduce confusion (allowing simple edits at the first layer, but also provide the ability to perform intricate level of editing on another page)</p>
-                            <p className='config-server__reflection__point-text'>• Important to advocate for features that will save a lot of time for the users for the MVP stage (Adding a custom Country Listing)</p>
+                            <p style={{ marginBottom: '10px' }} className='config-server__reflection__point-text'>• Important to advocate for features that will save a lot of time for the users for the MVP stage (Adding a custom Country Listing)</p>
                             <img src={ReflectionA} alt='info architect image 1' className='config-server__reflection__img modal-cursor' onClick={() => openModal(ReflectionA)}/>
                         </section>
                     </Section>
                     <Section id="section7">
                         <section className='config-server__section-start'>
                             <p className='config-server__section-title'>Results</p>
-                            <h1 className='config-server__results__title'>Key Benefits</h1>
+                            <h1 style={{ marginTop: '0px' }} className='config-server__results__title'>Key Benefits</h1>
                             <p className='config-server__results__point-text'>• Provides users (ie business, sales, product, engineering) a convenient UI to quickly understand ad configurations for different device groupings around the regions of the world.</p>
                             <p className='config-server__results__point-text'>• Allows users with the proper credentials to manage changes in real time. <span className='config-server__results__text-bold'>It drastically reduces the turn-around time from days to minutes and reduces the chances of error</span> in the requests for Configuration changes</p>
                             <p className='config-server__results__point-text'>• Allows users with permission to quickly modify ad configurations in production without requiring a production release.</p>

@@ -10,9 +10,9 @@ export default function About(){
                 <img src={Photo} className='about__imgContainer__img'/>
             </section>
             <section className='about__textContainer'>
-                <p className='about__textContainer__text'>Hi, I’m Jodi. I’m a UX Designer and Strategist.</p>
-                <p className='about__textContainer__text'>I come from a design background with a Bachelor of Design from OCAD University, as well as customer service, graphic design and UX strategy work experiences. My customer service work experience helps me emphasize with users, while my graphic design experience conditions me with an eye for well designed visual elements and layouts.</p>
-                <p className='about__textContainer__text'>My experience as a UX strategist builds out skills on facilitating a UX project from beginning to end, design thinking and critical thinking skills in an agile environment while working with multiple cross functioning departments and holding stakeholder’s best interests in mind.</p>
+                <p className='about__textContainer__text'>Hi, I’m Jodi. I’m a Product Designer and Strategist.</p>
+                <p className='about__textContainer__text'>With over 5 years of experience as a Senior Product Designer in B2C and B2B Ad Tech SaaS, I am eager to bring my expertise in user-centered design and my passion for creating impactful digital experiences to your innovative team.</p>
+                <p className='about__textContainer__text'>I have a proven track record of collaborating with senior designers, product managers, engineers, and other stakeholders to align on project goals, ensuring that designs not only meet user expectations but also drive business growth. Additionally, my strong portfolio showcases several design projects where I have played a pivotal role in creating workflows that simplify complex systems and enhance usability.</p>
             </section>
         </main>
     )
