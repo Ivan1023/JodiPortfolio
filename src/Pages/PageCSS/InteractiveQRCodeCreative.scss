@@ -1,6 +1,13 @@
 @import "../../Styles/Font.scss";
 @import "../../Styles/MainStyles.scss";
 
+@mixin sidebar-title-style {
+  font-family: $font-bold;
+  font-size: $title-text;
+  color: $paragraph-text-color;
+  margin: 30px 0 0 0;
+}
+
 @mixin sub-title-style {
   font-family: $font-bold;
   font-size: $title-text;
@@ -60,6 +67,32 @@
 }
 
 .interactive-qr-code-creative {
+  &__section-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid $border-color;
+    padding: 40px 0;
+
+    &__start {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 50%;
+    }
+
+    &__title {
+      // @include sub-title-style();
+      @include paragraph-text-bold-style();
+      margin: 0;
+    }
+
+    &__text {
+      @include paragraph-text-style();
+      margin: 0;
+    }
+  }
+
   &__section {
     display: flex;
     flex-direction: column;
@@ -76,6 +109,11 @@
     border-top: 1px solid black;
     width: 100%;
     margin: 20px 0 10px 0;
+  }
+
+  &__section-title {
+    @include sidebar-title-style();
+    margin: 0;
   }
 
   &__text-bold {

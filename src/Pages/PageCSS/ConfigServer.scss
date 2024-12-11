@@ -1,6 +1,13 @@
 @import "../../Styles/Font.scss";
 @import "../../Styles/MainStyles.scss";
 
+@mixin sidebar-title-style {
+  font-family: $font-bold;
+  font-size: $title-text;
+  color: $paragraph-text-color;
+  margin: 30px 0 0 0;
+}
+
 @mixin sub-title-style {
   font-family: $font-bold;
   font-size: $title-text;
@@ -46,6 +53,35 @@
 }
 
 .config-server {
+  &__section-container {
+    display: flex;
+    justify-content: space-between;
+
+    &__center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &__title {
+        font-size: 64px;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      &__sub-title {
+        font-size: $subtitle-text;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      &__text {
+        font-size: $paragraph-text;
+        margin: 0;
+      }
+    }
+  }
+
   &__section-center {
     display: flex;
     flex-direction: column;
@@ -73,7 +109,7 @@
     margin: 25px 0 0 0;
   }
 
-  &__img-text-container {
+  & &__img-text-container {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
@@ -132,6 +168,11 @@
     font-size: $header-text;
   }
 
+  &__section-title {
+    @include sidebar-title-style();
+    margin: 0;
+  }
+
   &__description {
     @include paragraph-text-style();
     line-height: $line-height;
@@ -180,12 +221,12 @@
   }
 
   &__questions {
-    text-align: center;
+    width: 100%;
     border-top: 1px solid $border-color;
     margin: 0 0 39px 0;
+    display: flex;
 
     &__title {
-      // @include sub-title-style();
       @include paragraph-text-bold-style();
       margin: 25px 0 0 0;
     }
@@ -193,17 +234,6 @@
     &__text {
       @include paragraph-text-style();
       margin: 0;
-    }
-
-    &__text-bold {
-      @include paragraph-text-style();
-      margin: 0 0 10px 0;
-      font-weight: 600;
-    }
-
-    &__point-text {
-      @include paragraph-text-style();
-      margin: 5px 0 0 0;
     }
   }
 
@@ -240,7 +270,8 @@
 
     &__title {
       @include paragraph-text-bold-style();
-      margin: 25px 0 0 0;
+      // margin: 25px 0 0 0;
+      margin: 0;
     }
 
     &__text {

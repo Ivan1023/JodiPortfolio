@@ -46,14 +46,13 @@ import Final2 from '../Asset/LocalPro/GIFS/LPT2 Final2.gif'
 
 const sections = [
     { id: 'section1', label: 'Overview of Design Process', description: 'The overview of the design process for this project.' },
-    { id: 'section2', label: 'Project Details', description: 'Project details outlining the problem and scope constraints.' },
-    { id: 'section3', label: 'Design Sprint', description: 'Prepared and facilitated a Design sprint held for 2 days involving all stakeholders.' },
-    { id: 'section4', label: 'Competitive Benchmarking', description: 'Observing other competitors and highlighting key features.' },
-    { id: 'section5', label: 'Ideation Sketches and Dot Voting', description: 'Rough sketches were presented to kickstart discussions and concept explorations.' },
-    { id: 'section6', label: 'Iteration', description: 'Iterations were done after taking the results from the Design Sprint dot voting to further finalize design direction.' },
-    { id: 'section7', label: 'User Test Results', description: 'Moderated user test was conducted with real contractors' },
-    { id: 'section8', label: 'Final Solution', description: 'Showcasing the prototype of the final solution released on the mobile app.' },
-    { id: 'section9', label: 'Reflection and Results', description: 'What I learned to improve my design process and outcome.' },
+    { id: 'section2', label: 'Design Sprint', description: 'Prepared and facilitated a Design sprint held for 2 days involving all stakeholders.' },
+    { id: 'section3', label: 'Competitive Benchmarking', description: 'Observing other competitors and highlighting key features.' },
+    { id: 'section4', label: 'Ideation Sketches and Dot Voting', description: 'Rough sketches were presented to kickstart discussions and concept explorations.' },
+    { id: 'section5', label: 'Iteration', description: 'Iterations were done after taking the results from the Design Sprint dot voting to further finalize design direction.' },
+    { id: 'section6', label: 'User Test Results', description: 'Moderated user test was conducted with real contractors' },
+    { id: 'section7', label: 'Final Solution', description: 'Showcasing the prototype of the final solution released on the mobile app.' },
+    { id: 'section8', label: 'Reflection and Results', description: 'What I learned to improve my design process and outcome.' },
   ];
 
 
@@ -114,6 +113,22 @@ export default function LocalPro() {
                     <p className='local-pro__item'>Tools: Figma, Figjam</p>
                     <p className='local-pro__item'>Platform: B2B SaaS on website</p>
                 </div>
+                <div className='local-pro__section-content'>
+                    <section className='local-pro__section'>
+                        <h1 className='local-pro__content__title'>Problem</h1>
+                        <p className='local-pro__content__text'>• No current UI platform to perform edit tasks</p>
+                        <p className='local-pro__content__text'>• Long turn around time (up to 2 weeks) for one edit change</p>
+                        <p className='local-pro__content__text'>• No documentation for change reason</p>
+                        <p className='local-pro__content__text'>• No viewing abilities for Ad Ops (those who are not engineers)</p>
+                    </section>
+                    <section className='local-pro__section'>
+                        <h1 className='local-pro__content__title'>Solution</h1>
+                        <p className='local-pro__content__text'>• A streamlined platform with abilities to edit TV model in any level combination of categories</p>
+                        <p className='local-pro__content__text'>• Ability to set custom country listing to view and edit without having to filter every time</p>
+                        <p className='local-pro__content__text'>• Separate permission to view and edit</p>
+                        <p className='local-pro__content__text'>• Documentation set in place for edits to record change reason</p>
+                    </section>                    
+                </div>
             </div>
             <div style={{display: 'flex'}}>
                 <SideBar sections={sections} checkIsSticky={checkIsSticky} />
@@ -125,19 +140,8 @@ export default function LocalPro() {
                     </Section>
                     <Section id="section2">
                         <section className='local-pro__section'>
-                            <h1 className='local-pro__content__title'>What</h1>
-                            <p className='local-pro__content__text'>An invitation to eligible Local Pros (contractors that signed up with home depot for getting referral jobs) for the new benefit called “Direct Job” (once called “Priority Local Pro”).</p>
-                            <h1 className='local-pro__content__title'>Who</h1>
-                            <p className='local-pro__content__text'>All eligible Local Pros that have above 4 stars rating with Home Depot.</p>
-                            <h1 className='local-pro__content__title'>How</h1>
-                            <p className='local-pro__content__text'>Introducing what “Local Pro Transact” is, and enticing these Local Pros to enroll through a form.</p>
-                            <h1 className='local-pro__content__title'>Goals</h1>
-                            <p className='local-pro__content__text'>The goal is to provide an enticing value proposition to these Local Pros in an easy to understand manner that will lead them to enroll in Local Pro Transact (Priority Local Pro). The enrollment has to be very simple to go through, and the benefits needs to be easily scannable and understood.</p>
-                        </section>
-                    </Section>
-                    <Section id="section3">
-                        <section className='local-pro__section'>
-                            <h1 className='local-pro__content__title'>Sprint Information</h1>
+                            <p className='local-pro__section-title'>Design Sprint</p>
+                            <h1 style={{ margin: '0' }} className='local-pro__content__title'>Overall Information</h1>
                             <p className='local-pro__content__text'>Preparation and Facilitator: Me</p>
                             <p className='local-pro__content__text'>Participants (stakeholders): Engineers, Product manager, Business Analyst, Legal, UX Researcher, UX Designers, Copy writer</p>
                             <p className='local-pro__content__text'>Duration: 2 days</p>
@@ -153,8 +157,9 @@ export default function LocalPro() {
                             <img src={DesignSprint3} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(DesignSprint3)} />
                         </section>
                     </Section>
-                    <Section id="section4">
+                    <Section id="section3">
                         <section className='local-pro__section'>
+                            <p className='local-pro__section-title'>Competitive Benchmarking Summary</p>
                             <p className='local-pro__content__text'>With the limitations of not having an actual business number or business insurance number, I tried to research on the invitation/enrollment stage of competitor apps as best I could. I reviewed both the customer facing and contractor facing experience to get the most thorough details, up until a business number or payment was required.</p>
                             <img src={CompetitiveBenchmarking1} alt='ideation image 5' className='local-pro__content__img margin-top' onClick={() => openModal(CompetitiveBenchmarking1)} />
                             <img src={CompetitiveBenchmarking2} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(CompetitiveBenchmarking2)} />
@@ -162,8 +167,9 @@ export default function LocalPro() {
                             <img src={CompetitiveBenchmarking4} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(CompetitiveBenchmarking4)} />
                         </section>
                     </Section>
-                    <Section id="section5">
+                    <Section id="section4">
                         <section className='local-pro__section'>
+                            <p className='local-pro__section-title'>Ideation Sketches &amp; Dot Voting</p>
                             <h1 className='local-pro__content__title'>This exercise sketches should consist the experience to:</h1>
                             <p className='local-pro__content__text'>1. Introduce the benefits of Local Pro Transact</p>
                             <p className='local-pro__content__text'>2. Capture Banking Information</p>
@@ -189,8 +195,9 @@ export default function LocalPro() {
                             <img src={IdeationDotVotingGoals} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(IdeationDotVotingGoals)} />
                         </section>
                     </Section>
-                    <Section id="section6">
+                    <Section id="section5">
                         <section className='local-pro__section'>
+                            <p className='local-pro__section-title'>Iteration - Translating Sprint Findings to Wireframes</p>
                             <h1 className='local-pro__content__title'>Wireframing</h1>
                             <p className='local-pro__content__text'>These wireframes are taken in front of stakeholders and reviewed. Notes were gathered as the UX team continued to work with these wireframes to turn into a prototype for moderated usability testing.</p>
                             <div className='local-pro__img-text-container__wrapper'>
@@ -217,38 +224,61 @@ export default function LocalPro() {
                             <img src={IterationWireframe3} alt='ideation image 5' className='local-pro__content__img margin-top' onClick={() => openModal(IterationWireframe3)} />
                         </section>
                     </Section>
-                    <Section id="section7">
+                    <Section id="section6">
                         <section className='local-pro__section'>
-                            <h1 className='local-pro__content__title'>Moderated Usability Test</h1>
+                            <p className='local-pro__section-title'>User Test</p>
                             <p className='local-pro__content__text'>A prototype was created for a moderated usability test for this project. An email was sent to a list of Local Pros signed up with Home Depot with a 4 or above star ratings. Each participant was in a 1 hour session with the UX researcher, with the UX team sitting in on the background as the test went on.</p>
-                            <img src={UserTestResults1} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults1)} />
-                            <img src={UserTestResults2} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults2)} />
-                            <img src={UserTestResults3} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults3)} />
-                            <img src={UserTestResults4} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults4)} />
-                            <img src={UserTestResults5} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults5)} />
-                            <img src={UserTestResults6} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults6)} />
+                            <h1 className='local-pro__content__title'>Test Objectives</h1>
+                            <p className='local-pro__content__text'>• Findability on locating the new feature</p>
+                            <p className='local-pro__content__text'>• Usability on completing the form</p>
+                            <p className='local-pro__content__text'>• Understanding all the questions requiring an input</p>
+                            <h1 className='local-pro__content__title'>Test Results Summary</h1>
+                            <ul>
+                                <li className='local-pro__content__point-text'>Overall no major issues on the findability or usability</li>
+                                <li className='local-pro__content__point-text'>A lot of <span className='local-pro__content__text-bold'>concerns over how the app will charge VS the reality</span> of a contractor job</li>
+                                <ul>
+                                    <li className='local-pro__content__point-text'>A good number of contractors we tested do not charge per hour</li>
+                                    <li className='local-pro__content__point-text'>A lot of variable changes how a job should charge, but the app does not take that in consideration</li>
+                                    <li className='local-pro__content__point-text'>Suggestion on setting one price with updates VS hourly (this is to be considered for the next phase)</li>
+                                </ul>
+                            </ul>
                             <img src={UserTestResults7} alt='ideation image 5' className='local-pro__content__img' onClick={() => openModal(UserTestResults7)} />
                         </section>
                     </Section>
-                    <Section id="section8">
+                    <Section id="section7">
                         <section className='local-pro__section'>
-                            <h1 className='local-pro__content__title'>Final Hand Off</h1>
+                            <p className='local-pro__section-title'>Final Solution</p>
+                            <h1 className='local-pro__content__title'>Mocks and Prototype Hand Off</h1>
                             <p className='local-pro__content__text'>Taking all the insights from the moderated usability tests, the UX team went back to tweak the designs before handing off to the developers.</p>
                             <p className='local-pro__content__text'>A visual of the final prototype:</p>
                             <div className='local-pro__img-text-container__wrapper'>
-                                <img src={Final1} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img margin-right'/>
-                                <img src={Final2} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img'/>
+                                <img src={Final1} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img margin-right' onClick={() => openModal(Final1)}/>
+                                <img src={Final2} alt='ideation image 4' className='local-pro__img-text-container__wrapper__img' onClick={() => openModal(Final2)}/>
                             </div>
                         </section>
                     </Section>
-                    <Section id="section9">
+                    <Section id="section8">
                         <section className='local-pro__section margin-page-end'>
+                            <p className='local-pro__section-title'>Reflection &amp; Results</p>
                             <h1 className='local-pro__content__title'>What could have went better and what I learned</h1>
                             <p className='local-pro__content__text'>• it would have been more beneficial to recruit the targeted personas amongst the entire pool of Local Pros, especially when it comes to their expectations for this new benefit (focus on a few occupations)</p>
                             <p className='local-pro__content__text'>• I learned a lot about helping set context in a moderated usability test and the testing script, because it matters a lot when we are trying to extract useful insights from the target audience through their tone, words and thoughts. When the context is set properly, insights become clearer.</p>
-                            <h1 className='local-pro__content__title'>Business Impact after launch</h1>
-                            <p className='local-pro__content__text'>• Improved the app rating on Google Play Store from 2.8 to 4 stars</p>
-                            <p className='local-pro__content__text'>• Recruited a 500+ local contractors to join the Local Pro Direct Job initiative within the first 6 months</p>
+                            <h1 className='local-pro__content__title'>KPIs</h1>
+                            <div className='config-server__section-container'>
+                                <section className='config-server__section-container__center'>
+                                    <p className='config-server__section-container__center__title'>4 stars</p>
+                                    <p className='config-server__section-container__center__sub-title'>Improvement Rating</p>
+                                    <p className='config-server__section-container__center__text'>From 2.8 to 4 stars on Google Play Store</p>
+                                </section>
+                                <section className='config-server__section-container__center'>
+                                    <p className='config-server__section-container__center__title'>200+</p>
+                                    <p className='config-server__section-container__center__sub-title'>Sign Ups from Local Pros</p>
+                                    <p className='config-server__section-container__center__text'>Within the first month of release</p>
+                                </section>
+                            </div>
+                            <h1 className='local-pro__content__title'>Next Step</h1>
+                            <p className='local-pro__content__text'>• Due to the heavy concerns of how the app will charge depending on the jobs, suggestions will be taken to consideration before the next phase of the app (how Direct Job will actually operate) begins</p>
+                            <p className='local-pro__content__text'>• Re mapping the business strategy</p>
                         </section>
                     </Section>
                 </ResponsiveContainer>

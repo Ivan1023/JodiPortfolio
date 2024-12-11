@@ -32,14 +32,12 @@ import FinalSolution4B from '../Asset/CreativePreviewGallery/Creative_preview_fi
 
 const sections = [
     { id: 'section1', label: 'Overview of Design Process', description: 'The overview of the design process for this project.' },
-    { id: 'section2', label: 'Project Details', description: 'Project details outlining the problem and scope constraints.' },
-    { id: 'section3', label: 'Discovery', description: 'Discover the current user journey and the issues with the current form' },
-    { id: 'section4', label: 'Competitive Benchmarking', description: 'Competitive benchmarking to see how others present their list of ad inventories' },
-    { id: 'section5', label: 'Ideation', description: 'Exploration on information architecture and layouts via low fidelity sketches' },
-    { id: 'section6', label: 'Testing', description: 'Taking the low fidelity sketch and turn into high fidelity mocks and prototype to user test' },
-    { id: 'section7', label: 'Iteration', description: 'Translating user test findings into design changes' },
-    { id: 'section8', label: 'Final Solution', description: 'The final high fidelity mocks and prototype' },
-    { id: 'section9', label: 'Reflection and Results', description: 'What I learned from the project and how it has influenced my design approach' },
+    { id: 'section2', label: 'Discovery', description: 'Discover the current user journey and the issues with the current form' },
+    { id: 'section3', label: 'Ideation', description: 'Exploration on information architecture and layouts via low fidelity sketches' },
+    { id: 'section4', label: 'Testing', description: 'Taking the low fidelity sketch and turn into high fidelity mocks and prototype to user test' },
+    { id: 'section5', label: 'Iteration', description: 'Translating user test findings into design changes' },
+    { id: 'section6', label: 'Final Solution', description: 'The final high fidelity mocks and prototype' },
+    { id: 'section7', label: 'Reflection and Results', description: 'What I learned from the project and how it has influenced my design approach' },
   ];
 
 const Section = ({ id, children }) => {
@@ -91,6 +89,20 @@ export default function CreativePreviewGallery() {
                     <p className='creative-preview-gallery__item'>Tools: Figma, Figjam</p>
                     <p className='creative-preview-gallery__item'>Platform: B2B SaaS on website</p>
                 </div>
+                <div className='creative-preview-gallery__section-container'>
+                    <section className='creative-preview-gallery__section-start'>
+                        <h1 className='creative-preview-gallery__section-container__title'>Problem</h1>
+                        <p className='creative-preview-gallery__section-container__text'>• No current UI platform to explore available creative inventories</p>
+                        <p className='creative-preview-gallery__section-container__text'>• No visual representation of end results of creative</p>
+                        <p className='creative-preview-gallery__section-container__text'>• Not user friendly for first time users</p>
+                    </section>
+                    <section className='creative-preview-gallery__section-start'>
+                        <h1 className='creative-preview-gallery__section-container__title'>Solution</h1>
+                        <p className='creative-preview-gallery__section-container__text'>• A Gallery page that showcases all the creative inventory in categories</p>
+                        <p className='creative-preview-gallery__section-container__text'>• Simple and easy visuals to showcase how the creatives will look on TV placements</p>
+                        <p className='creative-preview-gallery__section-container__text'>• Link to a downloadable marketing PDF that will have all the detailed information on file requirements</p>
+                    </section>                    
+                </div>
             </div>
             <div style={{display: 'flex'}}>
                 <SideBar sections={sections} checkIsSticky={checkIsSticky} />
@@ -102,43 +114,23 @@ export default function CreativePreviewGallery() {
                     </Section>
                     <Section id="section2">
                         <section className='creative-preview-gallery__section-start'>
-                            <h1 className='creative-preview-gallery__questions__title'>Problem</h1>
-                            <p className='creative-preview-gallery__questions__text'>The current state of choosing a creative template is to communicate with an Ad Ops Sales and rely on them to recommend a creative type. This is taking up hours of the Ad Ops Sales’ time and Samsung want to streamline this process better. The goal is to also advertise all the available inventory types to entice more sales.</p>
-                            <h1 className='creative-preview-gallery__questions__title'>What</h1>
-                            <p className='creative-preview-gallery__questions__text'>A platform that allows users to clearly understand the available inventory offerings, along with all the required information in order to complete the creative inventory for campaign submission.</p>
-                            <h1 className='creative-preview-gallery__questions__title'>Who</h1>
-                            <p className='creative-preview-gallery__questions__text'>All first time or self serve clients.</p>
-                            <h1 className='creative-preview-gallery__questions__title'>How</h1>
-                            <p className='creative-preview-gallery__questions__text'>A proper categorization of Samsung’s inventory offerings, along with proper information about the required fields and assets for each inventory.</p>
-                            <h1 className='creative-preview-gallery__questions__title'>Goals</h1>
-                            <p className='creative-preview-gallery__questions__text'>To reduce the turn-around time from Ad Ops Sales to the clients just to choose a creative inventory type. To allow self serve users more freedom and opportunities to try out new creative types for their campaigns.</p>
-                            <h1 className='creative-preview-gallery__questions__title'>Scope Constraints</h1>
-                            <p className='creative-preview-gallery__questions__point-text'>• The amount of available inventory is a lot, with a lot of different requirements</p>
-                            <p className='creative-preview-gallery__questions__point-text'>• Alignment with different teams within Samsung like Marketing, Sales and Campaign Speacialists</p>
+                            <p className='creative-preview-gallery__section-title'>Discovery</p>
+                            <h1 className='creative-preview-gallery__research__title'>Understanding End User</h1>
+                            <p className='creative-preview-gallery__questions__point-text'>• Most use case they already have the main media asset ready (either video or image)</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Not sure what input fields are required, and where their placements are on the creative itself when shown on TV</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Not sure what other possible creative templates exist other than what the Ad Ops recommend</p>
+                            <h1 style={{marginTop: '15px'}} className='creative-preview-gallery__research__title'>Current User Journey - Pain Points</h1>
+                            <p className='creative-preview-gallery__questions__point-text'>• Meant for experienced clients, this drop down list provide little to no indication of their TV placement or visuals</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Upon choosing a creative, it navigates you directly to the form with no descriptions or way to know more</p>
+                            <img src={Discovery1} alt='current state image 1' className='creative-preview-gallery__research__img modal-cursor' onClick={() => openModal(Discovery1)}/>
+                            <h1 className='creative-preview-gallery__research__title'>Learning about each Creative inventory</h1>
+                            <p className='creative-preview-gallery__questions__point-text'>Understanding the current state, I had to look into each and every single available creative inventory type. It is important to understand how the creative ad works on the TV and all the required information.</p>
+                            <img src={Discovery2} alt='current state image 2' className='creative-preview-gallery__research__img modal-cursor' onClick={() => openModal(Discovery2)}/>
                         </section>
                     </Section>
                     <Section id="section3">
                         <section className='creative-preview-gallery__section-start'>
-                            <p className='creative-preview-gallery__research__text'>As show in the visual below, we are presenting the list of available creative inventory types in a drop down list format, where there are no explanation or visual to what they are.</p>
-                            <p className='creative-preview-gallery__research__text'>This is meant for experienced clients, but for first time or self serve users this drop down list provide little to no indication of what they are. If you choose a creative, it navigates you directly to the form. In case you want to understand what the creative is, how it looks like or to know what inputs are required, you will have to go back a page to select a different creative.</p>
-                            <img src={Discovery1} alt='current state image 1' className='creative-preview-gallery__research__img modal-cursor' onClick={() => openModal(Discovery1)}/>
-                            <p className='creative-preview-gallery__research__text'>Understanding the current state, I had to look into each and every single available creative inventory type. It is important to understand how the creative ad works on the TV and all the required information.</p>
-                            <img src={Discovery2} alt='current state image 2' className='creative-preview-gallery__research__img modal-cursor' onClick={() => openModal(Discovery2)}/>
-                            <h1 className='creative-preview-gallery__research__title'>Understanding End User</h1>
-                            <p className='creative-preview-gallery__questions__text'>With the help of the UX Researcher, we were able to speak with several end users, which were self serve clients:</p>
-                            <p className='creative-preview-gallery__questions__point-text'>• Most use case they already have the main media asset ready (either video or image)</p>
-                            <p className='creative-preview-gallery__questions__point-text'>• Not sure what input fields are required, and where their placements are on the creative itself when shown on TV</p>
-                            <p className='creative-preview-gallery__questions__point-text'>• Not sure what other possible creative templates exist other than what the Ad Ops recommend</p>
-                        </section>
-                    </Section>
-                    <Section id="section4">
-                        <section className='creative-preview-gallery__section-start'>
-                            <img src={CompetitiveBrenchmarking1} alt='CompetitiveBrenchmarking1' className='creative-preview-gallery__research__img modal-cursor' onClick={() => openModal(CompetitiveBrenchmarking1)}/>
-                            <img src={CompetitiveBrenchmarking2} alt='CompetitiveBrenchmarking2' className='creative-preview-gallery__research__img modal-cursor' onClick={() => openModal(CompetitiveBrenchmarking2)}/>
-                        </section>
-                    </Section>
-                    <Section id="section5">
-                        <section className='creative-preview-gallery__section-start'>
+                            <p className='creative-preview-gallery__section-title'>Ideation</p>
                             <p className='creative-preview-gallery__final__text-bold'>Information Architecture Exploration - Chosen direction</p>
                             <p className='creative-preview-gallery__questions__point-text'>• The organization with Mobile, TV, Displays and OLV/CTV made the most sense as they are all types of platforms</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Hosted by 3rd Party or Samsung, through user feedback, did not matter too much to require it’s own category</p>
@@ -155,9 +147,18 @@ export default function CreativePreviewGallery() {
                             </div>
                         </section>
                     </Section>
-                    <Section id="section6">
+                    <Section id="section4">
                         <section className='creative-preview-gallery__section-start'>
-                            <p className='creative-preview-gallery__questions__text'>We have enabled one detail panel per creative under each of the 4 categories for user testing. 1st Screen Plus was chosen to be the main focus of this user test, since that is the most complex creative inventory Samsung Ads offers.</p>
+                            <p className='creative-preview-gallery__section-title'>Testing</p>
+                            <p className='creative-preview-gallery__final__text-bold'>Test Objectives:</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Information Architecture</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Understanding the provided information</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Ability to explore different creative inventories</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Navigating to complete the form</p>
+                            <p className='creative-preview-gallery__final__text-bold'>Test Results Summary:</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Icons and visual representation of how the creative will look was very successful</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Too much information was displayed in too many levels</p>
+                            <p className='creative-preview-gallery__questions__point-text'>• Users were confused by the detailed of information and thought the panel itself was a form</p>
                             <div className='creative-preview-gallery__img-text-container__wrapper'>
                                 <img src={Testing1A} alt='HiFi1A' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Testing1A)}/>
                                 <img src={Testing1B} alt='HiFi1B' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(Testing1B)}/>
@@ -173,12 +174,12 @@ export default function CreativePreviewGallery() {
                             <p className='creative-preview-gallery__questions__point-text'>• If the users thought the side panel were a step-to-step to fill in the form, how can we fix this misinterpretation?</p>
                         </section>
                     </Section>
-                    <Section id="section7">
+                    <Section id="section5">
                         <section className='creative-preview-gallery__section-start'>
-                        <h1 className='creative-preview-gallery__lo-fi__title'>Iteration</h1>
+                        <p className='creative-preview-gallery__section-title'>Iteration</p>
                             <p className='creative-preview-gallery__questions__text'>Since the overall layout was well received, there was no need to change. The side panel was the part that needed the most reiteration.</p>
                             <h1 className='creative-preview-gallery__lo-fi__title'>Translating User Test Findings into Iteration - What I changed and the Reasoning</h1>
-                            <ul>
+                            <ul style={{margin: '0px'}}>
                                 <li className='creative-preview-gallery__questions__point-text'>Simplified everything - I scrapped 80% of the information from the design so users will not be overwhelmed and confused</li>
                                 <ul>
                                     <li className='creative-preview-gallery__questions__point-text'>Users do not need the fine level of details at this stage since they are exploring the different options at a glance</li>
@@ -187,18 +188,14 @@ export default function CreativePreviewGallery() {
                                 <li className='creative-preview-gallery__questions__point-text'>Highlight the visuals - let users know how the TV creative will show up on the TV</li>
                                 <li className='creative-preview-gallery__questions__point-text'>Link the one source of truth where all the fine detailed information will be, so users can always refer to that upon exploring the options Samsung provides</li>
                             </ul>
-                            {/* <p className='creative-preview-gallery__questions__point-text'>• Simplified everything - I scrapped 80% of the information from the design so users will not be overwhelmed and confused</p>
-                            <p className='creative-preview-gallery__questions__point-text'>• Users do not need the fine level of details at this stage since they are exploring the different options at a glance</p>
-                            <p className='creative-preview-gallery__questions__point-text'>• Confirmed with the marketing team and aligned with them that there will be a one source of truth PDF provided for all the fine details</p>
-                            <p className='creative-preview-gallery__questions__point-text'>• Highlight the visuals - let users know how the TV creative will show up on the TV</p>
-                            <p className='creative-preview-gallery__questions__point-text'>• Link the one source of truth where all the fine detailed information will be, so users can always refer to that upon exploring the options Samsung provides</p> */}
                             <img src={Iteration} alt='Reiteration image 1' className='creative-preview-gallery__lo-fi__img modal-cursor' onClick={() => openModal(Iteration)}/>
                         </section>
                     </Section>
-                    <Section id="section8">
+                    <Section id="section6">
                         <section className='creative-preview-gallery__section-start'>
-                            <p className='creative-preview-gallery__final__text'>Below is part of all the final hand off of the mocks (prototypes were also provided to the engineers to show interactions).</p>
-                            <p className='creative-preview-gallery__final__text'>Due to the amount of mocks involved, only one example of each category mock is shown.</p>
+                            <p className='creative-preview-gallery__section-title'>Final Solution</p>
+                            <p style={{margin: '0px'}} className='creative-preview-gallery__final__text'>Below is part of all the final hand off of the mocks (prototypes were also provided to the engineers to show interactions).</p>
+                            <p style={{margin: '0px'}} className='creative-preview-gallery__final__text'>Due to the amount of mocks involved, only one example of each category mock is shown.</p>
                             <p className='creative-preview-gallery__final__text-bold'>CTV/OLV</p>
                             <div className='creative-preview-gallery__img-text-container__wrapper'>
                                 <img src={FinalSolution1A} alt='FinalHandOff1A' className='creative-preview-gallery__img-text-container__wrapper__img modal-cursor' onClick={() => openModal(FinalSolution1A)}/>
@@ -221,13 +218,15 @@ export default function CreativePreviewGallery() {
                             </div>
                         </section>
                     </Section>
-                    <Section id="section9">
+                    <Section id="section7">
                         <section className='creative-preview-gallery__section-start margin-end'>
+                            <p className='creative-preview-gallery__section-title'>Reflection</p>
                             <p className='creative-preview-gallery__final__text-bold'>What I learned that improved my design process</p>
                             <p className='creative-preview-gallery__questions__point-text'>• It is important to weight different types of user persona equally even though the project was meant for improving the user journey for one persona type</p>
                             <p className='creative-preview-gallery__questions__point-text'>• While presenting all crucial information in a clear and easy to navigate way is important, think about whether or not this level of information should be at this stage of the user’s whole journey of creating a campaign</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Do not be afraid to scrap the whole design or delegate where it makes sense (If the user needs to know the intended information at a different step before this UI, communicate with the correct department to align in order to give the best user experience) </p>
-                            <p className='creative-preview-gallery__final__text-bold'>Results after launch</p>
+                            <p style={{margin: '20px 0 0 0'}} className='creative-preview-gallery__section-title'>Results</p>
+                            <p className='creative-preview-gallery__final__text-bold'>Key Benefits</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Provides self serve users a convenient UI to quickly understand and explore all the available creative inventories Samsung Ads provide</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Reduces the time for Ad Ops Sales to spend on educating self serve or first time clients about all the available creative inventories</p>
                             <p className='creative-preview-gallery__questions__point-text'>• Aligned with marketing team to keep a one source of truth PDF for information that will also be easy to update</p>
